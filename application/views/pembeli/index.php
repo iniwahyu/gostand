@@ -16,6 +16,9 @@
 <p>Hello Home and Pembeli</p>
 
 
+
+<p>coba</p>
+
 <!-- SCRIPT -->
 <script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
 <script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
