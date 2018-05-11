@@ -10,5 +10,9 @@
 			# code...
 			$this->load->view('penjual/index');
 		}
+		function login()
+		{
+			$this->load->view('penjual/login');
+		}
 	}
 ?>
