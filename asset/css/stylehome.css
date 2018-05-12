@@ -1,6 +1,24 @@
 /* --- BAGIAN IRA --- */
+a{
+	color: #fff;
+}
 
+.section2{
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+}
 
+.section2 .card .card-header{
+    background: #23D1b9;
+    font-size: 20px;
+    font-weight: 700;
+}
+.section2 .card .card-header .fa{
+    color: #000;
+}
+.section2 .card .card-header span{
+    color: #000;
+}
 
 
 
