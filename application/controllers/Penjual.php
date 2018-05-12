@@ -22,5 +22,9 @@
 		{
 			$this->load->view('penjual/profil');
 		}
+		function editprofil()
+		{
+			$this->load->view('penjual/editprofil');
+		}
 	}
 ?>

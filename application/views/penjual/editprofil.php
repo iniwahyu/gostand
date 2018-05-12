@@ -134,76 +134,72 @@
      </div>
 </aside>
 
- <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Profil Penjual</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-
 <section class="content">
+  <div class="content-wrapper">
       <div class="container-fluid">
         <div class="row">
+          <!-- left column -->
           <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h3>Profile foto</h3>
-    
-              </div><!-- /.card-body -->
-            </div><!-- /.card -->
-          </div>
-             <div class="col-md-6">
-            <div class="card">
+            <!-- general form elements -->
+            <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Data Penjual</h3>
-                </div>
-                   <div class="card-body">
-                <table class="table table-bordered">
-                  <tr>
-                    <td>Username</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Nama Toko</td>
-                    <td>Update software</td>
-                  </tr>
-                  <tr>
-                    <td>Nama Pemilik</td>
-                    <td>Clean database</td>
-                  </tr>
-                  <tr>
-                    <td>Nomor Hp</td>
-                    <td>Cron job running</td>
-                  </tr>
-                  <tr>
-                    <td>Email</td>
-                    <td>Fix and squish bugs</td>
-                  </tr>
-                  
-                </table>
+                <h3 class="card-title">Edit Profil</h3>
               </div>
+                <form role="form">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Toko</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Pemilik</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="namapemilik" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nomor Handphone</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="nomorhp" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="email" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Lokasi Stand</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="
+                    lokasi" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Deskripsi Penjual</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="deskripsi" placeholder="">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+              </form>
             </div>
-            <!-- /.card -->
           </div>
+          <!--/.col (right) -->
+
+            <div class="col-md-6">
+            <!-- Horizontal Form -->
+            <div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">Horizontal Form</h3>
+              </div>
+                <p>untuk foto</p>
+               </div>
+              <!-- /.card-body -->
+          </div>
+          <!--/.col (right) -->
+
         </div>
-          <!-- /.col -->
-          
-            
-        
-       
+        <!-- /.row -->
       </div><!-- /.container-fluid -->
-    </section>
+    </div>
+</section>
 
 </div><!--divakhir-->
 
