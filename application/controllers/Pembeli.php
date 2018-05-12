@@ -20,7 +20,8 @@ class Pembeli extends CI_Controller {
 	 */
     public function index()
     {
-        echo "hai";
+        
+        $this->load->view('pembeli/index');
     }
     
      public function hidup()

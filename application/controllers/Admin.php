@@ -23,8 +23,47 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/index');
 	}
 
-	public function create()
+	public function penjual()
 	{
-		echo "hai";
+		$this->load->view('admin/penjual');
 	}
+
+	public function pembeli()
+	{
+		$this->load->view('admin/pembeli');
+	}
+
+	// public function tambah_data_barang () {
+
+	// 	if(isset($_POST[‘submit’])){
+		
+	// 	$nama_barang = $this->input->post(‘nama_barang’);
+		
+	// 	$stok = $this->input->post(‘stok’);
+		
+	// 	$status = $this->input->post(‘status’);
+		
+	// 	$data=array(‘nama_barang’ => $nama_barang,
+		
+	// 	‘stok’ =>$stok,
+		
+	// 	‘status’=>$status
+		
+	// 	);
+		
+	// 	$this->model_barang->input_data($data);
+		
+	// 	redirect(‘barang’);
+		
+	// 	}else{
+		
+	// 	$this->load->view(‘design/header’);
+		
+	// 	$this->load->view(‘barang/input_barang’);
+		
+	// 	$this->load->view(‘design/footer’);
+		
+	// 	}
+		
+	// 	}
 }
