@@ -48,19 +48,18 @@
 
 <!-- INI CONTAINER IKLAN/HOT PRODUK -->
 <div class="section1">
-<div class="container">
     <div class="row">
         <div class="col">
         	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 			    <div class="carousel-item active">
-			      <img class="d-block w-100" src="https://images.pexels.com/photos/539432/pexels-photo-539432.jpeg?cs=srgb&dl=caffeine-close-up-coffee-539432.jpg&fm=jpg/600x200?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+			      <img class="d-block w-100" src="https://images.pexels.com/photos/539432/pexels-photo-539432.jpeg?cs=srgb&dl=caffeine-close-up-coffee-539432.jpg" alt="First slide">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="https://images.pexels.com/photos/161600/smoothie-fruit-beverage-drink-161600.jpeg?cs=srgb&dl=berry-beverage-blur-161600.jpg&fm=jpg/600x200?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+			      <img class="d-block w-100" src="https://images.pexels.com/photos/161600/smoothie-fruit-beverage-drink-161600.jpeg?cs=srgb&dl=berry-beverage-blur-161600.jpg" alt="Second slide">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="https://images.pexels.com/photos/452737/pexels-photo-452737.jpeg?cs=srgb&dl=beverage-citrus-fruit-cocktail-452737.jpg&fm=jpg/600x200?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+			      <img class="d-block w-100" src="https://images.pexels.com/photos/452737/pexels-photo-452737.jpeg?cs=srgb&dl=beverage-citrus-fruit-cocktail-452737.jpg" alt="Third slide">
 			    </div>
 			  </div>
 			  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -75,7 +74,6 @@
         </div>
     </div>
 </div>
-</div>
 <!-- INI PENUTUP CONTAINER IKLAN/HOT PRODUK -->
 
 <!-- INI CARD AWAL MAKANAN DAN MINUMAN -->
@@ -83,34 +81,35 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div class="card"> 
-                <div class="card-header text-white" >
-                    <i class="fa fa-book " aria-hidden="true"></i> <span>Featured</span>  
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+            <div class="card kiri">
+			  <div class="card-body">
+			    <!-- <h5 class="card-title">Card title</h5> -->
+			    	<center><i class="fa fa-cutlery" aria-hidden="true"></i></center>
+			    	<!-- <a href="#" class="card-link">Another link</a> -->
+			  </div>
+			</div>
         </div>
 
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-header text-white">
-                    <span>Featured</span>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+            <div class="card kanan">
+			  <div class="card-body">
+			    <!-- <h5 class="card-title">Card title</h5> -->
+			    <center><i class="fa fa-coffee" aria-hidden="true"></i></center>
+			    <!-- <a href="#" class="card-link">Another link</a> -->
+			  </div>
+			</div>
         </div> 
     </div>
 </div>
 </div>
 <!-- INI CARD AKHIR MAKANAN DAN MINUMAN -->
+
+<!-- INI AWAL ABOUT -->
+<div class="section2">
+<h1><center>ABOUT</center></h1>
+</div>
+
+<!-- INI AKHIR ABOUT -->
 
 <!-- SCRIPT -->
 <script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
