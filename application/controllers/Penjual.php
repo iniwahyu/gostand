@@ -34,5 +34,9 @@
 		{
 			$this->load->view('penjual/tambahproduk');
 		}
+		function riwayatpemesanan()
+		{
+			$this->load->view('penjual/riwayatpemesanan');
+		}
 	}
 ?>
