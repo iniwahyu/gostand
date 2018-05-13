@@ -26,5 +26,13 @@
 		{
 			$this->load->view('penjual/editprofil');
 		}
+		function produk()
+		{
+			$this->load->view('penjual/produk');
+		}
+		function tambahproduk()
+		{
+			$this->load->view('penjual/tambahproduk');
+		}
 	}
 ?>

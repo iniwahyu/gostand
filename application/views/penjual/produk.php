@@ -134,72 +134,50 @@
      </div>
 </aside>
 
-<section class="content">
-  <div class="content-wrapper">
+ <div class="content-wrapper">
+   <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <!-- left column -->
-          <div class="col-md-6">
-            <!-- general form elements -->
-            <div class="card card-primary">
+          <div class="col-md-12">
+            <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Edit Profil</h3>
+                <h3 class="card-title">Daftar Produk</h3>
               </div>
-                <form role="form">
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Toko</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Pemilik</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="namapemilik" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nomor Handphone</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="nomorhp" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="email" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Lokasi Stand</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="
-                    lokasi" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Deskripsi Penjual</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="deskripsi" placeholder="">
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Simpan</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <!--/.col (right) -->
-
-            <div class="col-md-6">
-            <!-- Horizontal Form -->
-            <div class="card card-info">
-              <div class="card-header">
-                <h3 class="card-title">Ubah Foto</h3>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Nama Produk</th>
+                    <th>Deskripsi Produk</th>
+                    <th>Harga Produk</th>
+                    <th style="width: 130px">Action</th>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td><a href="">Edit</a> | <a href="">Delete</a> </td>
+                  </tr>
+                </table>
               </div>
-                <p>untuk foto</p>
-               </div>
               <!-- /.card-body -->
-          </div>
-          <!--/.col (right) -->
-
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
+              <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+ </div>
+</div>
+</div>
 </section>
+</div>
 
 </div><!--divakhir-->
 

@@ -143,40 +143,27 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Profil</h3>
+                <h3 class="card-title">Tambah Produk</h3>
               </div>
                 <form role="form">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Toko</label>
+                    <label for="exampleInputEmail1">Nama Produk</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Pemilik</label>
+                    <label for="exampleInputEmail1">Harga (Rp)</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" name="namapemilik" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nomor Handphone</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="nomorhp" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="email" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Lokasi Stand</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="
-                    lokasi" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Deskripsi Penjual</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="deskripsi" placeholder="">
+                    <label>Deskripsi Produk</label>
+                    <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Simpan</button>
+                  <button type="submit" class="btn btn-primary">Tambahkan</button>
                 </div>
               </form>
             </div>
@@ -187,7 +174,7 @@
             <!-- Horizontal Form -->
             <div class="card card-info">
               <div class="card-header">
-                <h3 class="card-title">Ubah Foto</h3>
+                <h3 class="card-title">Upload Foto Produk</h3>
               </div>
                 <p>untuk foto</p>
                </div>
