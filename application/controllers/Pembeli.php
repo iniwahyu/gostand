@@ -21,16 +21,16 @@ class Pembeli extends CI_Controller {
     public function index()
     {
         
-        $this->load->view('pembeli/index');
+        $this->load->view('pembeli/profilpembeli');
     }
     
-     public function hidup()
+     public function editprofil()
 	{
-		echo "Hidup";
+		$this->load->view('pembeli/inputdatadiri');
 	}
 
-	public function mati()
+	public function editpassword()
 	{
-		echo "Mati";
+		$this->load->view('pembeli/editpassword');
 	}
 }
