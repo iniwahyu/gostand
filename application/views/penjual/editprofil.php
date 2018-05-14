@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="<?php echo base_url('asset/penjual/plugins/morris/morris.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('asset/penjual/plugins/jvectormap/jquery-jvectormap-1.2.2.css');?>">
     <link rel="stylesheet" href="<?php echo base_url ('asset/penjual/plugins/datepicker/datepicker3.css');?>">
+    <!-- Bootstrap time Picker -->
+  <link rel="stylesheet" href="<?php echo base_url ('asset/penjual/plugins/timepicker/bootstrap-timepicker.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url ('asset/penjual/plugins/daterangepicker/daterangepicker-bs3.css');?>">
     <link rel="stylesheet" href="<?php echo base_url ('asset/penjual/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css');?>">
     <link href="<?php echo base_url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet')?>">
@@ -28,7 +30,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="<?php echo base_url('penjual/index'); ?>" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -77,7 +79,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Profile Toko
@@ -86,13 +88,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="<?php echo base_url('penjual/profil'); ?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Lihat Profile</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="<?php echo base_url('penjual/editprofil'); ?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Edit Profile</p>
                 </a>
@@ -100,7 +102,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="" class="nav-link">
               <i class="nav-icon fa fa-pie-chart"></i>
               <p>
                 Produk
@@ -109,13 +111,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="<?php echo base_url('penjual/produk'); ?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Lihat Produk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="<?php echo base_url('penjual/tambahproduk'); ?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Input Produk Baru</p>
                 </a>
@@ -123,7 +125,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="<?php echo base_url('penjual/riwayatpemesanan'); ?>" class="nav-link">
               <i class="nav-icon fa fa-calendar"></i>
               <p>
                 History Order
@@ -172,7 +174,21 @@
                     <label for="exampleInputEmail1">Deskripsi Penjual</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" name="deskripsi" placeholder="">
                   </div>
-                </div>
+                  <p>Jam Operasional</p>
+                  <div class="form-group">
+                    <div class="row">
+                    <div class="col-md-6">
+                      <label for="exampleInputEmail1">Jam Buka</label>
+                      <input type="time" class="form-control" id="exampleInputPassword1" name="jambuka" placeholder="">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="exampleInputEmail1">Jam Tutup</label>
+                      <input type="time" class="form-control" id="exampleInputPassword1" name="jamtutup" placeholder="">
+                    </div>
+                  </div>
+                  </div>
+
+                   </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
@@ -217,6 +233,8 @@
 <script src="<?php echo base_url('asset/penjual/plugins/morris/morris.min.js');?>"></script>
 <!-- Sparkline -->
 <script src="<?php echo base_url('asset/penjual/plugins/sparkline/jquery.sparkline.min.js');?>"></script>
+<!-- bootstrap time picker -->
+<script src="<?php echo base_url ('asset/penjual/plugins/timepicker/bootstrap-timepicker.min.js');?>"></script>
 <!-- jvectormap -->
 <script src="<?php echo base_url('asset/penjual/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js');?>"></script>
 <script src="<?php echo base_url('asset/penjual/plugins/jvectormap/jquery-jvectormap-world-mill-en.js');?>"></script>
