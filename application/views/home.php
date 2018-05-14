@@ -49,7 +49,7 @@
 <!-- INI CONTAINER IKLAN/HOT PRODUK -->
 <div class="section1">
     <div class="row">
-        <div class="col">
+        <div class="col-sm-12">
         	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 			    <div class="carousel-item active">

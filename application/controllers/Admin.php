@@ -18,9 +18,20 @@ class Admin extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct() {
+        parent::__construct();
+        // memuat model
+        $this->load->model('Admin_Model');
+        $this->model = $this->Admin_Model;
+ 
+        $this->load->database();
+        // memuat helper url
+        $this->load->helper('url'); // sebagai redirect
+	}
+	
 	public function index()
 	{
-		$this->load->view('admin/index');
+		$this->load->view('admin/indexadmin');
 	}
 
 	public function penjual()
@@ -30,40 +41,65 @@ class Admin extends CI_Controller {
 
 	public function pembeli()
 	{
-		$this->load->view('admin/pembeli');
+		$this->load->view('admin/pembeli');		
 	}
 
-	// public function tambah_data_barang () {
+	public function tambahpenjual()
+	{
+		$this->load->library('form_validation');
+		$this->load->view('admin/tambahpenjual');
+	}
 
-	// 	if(isset($_POST[‘submit’])){
+	public function simpanpenjual()
+	{
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
 		
-	// 	$nama_barang = $this->input->post(‘nama_barang’);
+		$data = array(
+			'username' => $username,
+			'password' => $password,
+		);
+
+		// INI VALIDASI	
+		if( $username == null ){
+			$this->session->set_flashdata('error', 'USERNAME SALAH');
+			redirect('admin/penjual');
+		}  
+
+		if( $password == null ){
+			$this->session->set_flashdata('error', 'SALAH');
+			redirect('admin/penjual');
+		}
+	
+		$query = $this->db->insert('hello', $data);
+		if( $query )
+		{
+			$this->session->set_flashdata('success', 'BERHASIL MENAMBAHKAN');
+			redirect('admin/penjual');
+		}
+		else
+		{
+			$this->session->set_flashdata('error', 'SALAH');
+			redirect('admin/penjual');
+		}
+	}
+
+	public function updatepenjual()
+	{
+		$this->load->view('admin/updatepenjual');
+	}
+
+	public function updatepenjuals($id)
+	{
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
 		
-	// 	$stok = $this->input->post(‘stok’);
-		
-	// 	$status = $this->input->post(‘status’);
-		
-	// 	$data=array(‘nama_barang’ => $nama_barang,
-		
-	// 	‘stok’ =>$stok,
-		
-	// 	‘status’=>$status
-		
-	// 	);
-		
-	// 	$this->model_barang->input_data($data);
-		
-	// 	redirect(‘barang’);
-		
-	// 	}else{
-		
-	// 	$this->load->view(‘design/header’);
-		
-	// 	$this->load->view(‘barang/input_barang’);
-		
-	// 	$this->load->view(‘design/footer’);
-		
-	// 	}
-		
-	// 	}
+		$data = array(
+			'username' => $username,
+			'password' => $password,
+		);
+		$this->db->replace('hello', $data);
+	}
+
+
 }

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <title>Ela - Bootstrap Admin Dashboard Template</title>
+    <title>Admin | Daftar Penjual GoStand</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('asset/admin/css/lib/bootstrap/bootstrap.min.css');?>" rel="stylesheet">
     <!-- Custom CSS -->
@@ -23,8 +23,6 @@
     <link href="<?php echo base_url('asset/admin/css/helper.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('asset/admin/css/style.css');?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('asset/css/styleadmin.css');?>">
-    
-
 </head>
 
 <body class="fix-header fix-sidebar">
@@ -182,7 +180,8 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Daftar Penjual / Toko</h3> </div>
+                    <h3 class="text-primary">Daftar Penjual / Toko</h3> 
+                </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
@@ -199,26 +198,45 @@
                     <div class="col-lg-12">
                     <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Daftar Penjual Toko</h4>
-                                <div class="table-responsive m-t-40">
+                                <?php
+                                if($this->session->flashdata('success'))
+                                {
+                                    echo $this->session->flashdata('success');
+                                }
+                                else
+                                {
+                                    echo $this->session->flashdata('error');
+                                }
+                                ?>
+                                <?php
+                                // $query = $this->db->get('hello');
+                                
+                                // foreach ($query->result() as $row)
+                                // {
+                                //     echo $row->username;
+                                //     echo $row->password ."<br/>";
+                                // }
+                                ?>
+                                <h4 class="card-title">Daftar Penjual Toko <a href="<?php echo base_url('admin/tambahpenjual');?>" class="btn btn-primary" >Tambah Penjual</a> </h4>
+                                <div class="table-responsive m-t-20">
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>Nama Toko</th>
+                                                <th>Nama Pemmilik</th>
+                                                <th>Email</th>
+                                                <th>No Hp</th>
+                                                <th>Lokasi Stand</th>
+                                                <th>Deskripsi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Tiger Nixon</td>
                                                 <td>System Architect</td>
-                                                <td>Edinburgh</td>
                                                 <td>61</td>
                                                 <td>2011/04/25</td>
+                                                <td>$320,800</td>
                                                 <td>$320,800</td>
                                             </tr>
                                         </tbody>
