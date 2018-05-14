@@ -28,7 +28,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="<?php echo base_url('penjual/index'); ?>" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -63,7 +63,7 @@
     </a>
     <!--side navbar bottom-->
      <div class="sidebar">
-     	<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
@@ -77,7 +77,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
                 Profile Toko
@@ -86,13 +86,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="<?php echo base_url('penjual/profil'); ?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Lihat Profile</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="<?php echo base_url('penjual/editprofil'); ?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Edit Profile</p>
                 </a>
@@ -100,7 +100,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="" class="nav-link">
               <i class="nav-icon fa fa-pie-chart"></i>
               <p>
                 Produk
@@ -109,13 +109,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="<?php echo base_url('penjual/produk'); ?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Lihat Produk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="<?php echo base_url('penjual/tambahproduk'); ?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Input Produk Baru</p>
                 </a>
@@ -123,7 +123,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="<?php echo base_url('penjual/riwayatpemesanan'); ?>" class="nav-link">
               <i class="nav-icon fa fa-calendar"></i>
               <p>
                 History Order
