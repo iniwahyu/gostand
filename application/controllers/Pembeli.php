@@ -21,7 +21,7 @@ class Pembeli extends CI_Controller {
     public function index()
     {
         
-        $this->load->view('pembeli/index');
+        $this->load->view('pembeli/profilpembeli');
     }
     
      public function hidup()
