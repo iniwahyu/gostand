@@ -34,9 +34,19 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/indexadmin');
 	}
 
+	public function user()
+	{
+		$this->load->view('admin/user');
+	}
+
 	public function penjual()
 	{
 		$this->load->view('admin/penjual');
+	}
+
+	public function history()
+	{
+		$this->load->view('admin/history');
 	}
 
 	public function pembeli()
@@ -70,8 +80,9 @@ class Admin extends CI_Controller {
 			$this->session->set_flashdata('error', 'SALAH');
 			redirect('admin/penjual');
 		}
-	
+
 		$query = $this->db->insert('hello', $data);
+		
 		if( $query )
 		{
 			$this->session->set_flashdata('success', 'BERHASIL MENAMBAHKAN');
