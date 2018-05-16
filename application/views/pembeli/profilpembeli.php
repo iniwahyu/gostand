@@ -21,12 +21,9 @@
   
   <body>
 
-<<<<<<< HEAD
-    
-=======
-<!-- INI AWAL NAVBAR -->
+
 <div id="header">
-  <nav class="navbar navbar-expand-lg bg-dark">
+  <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="#">GO-STAND</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -42,35 +39,35 @@
       </li>
     </ul>
 
-    <ul class="navbar-nav ml-auto">
-      <form class="form-inline">
-       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+  </form>
 
+    <ul class="navbar-nav ml-auto"> 
       <li class="nav-item">
-        <a class="btn btn-outline-success my-2 my-sm-0" href="#">Login</a>
+        <a class="btn btn-outline-light" href="#">Login</a>
       </li>
     </ul>
   </div>
 </nav>
 </div>
 <!-- INI AKHIR NAVBAR -->
->>>>>>> refs/remotes/origin/master
   
-  <div  class='container-fluid'>
+  <div>
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h1 align="center"><br>Data Diri</h1>
       </div>
 
+      <div id=formprofil>
       <div class="panel-body">
           <div class="row">
             <div class="col-md-6">
               <div class="table">
                 <tr>
                   <div align="center" style="margin-top: 10px">
-                    <img class="img-fluid" src="iconuser.png" alt="Ikon User">
+                    <img class="img-fluid" src="<?php echo base_url('asset/img/pembeli-iconuser.png'); ?>" alt="Ikon User">
                   </div>                            
                 </tr>                             
               </div>            
@@ -100,14 +97,14 @@
                   </tr>                                       
                   </tbody>
               </table>
-                <button type="button" class="btn btn-primary">Edit Data Diri</button>
-                <button type="button" class="btn btn-primary">Ganti Password</button>
+                <button type="button" class="btn btn-primary">Edit Data Diri</button>                
             </div>                
           </div>
         </div>
       
       </div>
     </div>
+  </div>
   </body>
   
             

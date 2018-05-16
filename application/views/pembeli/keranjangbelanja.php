@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!-- Required meta tags -->
-    <title>Edit Password</title>
+    
+    
+    <title>Profil Pembeli</title>
 
-   <link rel="stylesheet" href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,9 +21,9 @@
   
   <body>
 
-  <!-- INI AWAL NAVBAR -->
+
 <div id="header">
-  <nav class="navbar navbar-expand-lg bg-dark">
+  <nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="#">GO-STAND</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -38,14 +39,14 @@
       </li>
     </ul>
 
-    <ul class="navbar-nav ml-auto">
-      <form class="form-inline">
-       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+  </form>
 
+    <ul class="navbar-nav ml-auto"> 
       <li class="nav-item">
-        <a class="btn btn-outline-success my-2 my-sm-0" href="#">Login</a>
+        <a class="btn btn-outline-light" href="#">Login</a>
       </li>
     </ul>
   </div>
@@ -53,48 +54,8 @@
 </div>
 <!-- INI AKHIR NAVBAR -->
   
-  <div  class='container-fluid'>
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h1 align="center"><br>Data Diri</h1>
-      </div>
 
-      <div id="form1">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="table">
-                <tr>
-                  <div align="center" style="margin-top: 10px">
-                    <img class="img-fluid" src="iconuser.png" alt="Ikon User">
-                  </div>                            
-                </tr>                             
-              </div>
-            </div>
-        
-            <div class="col-md-6">                  
-               <form action="">                  
-                  <div class="form-group">
-                    <label for="nim">NIM :</label>
-                    <input type="text" class="form-control" placeholder="NIM" name="nim" disabled>
-                  </div>
-                  <div class="form-group">
-                    <label for="oldpassword">Password Lama :</label>
-                    <input type="text" class="form-control" placeholder="Password Lama" name="oldpassword">
-                  </div>                            
-                  <div class="form-group">
-                    <label for="newpassword">Password Baru :</label>
-                    <input type="text" class="form-control" placeholder="Password Baru" name="newpassword">
-              </form>
-                <br>
-                <button type="button" class="btn btn-primary">Simpan</button>
-            </div>                
-          </div>
-        </div>
-      
-      </div>
-    </div>
-      </div>
+
   </body>
   
             
