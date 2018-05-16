@@ -66,12 +66,8 @@
             <div class="col-md-6">
               <div class="table">
                 <tr>
-                  <div align="center" style="margin-top: 10px">
-<<<<<<< HEAD
-                    <img class="img-fluid" src="<?php echo base_url('pembeli/iconuser.png');?>" alt="Ikon User">
-=======
+                  <div align="center" style="margin-top: 10px">            
                     <img class="img-fluid" src="<?php echo base_url('asset/img/pembeli-iconuser.png'); ?>" alt="Ikon User">
->>>>>>> 5202de3aefa7a487028b90eb85fda06c5e7c4f57
                   </div>                            
                 </tr>                             
               </div>            
