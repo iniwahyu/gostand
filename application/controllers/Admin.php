@@ -44,6 +44,11 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/penjual');
 	}
 
+	public function profilpenjual()
+	{
+		$this->load->view('admin/profilpenjual');
+	}
+
 	public function history()
 	{
 		$this->load->view('admin/history');

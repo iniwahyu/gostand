@@ -82,7 +82,12 @@
                                     <span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2>1178</h2>
+                                    <h2>
+                                        <?php 
+                                        $query = $this->db->query('SELECT * FROM hello');
+                                        echo $query->num_rows();
+                                        ?>
+                                    </h2>
                                     <p class="m-b-0">Penjualan</p>
                                 </div>
                             </div>

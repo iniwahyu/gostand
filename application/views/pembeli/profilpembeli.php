@@ -70,7 +70,7 @@
               <div class="table">
                 <tr>
                   <div align="center" style="margin-top: 10px">
-                    <img class="img-fluid" src="iconuser.png" alt="Ikon User">
+                    <img class="img-fluid" src="<?php echo base_url('pembeli/iconuser.png');?>" alt="Ikon User">
                   </div>                            
                 </tr>                             
               </div>            
