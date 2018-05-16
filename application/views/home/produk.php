@@ -12,38 +12,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     
 </head>
-<body>
+<body id="body">
 
+<!-- INI AWAL NAVBAR -->
 <?php require_once(APPPATH. 'views/home/navbar.php'); ?>
+<!-- INI AKHIR NAVBAR -->
 
 <!-- INI CONTAINER IKLAN/HOT PRODUK -->
-<div class="section1">
-    <div class="row">
-        <div class="col-sm-12">
-        	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-			  <div class="carousel-inner">
-			    <div class="carousel-item active">
-			      <img class="d-block w-100" src="https://images.pexels.com/photos/539432/pexels-photo-539432.jpeg?cs=srgb&dl=caffeine-close-up-coffee-539432.jpg" alt="First slide">
-			    </div>
-			    <div class="carousel-item">
-			      <img class="d-block w-100" src="https://images.pexels.com/photos/161600/smoothie-fruit-beverage-drink-161600.jpeg?cs=srgb&dl=berry-beverage-blur-161600.jpg" alt="Second slide">
-			    </div>
-			    <div class="carousel-item">
-			      <img class="d-block w-100" src="https://images.pexels.com/photos/452737/pexels-photo-452737.jpeg?cs=srgb&dl=beverage-citrus-fruit-cocktail-452737.jpg" alt="Third slide">
-			    </div>
-			  </div>
-			  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			    <span class="sr-only">Previous</span>
-			  </a>
-			  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			    <span class="sr-only">Next</span>
-			  </a>
-			</div> 
-        </div>
-    </div>
-</div>
+
 <!-- INI PENUTUP CONTAINER IKLAN/HOT PRODUK -->
 
 <!-- INI CARD AWAL MAKANAN DAN MINUMAN -->
@@ -75,7 +51,7 @@
 <!-- INI CARD AKHIR MAKANAN DAN MINUMAN -->
 
 <!-- INI AWAL ABOUT -->
-<div class="section2">
+<div class="section3">
 <h1><center>ABOUT</center></h1>
 </div>
 
