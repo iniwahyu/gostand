@@ -15,36 +15,7 @@
 <body id="body">
 
 <!-- INI AWAL NAVBAR -->
-<div id="header">
-	<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">GO-STAND</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="buku.php">Daftar Stand</a>
-      </li>
-    </ul>
-
-    <form class="form-inline">
-   		<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    	<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
- 	</form>
-
-    <ul class="navbar-nav ml-auto"> 
-      <li class="nav-item">
-        <a class="btn btn-outline-light" href="#">Login</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</div>
+<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
 <!-- INI AKHIR NAVBAR -->
 
 <!-- INI CONTAINER IKLAN/HOT PRODUK -->
@@ -52,11 +23,11 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/33392/s-1256-824/New_Banner_1.jpg" alt="" width="100%" height="450" >
+                <img src="https://s3.bukalapak.com/uploads/flash_banner/33392/s-1256-824/New_Banner_1.jpg" alt="" width="100%" height="350" >
             </div>
             <div class="col-sm-6">
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="225" style="padding-bottom: 5px;" >
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="225">
+                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="175" style="padding-bottom: 5px;" >
+                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="175">
             </div>
         </div>
     </div>
