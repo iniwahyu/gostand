@@ -24,10 +24,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url']  =  "http://".$_SERVER['HTTP_HOST'];
-<<<<<<< HEAD
-=======
-
->>>>>>> 5202de3aefa7a487028b90eb85fda06c5e7c4f57
 $config['base_url'] .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])).'/';
 
 /*
