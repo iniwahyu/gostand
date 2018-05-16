@@ -18,6 +18,9 @@
   
   <body>
 
+<<<<<<< HEAD
+  
+=======
   <!-- INI AWAL NAVBAR -->
 <div id="header">
   <nav class="navbar navbar-expand-lg bg-dark">
@@ -50,6 +53,7 @@
 </nav>
 </div>
 <!-- INI AKHIR NAVBAR -->
+>>>>>>> refs/remotes/origin/master
   
   <div  class='container-fluid'>
     <div class="panel panel-primary">
