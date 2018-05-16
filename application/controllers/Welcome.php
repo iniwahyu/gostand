@@ -28,5 +28,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('produk');
 	}
 
+	public function home2()
+	{
+		$this->load->view('home/home2');
+	}
+
 	
 }

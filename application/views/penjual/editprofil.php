@@ -172,7 +172,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi Penjual</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="deskripsi" placeholder="">
+                    <textarea name="deskripsi" class="form-control" cols="30" rows="5"></textarea>
                   </div>
                   <p>Jam Operasional</p>
                   <div class="form-group">

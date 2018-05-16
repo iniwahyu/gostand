@@ -19,9 +19,7 @@
   <a class="navbar-brand" href="#">GO-STAND</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-	</button>
-	
-	
+  </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
@@ -72,6 +70,7 @@
 						</div>
 					</div>
 				</div>
+				
 				<div class="col-md-6">					
 					<div align="left">
 						<h4>NIM	:</h4>
