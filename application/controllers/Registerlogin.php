@@ -40,6 +40,11 @@ class Registerlogin extends CI_Controller
 			echo "Salah Anjing";
 		}
 	}
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect(base_url('penjual/login'));
+	}
 }
 
 	

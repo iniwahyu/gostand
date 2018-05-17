@@ -51,7 +51,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li>
-        <button type="submit" class="btn btn-primary btn-block btn-flat">LogOut</button>
+        <a href="<?php echo base_url('registerlogin/logout'); ?>" class="btn btn-primary btn-block btn-flat" >LogOut</a>
       </li>
     </ul>
 </nav>
