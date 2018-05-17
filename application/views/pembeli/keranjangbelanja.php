@@ -16,6 +16,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+ 
 
 
     
@@ -49,24 +51,55 @@
                     <div class="col-lg-12">
                     <div class="card">
                             <div class="card-body">                               
-                                <h4 class="card-title">Daftar User </h4>
+                                <h4 class="card-title">Keranjang Belanja</h4>
                                 <div class="table-responsive m-t-20">
-                                    <table id="myTable" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nama / Nama Toko</th>
-                                                <th>Nim / Username</th>
-                                                <th>Password</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>2011/04/25</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011/07/25</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+                <td>2009/01/12</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2012/03/29</td>
+                <td>$433,060</td>
+            </tr>
+
+            </tbody>      
+    </table>
                                 </div>
                             </div>
                         </div>
@@ -76,17 +109,8 @@
             </div>
             <!-- End Container fluid  -->
         </div>
-        <!-- End Page wrapper  -->
-       <p>Kelola informasi profil Anda untuk mengontrol, melindungi dan mengamankan akun</p>
-                    <hr>
-                    
-      </div>
-                    <table>
-                        <tr>
-                            <td>a</td>
-                            <td>a</td>
-                        </tr>
-                    </table>
+        <!-- End Page wrapper  -->                         
+      </div>                    
                 </div>
             </div>
         </div>
@@ -94,6 +118,9 @@
   </div>
 </div>
 <!-- Content -->
+
+
+
             
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -104,33 +131,18 @@
 <script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-<!-- All Jquery -->
-    <script src="<?php echo base_url('asset/admin/js/lib/jquery/jquery.min.js');?>"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="<?php echo base_url('asset/admin/js/lib/bootstrap/js/popper.min.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/bootstrap/js/bootstrap.min.js');?>"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="<?php echo base_url('asset/admin/js/jquery.slimscroll.js');?>"></script>
-    <!--Menu sidebar -->
-    <script src="<?php echo base_url('asset/admin/js/sidebarmenu.js');?>"></script>
-    <!--stickey kit -->
-    <script src="<?php echo base_url('asset/admin/js/lib/sticky-kit-master/dist/sticky-kit.min.js');?>"></script>
-    <!--Custom JavaScript -->
 
-    
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 
-    <script src="<?php echo base_url('asset/admin/js/custom.min.js');?>"></script>
+<script type="text/javascript">
+$(document).ready( function () 
+{
+    $('#example').DataTable();
+} );     
+</script>
 
-    <!-- DATA TABLES -->
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/datatables.min.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js');?>"></script>
-    <script src="<?php echo base_url('asset/admin/js/lib/datatables/datatables-init.js');?>"></script>
 
 </body>
 </html>

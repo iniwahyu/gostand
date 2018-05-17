@@ -16,6 +16,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+ 
+
+
+    
 
   </head>
   
@@ -34,15 +39,81 @@
 <div class="col-md-9">
   <div class="panel-right">
     <div class="card">
-      <h4>Riwayat Pemesanan</h4>
-       <p>Kelola informasi profil Anda untuk mengontrol, melindungi dan mengamankan akun</p>
-                    <hr>
-                    <table>
+      
+      <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            
+            <!-- Container fluid  -->
+            <div class="container-fluid">
+                <!-- Start Page Content -->
+                <div class="row bg-white m-l-0 m-r-0 box-shadow ">
+
+                    <div class="col-lg-12">
+                    <div class="card">
+                            <div class="card-body">                               
+                                <h4 class="card-title">Riwayat Pembelian</h4>
+                                <div class="table-responsive m-t-20">
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
                         <tr>
-                            <td>a</td>
-                            <td>a</td>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
                         </tr>
-                    </table>
+                    </thead>
+                    
+                    <tbody>
+                      <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>63</td>
+                        <td>2011/07/25</td>
+                        <td>$170,750</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>San Francisco</td>
+                        <td>66</td>
+                        <td>2009/01/12</td>
+                        <td>$86,000</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Edinburgh</td>
+                        <td>22</td>
+                        <td>2012/03/29</td>
+                        <td>$433,060</td>
+                      </tr>
+                    </tbody>      
+                  </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End PAge Content -->
+            </div>
+            <!-- End Container fluid  -->
+        </div>
+        <!-- End Page wrapper  -->                         
+      </div>                    
                 </div>
             </div>
         </div>
@@ -50,6 +121,9 @@
   </div>
 </div>
 <!-- Content -->
+
+
+
             
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -59,6 +133,19 @@
 <script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
 <script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript">
+$(document).ready( function () 
+{
+    $('#example').DataTable();
+} );     
+</script>
+
 
 </body>
 </html>
