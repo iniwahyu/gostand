@@ -1,90 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <head>
+    <!-- Required meta tags -->
+    
+    
+    <title>Profil Pembeli</title>
 
     <link rel="stylesheet" href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<?php echo base_url('asset/css/stylehome.css'); ?>">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    
-</head>
-<body id="body">
+    <link rel="stylesheet" href="<?php echo base_url('asset/css/stylepembeli.css'); ?>">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  
+<body id="body-pembeli">
 
 <!-- INI AWAL NAVBAR -->
-<div id="header">
-	<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">GO-STAND</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="buku.php">Daftar Stand</a>
-      </li>
-    </ul>
-
-    <form class="form-inline">
-   		<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    	<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
- 	</form>
-
-    <ul class="navbar-nav ml-auto"> 
-      <li class="nav-item">
-        <a class="btn btn-outline-light" href="#">Login</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</div>
+<?php require_once(APPPATH. 'views/pembeli/navbarpembeli.php'); ?>
 <!-- INI AKHIR NAVBAR -->
 
-<!-- INI CONTAINER IKLAN/HOT PRODUK -->
-<div class="section1">
-    <div class="container">
+
+<!--Ini Navbar Samping -->  
+<?php require_once(APPPATH. 'views/pembeli/navbarsamping.php'); ?>
+<!-- Akhir Navbar Samping -->
+
+<!-- Content -->
+<div class="col-md-10">
+  <div class="panel-right">
+    <div class="card">                  
+      
+      <!-- INI CONTAINER IKLAN/HOT PRODUK -->
+      <div class="section1">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+                <img src="https://s3.bukalapak.com/uploads/flash_banner/33392/s-1256-824/New_Banner_1.jpg" alt="" width="100%" height="350" >
+            </div>
+            <div class="col-sm-6">
+                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="350" >
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- INI PENUTUP CONTAINER IKLAN/HOT PRODUK -->
+        
+    <!-- INI CARD AWAL MAKANAN DAN MINUMAN -->
+    <div class="section2">
+      <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/33392/s-1256-824/New_Banner_1.jpg" alt="" width="100%" height="450" >
-            </div>
-            <div class="col-sm-6">
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="225" style="padding-bottom: 5px;" >
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="225">
-            </div>
+          <div class="col-md-6">
+            <a href="<?php echo base_url('produk');?>">
+              <div class="card-kiri">
+               <div class="card-body">
+                <div class="card-icon">
+                  <i class="fa fa-cutlery" aria-hidden="true"></i>
+                </div>
+                <div class="card-text">
+                <h4>MAKANAN</h4>
+                <ul>
+                  <li>Makanan Halal 100%</li>
+                  <li>Makanan Selalu Terbaru</li>
+            <li>Makanan Berkualitas</li>
+          </ul>
         </div>
-    </div>
-</div>
-<!-- INI PENUTUP CONTAINER IKLAN/HOT PRODUK -->
-
-<!-- INI CARD AWAL MAKANAN DAN MINUMAN -->
-<div class="section2">
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card kiri">
-			  <div class="card-body">
-			    <!-- <h5 class="card-title">Card title</h5> -->
-			    	<center><i class="fa fa-cutlery" aria-hidden="true"></i></center>
-			    	<!-- <a href="#" class="card-link">Another link</a> -->
-			  </div>
-			</div>
+        </div>
+        </a>
+      </div>
         </div>
 
         <div class="col-md-6">
-            <div class="card kanan">
-			  <div class="card-body">
-			    <!-- <h5 class="card-title">Card title</h5> -->
-			    <center><i class="fa fa-coffee" aria-hidden="true"></i></center>
-			    <!-- <a href="#" class="card-link">Another link</a> -->
-			  </div>
-			</div>
+            <div class="card-kanan">
+        <div class="card-body">
+        <div class="card-icon">
+          <i class="fa fa-coffee" aria-hidden="true"></i>
+        </div>
+          <div class="card-text">
+        <h4>MINUMAN</h4>
+          <ul>
+            <li>Minuman Halal 100%</li>
+            <li>Minuman Selalu Terbaru</li>
+            <li>Minuman Berkualitas</li>
+          </ul>
+        </div>
+        </div>
+      </div>
         </div> 
     </div>
 </div>
@@ -93,16 +98,91 @@
 
 <!-- INI AWAL ABOUT -->
 <div class="section3">
-<h1><center>ABOUT</center></h1>
+<div class="container">
+  <h3>HOT PRODUK</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+<div class="section4">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card-icon">
+        <i class="fa fa-shield" aria-hidden="true"></i>
+      </div>
+      <h4>AMAN</h4>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card-icon">
+        <i class="fa fa-money" aria-hidden="true"></i>
+      </div>
+      <h4>MUDAH BAYARNYA</h4>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card-icon">
+        <i class="fa fa-ticket" aria-hidden="true"></i>
+      </div>
+      <h4>24 / 7</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="about">
+      <p><b>GoStand</b> adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id feugiat arcu. Proin non nisi augue. Cras pharetra velit quis aliquam pretium. Proin a augue ac sem eleifend lacinia id rutrum arcu. Vestibulum venenatis, felis vel dapibus maximus, augue ipsum cursus magna, sed condimentum dui tortor sed diam. Duis in nulla a nunc lacinia dapibus quis in turpis. Vestibulum porttitor pharetra nisi sed interdum. Nam molestie magna tortor, egestas sollicitudin risus vehicula eleifend. Curabitur lobortis est bibendum, laoreet arcu ut, iaculis mauris. Donec sollicitudin sed enim non viverra. Nullam mollis, nunc nec scelerisque congue, diam urna luctus purus, id eleifend ante eros convallis nisl. Vestibulum quis elit eu diam ornare mattis ut at felis. Vestibulum felis felis, lacinia in fermentum ac, consequat eu purus. Donec molestie elit in imperdiet vulputate. Etiam arcu nulla, mollis a nulla vitae, varius condimentum libero. </p>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
 <!-- INI AKHIR ABOUT -->
+                
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Content -->
+            
 
-<!-- SCRIPT -->
-<script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
-<script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
+<script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 </body>

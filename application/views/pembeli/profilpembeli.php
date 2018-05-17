@@ -19,103 +19,69 @@
 
   </head>
   
-  <body>
+<body id="body-pembeli">
 
-
-<div id="header">
-  <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">GO-STAND</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="buku.php">Daftar Stand</a>
-      </li>
-    </ul>
-
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-  </form>
-
-    <ul class="navbar-nav ml-auto"> 
-      <li class="nav-item">
-        <a class="btn btn-outline-light" href="#">Login</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</div>
+<!-- INI AWAL NAVBAR -->
+<?php require_once(APPPATH. 'views/pembeli/navbarpembeli.php'); ?>
 <!-- INI AKHIR NAVBAR -->
-  
-  <div>
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h1 align="center"><br>Data Diri</h1>
-      </div>
 
-      <div id=formprofil>
-      <div class="panel-body">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="table">
-                <tr>
-                  <div align="center" style="margin-top: 10px">            
-                    <img class="img-fluid" src="<?php echo base_url('asset/img/pembeli-iconuser.png'); ?>" alt="Ikon User">
-                  </div>                            
-                </tr>                             
-              </div>            
+
+<!--Ini Navbar Samping -->  
+<?php require_once(APPPATH. 'views/pembeli/navbarsamping.php'); ?>
+<!-- Akhir Navbar Samping -->
+
+<!-- Content -->
+<div class="col-md-10">
+  <div class="panel-right">
+    <div class="card">
+      <h4>Profilku</h4>
+       <p>Kelola informasi profil Anda untuk mengontrol, melindungi dan mengamankan akun</p>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td align="center">
+                               <img id="img1" class="img-fluid" src="<?php echo base_url('asset/img/pembeli-iconuser.png'); ?>" alt="Ikon User">
+                            </td>
+                            
+                            <td align="left">
+                              <table>
+                                <tr>
+                                  <td><label>Nama</label></td>                                
+                                  <td><label>: Bugi Setiawan</label></td>
+                                </tr>
+                                <tr>
+                                  <td><label>NIM</label></td>
+                                  <td><label>: A11.2016.09358</label></td>
+                                </tr>
+                                <tr>
+                                  <td><label>Email</label></td>
+                                  <td><label>: bugisetiawan98@gmail.com</label></td>
+                                </tr>
+                                <tr>
+                                  <td><label>Telepon</label></td>
+                                  <td><label>: 087830431896</label></td>
+                                </tr>                                                              
+                              </table>
+                              <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url('pembeli/editprofil');?>">Edit Profil</a></button>
+                            </td>                            
+                        </tr>
+                    </table>
+                </div>
             </div>
-        
-            <div class="col-md-6">                  
-               <table class="table">            
-                <tbody>
-                  <tr>
-                    <th scope="row">Nama</th>
-                    <td colspan="5">: Bugi Setiawan</td>              
-                  </tr>
-                  
-                  <tr>
-                    <th scope="row">NIM</th>
-                    <td colspan="5">: A11.2016.09358</td>
-                  </tr>
-                  
-                  <tr>
-                    <th scope="row">Email</th>
-                    <td colspan="5">: bugisetiawan98@gmail.com</td>
-                  </tr>
-                  
-                  <tr>
-                    <th scope="row">No.Handphone :</th>
-                    <td colspan="5">: 087830431896</td> 
-                  </tr>                                       
-                  </tbody>
-              </table>
-                <button type="button" class="btn btn-primary">Edit Data Diri</button>                
-            </div>                
-          </div>
         </div>
-      
-      </div>
     </div>
-  </div>
-  </body>
-  
+</div>
+</div>
+<!-- Content -->
             
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-    <script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
-    <script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
+<script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-  </body>
+</body>
 </html>

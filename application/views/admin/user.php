@@ -40,6 +40,7 @@
             <!-- End Sidebar scroll-->
         </div>
         <!-- End Left Sidebar  -->
+        
         <!-- Page wrapper  -->
         <div class="page-wrapper">
             <!-- Bread crumb -->
@@ -55,6 +56,7 @@
                 </div>
             </div>
             <!-- End Bread crumb -->
+            
             <!-- Container fluid  -->
             <div class="container-fluid">
                 <!-- Start Page Content -->
