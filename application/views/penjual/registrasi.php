@@ -28,7 +28,17 @@
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">Registrasi</p>
-                <form action="<?php echo site_url('registerlogin/register'); ?>" method="post">
+                <form action="<?php echo base_url('registerlogin/prosesregister'); ?>" method="post">
+                <?php
+                if($this->session->flashdata('success'))
+                {
+                    echo $this->session->flashdata('success');
+                }
+                else
+                {
+                    echo $this->session->flashdata('error');
+                }
+                ?>
                     <div class="form-group has-feedback">
                         <input type="text" name="nim" class="form-control" placeholder="NIM"/>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -44,7 +54,6 @@
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-xs-4">
-                            
                             <br>
                             <button type="submit" class="btn btn-primary btn-block btn-flat">Registrasi</button>
                         </div><!-- /.col -->

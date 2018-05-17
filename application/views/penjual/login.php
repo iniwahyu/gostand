@@ -28,7 +28,7 @@
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">Sign in</p>
-                <form action="<?php echo site_url('registerlogin/login'); ?>" method="post">
+                <form action="<?php echo site_url('registerlogin/proseslogin'); ?>" method="post">
                     <div class="form-group has-feedback">
                         <input type="text" name="username" class="form-control" placeholder="Username"/>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>

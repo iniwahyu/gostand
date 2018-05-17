@@ -4,22 +4,43 @@ defined('BASEPATH') OR exit('No Direct Script Access Allowed');
 
 class Registerlogin extends CI_Controller
 {
-	public function register()
+	function registrasi()
+	{
+		$this->load->view('penjual/registrasi');
+	}
+	
+	public function prosesregister()
 	{
 		$this->load->model('home_model');
 		$data = array(
         'nim' => $this->input->post('nim'),
-        'nama' => $this->input->post('nama'),
+	'nama' => $this->input->post('nama'),
         'password' => md5($this->input->post('password')),
         //'level' => $this->input->post('')
         'level' => 'Pembeli'
          );
 
 		$data = $this->home_model->Insert('user', $data);
-		return "berhasil";
+
+		if( $data )
+		{
+			$this->session->set_flashdata('success', 'BERHASIL DAFTAR');
+			redirect('registrasi');
+		}
+		else
+		{
+			$this->session->set_flashdata('error', 'GAGAL MENDAFTAR');
+			redirect('registrasi');
+		}
     	//redirect(base_url(),'refresh');
 	}
-	public function login()
+
+	function login()
+	{
+		$this->load->view('penjual/login');
+	}
+
+	public function proseslogin()
 	{
 		$this->load->model('home_model');
 		$username=$this->input->post('username');
@@ -43,7 +64,7 @@ class Registerlogin extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect(base_url('penjual/login'));
+		redirect(base_url('login'));
 	}
 }
 

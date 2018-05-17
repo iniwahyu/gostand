@@ -28,6 +28,16 @@ class Welcome extends CI_Controller {
 		$this->load->view('home/produk');
 	}
 
+	public function makanan()
+	{
+		$this->load->view('home/makanan');
+	}
+
+	public function minuman()
+	{
+		$this->load->view('home/minuman');
+	}
+
 	public function home2()
 	{
 		$this->load->view('home/home2');

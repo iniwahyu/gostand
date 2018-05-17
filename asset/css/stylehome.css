@@ -12,7 +12,8 @@ a{
     color: #fff;
 }
 .section1{
-	padding: 35px 0;
+    padding: 35px 0;
+    min-height: 400px;
 }
 .section1 .container-fluid{
     width: 97%;
@@ -28,6 +29,7 @@ a{
     background: #000;
     margin-top: 30px;
     padding: 35px;
+    min-height: 400px;
 }
 .section2 a:hover{
     text-decoration: none;
@@ -56,7 +58,7 @@ a{
 }
 .section2 .card-icon{
     border-radius: 50%;
-    background: #0984e3;
+    background: #2980b9;
     width: 150px;
     padding: 40px;
     margin: 0 auto;
@@ -82,6 +84,7 @@ a{
 }
 .section3{
     padding: 35px;
+    min-height: 400px;
 }
 .section3 h3{
     text-align: center;
@@ -124,9 +127,25 @@ a{
     margin: 15px 0;
     text-align: center;
 }
-.section-p-2 ul{
-    list-style-type: none;
-    padding-left: 0;
+.section-p-2 .col-md-3{
+    margin-bottom: 10px;
+}
+.section-p-2 a:hover{
+    text-decoration: none;
+}
+.section-p-2 a:hover h5{
+    color: red;
+}
+.section-p-2 h5{
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0;
+    color: #000;
+}
+.section-p-2 span{
+    font-size: 15px;
+    color: #456883;
+    font-weight: 700;
 }
 
 /* --- BAGIAN BUGI --- */

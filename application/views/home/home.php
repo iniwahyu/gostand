@@ -38,7 +38,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-			<a href="<?php echo base_url('produk');?>">
+			<a href="<?php echo base_url('makanan');?>">
             <div class="card-kiri">
 			  <div class="card-body">
 				<div class="card-icon">
@@ -58,6 +58,7 @@
         </div>
 
         <div class="col-md-6">
+			<a href="<?php echo base_url('minuman');?>">
             <div class="card-kanan">
 			  <div class="card-body">
 				<div class="card-icon">
@@ -73,6 +74,7 @@
 				</div>
 			  </div>
 			</div>
+			</a>
         </div> 
     </div>
 </div>
@@ -144,6 +146,12 @@
 			<div class="about">
 			<p><b>GoStand</b> adalah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id feugiat arcu. Proin non nisi augue. Cras pharetra velit quis aliquam pretium. Proin a augue ac sem eleifend lacinia id rutrum arcu. Vestibulum venenatis, felis vel dapibus maximus, augue ipsum cursus magna, sed condimentum dui tortor sed diam. Duis in nulla a nunc lacinia dapibus quis in turpis. Vestibulum porttitor pharetra nisi sed interdum. Nam molestie magna tortor, egestas sollicitudin risus vehicula eleifend. Curabitur lobortis est bibendum, laoreet arcu ut, iaculis mauris. Donec sollicitudin sed enim non viverra. Nullam mollis, nunc nec scelerisque congue, diam urna luctus purus, id eleifend ante eros convallis nisl. Vestibulum quis elit eu diam ornare mattis ut at felis. Vestibulum felis felis, lacinia in fermentum ac, consequat eu purus. Donec molestie elit in imperdiet vulputate. Etiam arcu nulla, mollis a nulla vitae, varius condimentum libero. </p>
 			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="ml-auto">
+			Copyright GoStand
 		</div>
 	</div>
 </div>
