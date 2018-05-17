@@ -39,5 +39,10 @@ class Pembeli extends CI_Controller {
 		$this->load->view('pembeli/keranjangbelanja');
 	}
 
+	public function default()
+	{
+		$this->load->view('pembeli/default');
+	}
+
 
 }

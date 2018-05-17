@@ -1,11 +1,10 @@
-
 /* --- BAGIAN IRA --- */
 a{
 	color: #fff;
 }
-#body{
+/* #body{
     background: #dfe4ea;
-}
+} */
 #header .navbar{
     background: #0984e3;
 }
@@ -13,43 +12,130 @@ a{
     color: #fff;
 }
 .section1{
-	margin-top: 20px;
+	padding: 35px 0;
 }
-.section1 .carousel-inner .carousel-item img{
-	height: 595px;
+.section1 .container-fluid{
+    width: 97%;
+}
+.section1 img{
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .section2{
+    /* background: #cc2b5e;  
+    background: -webkit-linear-gradient(to right, #753a88, #cc2b5e); 
+    background: linear-gradient(to right, #753a88, #cc2b5e); */
+    background: #000;
     margin-top: 30px;
-    margin-left: 160px;
-    padding: 15px;
+    padding: 35px;
 }
-.section2 .kiri{
-    background: #1D4350;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    width: 350px;
-    height: 350px;
+.section2 a:hover{
+    text-decoration: none;
+}
+.section2 .card-kiri, .section2 .card-kanan{
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+    transition: .5s;
+}
+.section2 .card-kiri:hover{
+    background: red;
+    transition: .5s;
+}
+.section2 .card-kiri:hover .card-icon{
+    background: #000;
+    transition: .5s;
+}
+.section2 .card-kanan:hover{
+    background: red;
+    transition: .5s;
+}
+.section2 .card-kanan:hover .card-icon{
+    background: #000;
+    transition: .5s;
+}
+.section2 .card-icon{
     border-radius: 50%;
-    font-size: 100px;
-    font-weight: 700;
+    background: #0984e3;
+    width: 150px;
+    padding: 40px;
+    margin: 0 auto;
+}
+.section2 .card-icon .fa{
+    font-size: 50px;
     color: #fff;
 }
-.section2 .kanan{
-    background: #1D4350;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    font-size: 100px;
+.section2 .card-text h4{
+    padding: 15px 0;
+    text-transform: uppercase;
     font-weight: 700;
     color: #fff;
+    font-size: 2em;
+}
+.section2 .card-text ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.section2 .card-text ul li{
+    color: #fff;
+    font-size: 18px;
+}
+.section3{
+    padding: 35px;
+}
+.section3 h3{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0 15px;
+}
+.section3 .card{
+    transition: .5s;
+}
+.section3 .card:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: .5s;
+}
+.section3 .card-img-top{
+    height: 250px;
+}
+.section4{
+    background: #ecf0f1;
+    padding: 35px;
+    text-align: center;
+}
+.section4 .card-icon{
+    background: #fff;
+    width: 100px;
+    padding: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.section4 .card-icon i{
+    font-size: 45px;
+}
+.section4 h4{
+    padding: 15px 0;
+}
+.section4 .about{
+    text-align: left;
+}
+/* ----- BAGIAN PRODUK ------ */
+.section-p-1{
+    margin: 15px 0;
+    text-align: center;
+}
+.section-p-2 ul{
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.fa {
-    margin-top: 100px;
+/* --- BAGIAN BUGI --- */
+#body-pembeli{
+    background: #f5f5f5;
 }
-
-
-
-
+.sectionpembeli1{
+    margin: 30px 0 20px;
+}
+.sectionpembeli1 .card{
+    padding: 10px;
+}

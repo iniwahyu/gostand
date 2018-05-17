@@ -20,12 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+		$this->load->view('home/home');
 	}
 
 	public function produk()
 	{
-		$this->load->view('produk');
+		$this->load->view('home/produk');
 	}
 
 	public function home2()
