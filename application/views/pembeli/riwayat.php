@@ -31,46 +31,23 @@
 <!-- Akhir Navbar Samping -->
 
 <!-- Content -->
-<div class="col-md-10">
+<div class="col-md-9">
   <div class="panel-right">
     <div class="card">
-      <h4>Profilku</h4>
+      <h4>Riwayat Pemesanan</h4>
        <p>Kelola informasi profil Anda untuk mengontrol, melindungi dan mengamankan akun</p>
                     <hr>
                     <table>
                         <tr>
-                            <td align="center">
-                               <img id="img1" class="img-fluid" src="<?php echo base_url('asset/img/pembeli-iconuser.png'); ?>" alt="Ikon User">
-                            </td>
-                            
-                            <td align="left">
-                              <table>
-                                <tr>
-                                  <td><label>Nama</label></td>                                
-                                  <td><label>: Bugi Setiawan</label></td>
-                                </tr>
-                                <tr>
-                                  <td><label>NIM</label></td>
-                                  <td><label>: A11.2016.09358</label></td>
-                                </tr>
-                                <tr>
-                                  <td><label>Email</label></td>
-                                  <td><label>: bugisetiawan98@gmail.com</label></td>
-                                </tr>
-                                <tr>
-                                  <td><label>Telepon</label></td>
-                                  <td><label>: 087830431896</label></td>
-                                </tr>                                                              
-                              </table>
-                              <button class="btn btn-primary"><a style="color: white;" href="<?php echo base_url('pembeli/editprofil');?>">Edit Profil</a></button>
-                            </td>                            
+                            <td>a</td>
+                            <td>a</td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-</div>
+  </div>
 </div>
 <!-- Content -->
             

@@ -22,60 +22,29 @@
   
 
   <!-- INI AWAL NAVBAR -->
-<div id="header">
-  <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">GO-STAND</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="buku.php">Daftar Stand</a>
-      </li>
-    </ul>
-
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-  </form>
-
-    <ul class="navbar-nav ml-auto"> 
-      <li class="nav-item">
-        <a class="btn btn-outline-light" href="#">Login</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</div>
+<?php require_once(APPPATH. 'views/pembeli/navbarpembeli.php'); ?>
 <!-- INI AKHIR NAVBAR -->
-  
-  <div>
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h1 align="center"><br>Data Diri</h1>
-      </div>
 
-      <div id="formeditprofil">
-      <div class="panel-body">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="table">
-                <tr>
-                  <div align="center">
-                    <img id="img1" class="img-fluid" src="<?php echo base_url('asset/img/pembeli-iconuser.png'); ?>" alt="Ikon User">
-                  </div>                            
-                </tr>                             
-              </div>
-            </div>
-          
-        
-            <div class="col-md-6">                  
-               <form action="">
+
+<!--Ini Navbar Samping -->  
+<?php require_once(APPPATH. 'views/pembeli/navbarsamping.php'); ?>
+<!-- Akhir Navbar Samping -->
+
+<!-- Content -->
+<div class="col-md-9">
+  <div class="panel-right">
+    <div class="card">
+      <h4>Edit profil</h4>
+       <p>Kelola informasi profil Anda untuk mengontrol, melindungi dan mengamankan akun</p>
+                    <hr>
+                    <table>
+                        <tr>                          
+                            <td align="center">
+                              <img id="img1" class="img-fluid" src="<?php echo base_url('asset/img/pembeli-iconuser.png'); ?>" alt="Ikon User">
+                            </td>
+                            
+                            <td align="left">
+                              <form action="">
                   <div class="form-group">
                     <label for="nama">Nama :</label>
                     <input type="text" class="form-control" placeholder="Nama Anda" name="email">
@@ -94,12 +63,18 @@
               </form>
                 <br>
                 <button type="button" class="btn btn-primary">Simpan</button>
-            </div>                
-          </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   </div>
+</div>
+<!-- Content -->
+  
+ 
 
       
   </body>

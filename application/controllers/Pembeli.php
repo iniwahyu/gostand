@@ -34,6 +34,11 @@ class Pembeli extends CI_Controller {
 		$this->load->view('pembeli/editprofil');
 	}
 
+	 public function riwayat()
+	{
+		$this->load->view('pembeli/riwayat');
+	}
+
 	public function keranjang()
 	{
 		$this->load->view('pembeli/keranjangbelanja');
