@@ -146,6 +146,16 @@
                 <h3 class="card-title">Tambah Produk</h3>
               </div>
                 <form role="form" action="<?php echo site_url('penjual/prosestambahproduk'); ?>" method="post">
+                  <?php
+                if($this->session->flashdata('success'))
+                {
+                    echo $this->session->flashdata('success');
+                }
+                else
+                {
+                    echo $this->session->flashdata('error');
+                }
+                ?>
                 <div class="card-body">
                    <div class="form-group">
                     <label for="exampleInputEmail1">Nama Toko</label>

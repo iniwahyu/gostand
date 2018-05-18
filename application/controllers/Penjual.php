@@ -48,10 +48,12 @@
 			if( $data )
 			{
 				$this->session->set_flashdata('success', 'BERHASIL DITAMBAHKAN');
+				redirect(base_url('penjual/tambahproduk'));
 			}
 			else
 			{
 				$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
+				redirect(base_url('penjual/tambahproduk'));
 			}
 		}
 	}
