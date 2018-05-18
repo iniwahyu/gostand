@@ -14,7 +14,7 @@ class Registerlogin extends CI_Controller
 		$this->load->model('home_model');
 		$data = array(
         'nim' => $this->input->post('nim'),
-	'nama' => $this->input->post('nama'),
+		'nama' => $this->input->post('nama'),
         'password' => md5($this->input->post('password')),
         //'level' => $this->input->post('')
         'level' => 'Pembeli'
@@ -58,7 +58,7 @@ class Registerlogin extends CI_Controller
 			$this->session->set_userdata($data_session);
 			redirect(base_url('penjual/index'));
 		}else{
-			echo "Salah Anjing";
+			echo "Salah Password/Username";
 		}
 	}
 	public function logout()
