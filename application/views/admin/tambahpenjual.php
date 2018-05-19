@@ -69,13 +69,15 @@
                             </div>
                             <div class="card-body">
                                 <div class="basic-form">
-                                <?php echo validation_errors(); ?>
-                                    <form action="<?php echo base_url('admin/simpanpenjual'); ?>" name="form" method="post" >
+                                    <form action="<?php echo base_url('registerlogin/prosesregisterpenjual'); ?>" name="form" method="post" >
                                         <div class="form-group">
                                             <input type="text" class="form-control input-default" name="username" placeholder="Username">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-flat" name="password" placeholder="Password">
+                                            <input type="text" class="form-control input-default" name="nama" placeholder="Nama" >
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control input-flat" name="password" placeholder="Password">
                                         </div>
                                         <input type="submit" name="submit" class="btn btn-primary" value="Tambah Penjual" >
                                     </form>

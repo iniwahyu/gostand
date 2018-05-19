@@ -44,6 +44,12 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/pembeli');		
 	}
 
+	public function tambahpenjual()
+	{
+		$this->load->view('admin/tambahpenjual');
+	}
+
+
 	public function insert(){
 		$this->load->model('mymodel');
 		$data = array(

@@ -7,8 +7,14 @@
 		
 		function index()
 		{
-			# code...
-			$this->load->view('penjual/index');
+			if($this->session->userdata('status'))
+			{
+				$this->load->view('penjual/index');
+			}
+			else
+			{
+				redirect('login');
+			}		
 		}
 		
 		function profil()
@@ -61,10 +67,19 @@
 				redirect(base_url('penjual/tambahproduk'));
 			}
 		}
-		/*public function tampilproduk()
+		public function hapusproduk($id)
 		{
 			$this->load->model('penjual_model');
-			$data=$this->mymodel->tampilproduk('produk','');
-		}*/
+			$where = array('id' => $id);
+			$data=$this->penjual_model->hapus('produk',$where);
+			if($data){
+				//redirect(base_url('penjual/produk');
+			}
+			else{
+				
+			}
+			
+		}
+		
 	}
 ?>

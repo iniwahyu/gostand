@@ -14,6 +14,11 @@ class penjual_model extends CI_Model
 		$res=$this->db->get_where($table,array('nama_toko'=>$username));//memilih tabel
 		return $res->result_array();//mengembalikan hasil
     }
+    public function hapus($table,$id){
+    	$this->db->where($id);
+		$res=$this->db->delete($table);
+		return $res;
+    }
 	
 }
 	

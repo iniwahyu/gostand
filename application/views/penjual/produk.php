@@ -54,6 +54,7 @@
     </ul>
 </nav>
 <!--side navbar-->
+<<<<<<< HEAD
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -154,13 +155,14 @@
                     <th style="width: 130px">Action</th>
                   </tr>
                   <?php
+                  $no=1;
                   foreach ($data as $produk) {?>
                   <tr>
-                    <td><?php echo $produk['id'];?></td>
+                    <td><?php echo $no++ ?></td>
                     <td><?php echo $produk['nama_produk'];?></td>
                     <td><?php echo $produk['deskripsi'];?></td>
                     <td><?php echo $produk['harga'];?></td>
-                    <td><a href="">Edit</a> | <a href="">Delete</a> </td>
+                    <td><a href="">Edit</a> | <a href="<?php echo base_url();?>penjual/hapusproduk/<?php echo $produk['id'];?>">Delete</a> </td>
                   </tr>
                   <?php } ?>
                 </table>
@@ -175,11 +177,71 @@
                   <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
                 </ul>
               </div>
+=======
+<?php require_once(APPPATH. 'views/penjual/sidebar.php');?> ?>
+
+<!-- KONTEN -->
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Dashboard</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v2</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Daftar Produk</h3>
+>>>>>>> 0e1a5a57d8ba73f7f49e9f81a0e732f4bcc4a610
             </div>
- </div>
-</div>
-</div>
-</section>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th style="width: 10px">#</th>
+                  <th>Nama Produk</th>
+                  <th>Deskripsi Produk</th>
+                  <th>Harga Produk</th>
+                  <th style="width: 130px">Action</th>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                  <td><a href="">Edit</a> | <a href="">Delete</a> </td>
+                </tr>
+              </table>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer clearfix">
+              <ul class="pagination pagination-sm m-0 float-right">
+                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 </div>
 
 </div><!--divakhir-->

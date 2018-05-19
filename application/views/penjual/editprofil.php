@@ -56,6 +56,7 @@
     </ul>
 </nav>
 <!--side navbar-->
+<<<<<<< HEAD
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -71,73 +72,28 @@
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $this->session->userdata('nama');?></a>
+=======
+<?php require_once(APPPATH. 'views/penjual/sidebar.php');?> ?>
+
+<div class="content-wrapper">
+
+<section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Edit Profil Penjual</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+            </ol>
+          </div>
+>>>>>>> 0e1a5a57d8ba73f7f49e9f81a0e732f4bcc4a610
         </div>
-      </div>
-       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="" class="nav-link">
-              <i class="nav-icon fa fa-dashboard"></i>
-              <p>
-                Profile Toko
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/profil'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Lihat Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/editprofil'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Edit Profile</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="" class="nav-link">
-              <i class="nav-icon fa fa-pie-chart"></i>
-              <p>
-                Produk
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/produk'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Lihat Produk</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/tambahproduk'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Input Produk Baru</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('penjual/riwayatpemesanan'); ?>" class="nav-link">
-              <i class="nav-icon fa fa-calendar"></i>
-              <p>
-                History Order
-              </p>
-            </a>
-          </li>
-      </nav>
-     </div>
-</aside>
+      </div><!-- /.container-fluid -->
+</section>
 
 <section class="content">
-  <div class="content-wrapper">
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->

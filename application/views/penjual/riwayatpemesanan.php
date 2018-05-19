@@ -54,6 +54,7 @@
     </ul>
 </nav>
 <!--side navbar-->
+<<<<<<< HEAD
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -133,6 +134,9 @@
       </nav>
      </div>
 </aside>
+=======
+<?php require_once(APPPATH. 'views/penjual/sidebar.php');?> ?>
+>>>>>>> 0e1a5a57d8ba73f7f49e9f81a0e732f4bcc4a610
 
  <div class="content-wrapper">
    <section class="content">
