@@ -30,13 +30,13 @@
     <div id="main-wrapper">
         <!-- header header  -->
         <div class="header">
-            <?php require_once(APPPATH. 'views/admin/menu.php'); ?>
+            <?php require_once(APPPATH. 'views/admin/src/menu.php'); ?>
         </div>
         <!-- End header header -->
         <!-- Left Sidebar  -->
         <div class="left-sidebar">
             <!-- Sidebar scroll-->
-            <?php require_once(APPPATH.'views/admin/sidebar.php'); ?>
+            <?php require_once(APPPATH.'views/admin/src/sidebar.php'); ?>
             <!-- End Sidebar scroll-->
         </div>
         <!-- End Left Sidebar  -->
@@ -65,25 +65,6 @@
                     <div class="col-lg-12">
                     <div class="card">
                             <div class="card-body">
-                                <?php
-                                if($this->session->flashdata('success'))
-                                {
-                                    echo $this->session->flashdata('success');
-                                }
-                                else
-                                {
-                                    echo $this->session->flashdata('error');
-                                }
-                                ?>
-                                <?php
-                                // $query = $this->db->get('hello');
-                                
-                                // foreach ($query->result() as $row)
-                                // {
-                                //     echo $row->username;
-                                //     echo $row->password ."<br/>";
-                                // }
-                                ?>
                                 <h4 class="card-title">Daftar User </h4>
                                 <div class="table-responsive m-t-20">
                                     <table id="myTable" class="table table-bordered table-striped">
@@ -92,14 +73,21 @@
                                                 <th>Nama / Nama Toko</th>
                                                 <th>Nim / Username</th>
                                                 <th>Password</th>
+                                                <th>Level</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php
+                                        $query = $this->db->get('user');                               
+                                        foreach ($query->result() as $row)
+                                        { ?>
                                             <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>2011/04/25</td>
+                                                <td><?php echo $row->nim; ?></td>
+                                                <td><?php echo $row->nama; ?></td>
+                                                <td><?php echo $row->password; ?></td>
+                                                <td><?php echo $row->level; ?></td>
                                             </tr>
+                                        <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>

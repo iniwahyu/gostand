@@ -30,7 +30,7 @@
     <div id="main-wrapper">
         <!-- header header  -->
         <div class="header">
-            <?php require_once(APPPATH. 'views/admin/menu.php'); ?>
+            <?php require_once(APPPATH. 'views/admin/src/menu.php'); ?>
         </div>
         <!-- End header header -->
         <!-- Left Sidebar  -->
@@ -38,7 +38,7 @@
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
                 <!-- Sidebar scroll-->
-                <?php require_once(APPPATH.'views/admin/sidebar.php'); ?>
+                <?php require_once(APPPATH.'views/admin/src/sidebar.php'); ?>
                 <!-- End Sidebar scroll-->
             </div>
             <!-- End Sidebar scroll-->
@@ -68,9 +68,14 @@
                                 <div class="media-left meida media-middle">
                                     <span><i class="fa fa-usd f-s-40 color-primary"></i></span>
                                 </div>
-                                <div class="media-body media-text-right">
-                                    <h2>568120</h2>
-                                    <p class="m-b-0">Total Revenue</p>
+                                <div class="media-body media-text-right"  >
+                                    <h2>
+                                        <?php
+                                        $query = $this->db->get('user');
+                                        echo $query->num_rows();
+                                        ?>
+                                    </h2>
+                                    <p class="m-b-0">User</p>
                                 </div>
                             </div>
                         </div>
@@ -83,9 +88,10 @@
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2>
+                                    0
                                         <?php 
-                                        $query = $this->db->query('SELECT * FROM hello');
-                                        echo $query->num_rows();
+                                        // $query = $this->db->query('SELECT * FROM hello');
+                                        // echo $query->num_rows();
                                         ?>
                                     </h2>
                                     <p class="m-b-0">Penjualan</p>

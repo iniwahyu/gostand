@@ -7,8 +7,14 @@
 		
 		function index()
 		{
-			# code...
-			$this->load->view('penjual/index');
+			if($this->session->userdata('status'))
+			{
+				$this->load->view('penjual/index');
+			}
+			else
+			{
+				redirect('login');
+			}		
 		}
 		
 		function profil()

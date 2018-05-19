@@ -54,153 +54,85 @@
     </ul>
 </nav>
 <!--side navbar-->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Penjual</span>
-    </a>
-    <!--side navbar bottom-->
-     <div class="sidebar">
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+<?php require_once(APPPATH. 'views/penjual/sidebar.php');?> ?>
+
+<!-- KONTEN -->
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Dashboard</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v2</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Tambah Produk</h3>
+            </div>
+            <form role="form" action="<?php echo site_url('penjual/prosestambahproduk'); ?>" method="post">
+            <?php
+            if($this->session->flashdata('success'))
+            {
+              echo $this->session->flashdata('success');
+            }
+            else
+            {
+              echo $this->session->flashdata('error');
+            }
+            ?>
+            <div class="card-body">
+               <div class="form-group">
+                <label for="exampleInputEmail1">Nama Toko</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="" readonly="" value="<?php echo $this->session->userdata('nama');?>">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nama Produk</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Harga (Rp)</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="harga" placeholder="">
+              </div>
+              <div class="form-group">
+                <label>Deskripsi Produk</label>
+                <textarea class="form-control" rows="3" placeholder="Enter ..." name="deskripsi"></textarea>
+              </div>
+            </div>
+            
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Tambahkan</button>
+            </div>
+            
+            </form>
+          </div>
         </div>
-        <div class="info">
-          <a href="#" class="d-block"><?php echo $this->session->userdata('nama');?></a>
+
+        <div class="col-md-6">
+          <div class="card card-info">
+            <div class="card-header">
+              <h3 class="card-title">Upload Foto Produk</h3>
+            </div>
+            <p>untuk foto</p>
+          </div>
         </div>
       </div>
-       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="" class="nav-link">
-              <i class="nav-icon fa fa-dashboard"></i>
-              <p>
-                Profile Toko
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/profil'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Lihat Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/editprofil'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Edit Profile</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="" class="nav-link">
-              <i class="nav-icon fa fa-pie-chart"></i>
-              <p>
-                Produk
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/produk'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Lihat Produk</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/tambahproduk'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Input Produk Baru</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('penjual/riwayatpemesanan'); ?>" class="nav-link">
-              <i class="nav-icon fa fa-calendar"></i>
-              <p>
-                History Order
-              </p>
-            </a>
-          </li>
-      </nav>
-     </div>
-</aside>
-
-<section class="content">
-  <div class="content-wrapper">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-6">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Tambah Produk</h3>
-              </div>
-                <form role="form" action="<?php echo site_url('penjual/prosestambahproduk'); ?>" method="post">
-                  <?php
-                if($this->session->flashdata('success'))
-                {
-                    echo $this->session->flashdata('success');
-                }
-                else
-                {
-                    echo $this->session->flashdata('error');
-                }
-                ?>
-                <div class="card-body">
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Toko</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="" readonly="" value="<?php echo $this->session->userdata('nama');?>">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Produk</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Harga (Rp)</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="harga" placeholder="">
-                  </div>
-                  <div class="form-group">
-                    <label>Deskripsi Produk</label>
-                    <textarea class="form-control" rows="3" placeholder="Enter ..." name="deskripsi"></textarea>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Tambahkan</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <!--/.col (right) -->
-
-            <div class="col-md-6">
-            <!-- Horizontal Form -->
-            <div class="card card-info">
-              <div class="card-header">
-                <h3 class="card-title">Upload Foto Produk</h3>
-              </div>
-                <p>untuk foto</p>
-               </div>
-              <!-- /.card-body -->
-          </div>
-          <!--/.col (right) -->
-
-        </div>
         <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-</section>
+    </div><!-- /.container-fluid -->
+  </section>
+</div>
 
 </div><!--divakhir-->
 
