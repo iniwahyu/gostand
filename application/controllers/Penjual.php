@@ -21,7 +21,12 @@
 		}
 		function produk()
 		{
-			$this->load->view('penjual/produk');
+			$namadata=$this->session->userdata('nama');
+			$this->load->model('penjual_model');
+			$data=$this->penjual_model->tampilproduk('produk',$namadata);
+			$data=array('data'=>$data);
+			//$this->load->view('terserah',$data);
+			$this->load->view('penjual/produk',$data);
 		}
 		function tambahproduk()
 		{
@@ -56,5 +61,10 @@
 				redirect(base_url('penjual/tambahproduk'));
 			}
 		}
+		/*public function tampilproduk()
+		{
+			$this->load->model('penjual_model');
+			$data=$this->mymodel->tampilproduk('produk','');
+		}*/
 	}
 ?>

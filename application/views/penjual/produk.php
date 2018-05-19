@@ -153,13 +153,16 @@
                     <th>Harga Produk</th>
                     <th style="width: 130px">Action</th>
                   </tr>
+                  <?php
+                  foreach ($data as $produk) {?>
                   <tr>
-                    <td>1.</td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td><?php echo $produk['id'];?></td>
+                    <td><?php echo $produk['nama_produk'];?></td>
+                    <td><?php echo $produk['deskripsi'];?></td>
+                    <td><?php echo $produk['harga'];?></td>
                     <td><a href="">Edit</a> | <a href="">Delete</a> </td>
                   </tr>
+                  <?php } ?>
                 </table>
               </div>
               <!-- /.card-body -->
