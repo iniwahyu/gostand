@@ -54,7 +54,6 @@
     </ul>
 </nav>
 <!--side navbar-->
-<<<<<<< HEAD
 <?php require_once(APPPATH. 'views/penjual/sidebar.php');?> ?>
 
 <!-- KONTEN -->
@@ -75,95 +74,7 @@
     </div><!-- /.container-fluid -->
   </div>
   
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Daftar Produk</h3>
-=======
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Penjual</span>
-    </a>
-    <!--side navbar bottom-->
-     <div class="sidebar">
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block"><?php echo $this->session->userdata('nama');?></a>
-        </div>
-      </div>
-       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="" class="nav-link">
-              <i class="nav-icon fa fa-dashboard"></i>
-              <p>
-                Profile Toko
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/profil'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Lihat Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/editprofil'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Edit Profile</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="" class="nav-link">
-              <i class="nav-icon fa fa-pie-chart"></i>
-              <p>
-                Produk
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/produk'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Lihat Produk</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?php echo base_url('penjual/tambahproduk'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Input Produk Baru</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('penjual/riwayatpemesanan'); ?>" class="nav-link">
-              <i class="nav-icon fa fa-calendar"></i>
-              <p>
-                History Order
-              </p>
-            </a>
-          </li>
-      </nav>
-     </div>
-</aside>
 
- <div class="content-wrapper">
    <section class="content">
       <div class="container-fluid">
         <div class="row">
@@ -183,13 +94,14 @@
                     <th style="width: 130px">Action</th>
                   </tr>
                   <?php
+                  $no=1;
                   foreach ($data as $produk) {?>
                   <tr>
-                    <td><?php echo $produk['id'];?></td>
+                    <td><?php echo $no++ ?></td>
                     <td><?php echo $produk['nama_produk'];?></td>
                     <td><?php echo $produk['deskripsi'];?></td>
                     <td><?php echo $produk['harga'];?></td>
-                    <td><a href="">Edit</a> | <a href="">Delete</a> </td>
+                    <td><a href="">Edit</a> | <a href="<?php echo base_url();?>penjual/hapusproduk/<?php echo $produk['id'];?>">Delete</a> </td>
                   </tr>
                   <?php } ?>
                 </table>
@@ -204,44 +116,6 @@
                   <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
                 </ul>
               </div>
->>>>>>> b697e4129ee5fe788bc7f43dc63aa3ae59d043a7
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-              <table class="table table-bordered">
-                <tr>
-                  <th style="width: 10px">#</th>
-                  <th>Nama Produk</th>
-                  <th>Deskripsi Produk</th>
-                  <th>Harga Produk</th>
-                  <th style="width: 130px">Action</th>
-                </tr>
-                <tr>
-                  <td>1.</td>
-                  <td> </td>
-                  <td> </td>
-                  <td> </td>
-                  <td><a href="">Edit</a> | <a href="">Delete</a> </td>
-                </tr>
-              </table>
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer clearfix">
-              <ul class="pagination pagination-sm m-0 float-right">
-                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-</div>
 
 </div><!--divakhir-->
 

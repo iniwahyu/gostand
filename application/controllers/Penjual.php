@@ -30,7 +30,7 @@
 			$namadata=$this->session->userdata('nama');
 			$this->load->model('penjual_model');
 			$data=$this->penjual_model->tampilproduk('produk',$namadata);
-			$data=array('data'=>$data);
+			$data=array('data'=> $data);
 			//$this->load->view('terserah',$data);
 			$this->load->view('penjual/produk',$data);
 		}
@@ -47,12 +47,12 @@
 		{
 			$this->load->model('penjual_model');
 			$data = array(
-	        'nama_toko' => $this->input->post('namatoko'),
-			'nama_produk' => $this->input->post('namaproduk'),
-	        //'gambar' => $this->input->post('nama'),
-	        'harga' => $this->input->post('harga'),
-	        'deskripsi' => $this->input->post('deskripsi')
-	         );
+	        	'nama_toko' => $this->input->post('namatoko'),
+				'nama_produk' => $this->input->post('namaproduk'),
+	        	//'gambar' => $this->input->post('nama'),
+	        	'harga' => $this->input->post('harga'),
+	        	'deskripsi' => $this->input->post('deskripsi')
+	        );
 
 			$data = $this->penjual_model->Insertproduk('produk', $data);
 
@@ -67,10 +67,19 @@
 				redirect(base_url('penjual/tambahproduk'));
 			}
 		}
-		/*public function tampilproduk()
+		public function hapusproduk($id)
 		{
 			$this->load->model('penjual_model');
-			$data=$this->mymodel->tampilproduk('produk','');
-		}*/
+			$where = array('id' => $id);
+			$data=$this->penjual_model->hapus('produk',$where);
+			if($data){
+				//redirect(base_url('penjual/produk');
+			}
+			else{
+				
+			}
+			
+		}
+		
 	}
 ?>
