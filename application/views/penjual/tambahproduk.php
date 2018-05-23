@@ -82,6 +82,7 @@
             <div class="card-header">
               <h3 class="card-title">Tambah Produk</h3>
             </div>
+            
             <form role="form" action="<?php echo site_url('penjual/prosestambahproduk'); ?>" method="post">
             <?php
             if($this->session->flashdata('success'))
@@ -93,24 +94,24 @@
               echo $this->session->flashdata('error');
             }
             ?>
-            <div class="card-body">
-               <div class="form-group">
-                <label for="exampleInputEmail1">Nama Toko</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="" readonly="" value="<?php echo $this->session->userdata('nama');?>">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Toko</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="" readonly="" value="<?php echo $this->session->userdata('nama');?>">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Produk</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Harga (Rp)</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label>Deskripsi Produk</label>
+                  <textarea class="form-control" rows="3" placeholder="Enter ..." name="deskripsi"></textarea>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Nama Produk</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Harga (Rp)</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" name="harga" placeholder="">
-              </div>
-              <div class="form-group">
-                <label>Deskripsi Produk</label>
-                <textarea class="form-control" rows="3" placeholder="Enter ..." name="deskripsi"></textarea>
-              </div>
-            </div>
             
             <div class="card-footer">
               <button type="submit" class="btn btn-primary">Tambahkan</button>
