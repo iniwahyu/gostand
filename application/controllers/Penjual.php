@@ -8,13 +8,13 @@
 		function index()
 		{
 			
-			if($this->session->userdata('status'))
+			if($this->session->userdata('nama'))
 			{
 			$this->load->model('home_model');
 			$nama=$this->session->userdata('nama');
 			$where=array('username'=>$nama);
 			$cek=$this->home_model->login('penjual',$where)->num_rows();
-				if($cek=NULL){
+				if($cek==NULL){
 					$this->load->view('penjual/editprofil');
 				}
 				else{
