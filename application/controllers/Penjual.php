@@ -15,7 +15,7 @@
 			$where=array('username'=>$nama);
 			$cek=$this->home_model->login('penjual',$where)->num_rows();
 				if($cek==NULL){
-					$this->load->view('penjual/editprofil');
+					$this->load->view('penjual/profil1');
 				}
 				else{
 					$this->load->view('penjual/index');
@@ -31,6 +31,10 @@
 		function profil()
 		{
 			$this->load->view('penjual/profil');
+		}
+		function profil1()
+		{
+			$this->load->view('penjual/profil1');
 		}
 		function editprofil()
 		{
