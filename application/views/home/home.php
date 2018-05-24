@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>Grocery Shoppy an Ecommerce Category Bootstrap Responsive Web Template | Home :: w3layouts</title>
+	<title>GOSTAND</title>
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,29 +41,29 @@
 				<ul>
 					<li>
 						<a class="play-icon popup-with-zoom-anim">
-							<span class="fa fa-map-marker" aria-hidden="true"></span> Indonesia</a>
+							<span class="fa fa-map-marker" aria-hidden="true"></span> Semarang</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#" data-toggle="modal" data-target="#myModal1">
-							<span class="fa fa-truck" aria-hidden="true"></span>Track Order</a>
+							<span class="fa fa-truck" aria-hidden="true"></span>Lacak pesanan</a>
+					</li> -->
+					<li>
+						<span class="fa fa-phone" aria-hidden="true"></span> (024) 3565580
 					</li>
 					<li>
-						<span class="fa fa-phone" aria-hidden="true"></span> 001 234 5678
+						<a href="penjual/login.php" data-toggle="modal" data-target="#myModal1">
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Login </a>
 					</li>
 					<li>
-						<a href="#" data-toggle="modal" data-target="#myModal1">
-							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In </a>
-					</li>
-					<li>
-						<a href="#" data-toggle="modal" data-target="#myModal2">
-							<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up </a>
+						<a href="penjual/registrasi.php" data-toggle="modal" data-target="#myModal2">
+							<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Register</a>
 					</li>
 				</ul>
 				<!-- //header lists -->
 				<!-- search -->
 				<div class="agileits_search">
 					<form action="#" method="post">
-						<input name="Search" type="search" placeholder="How can we help you today?" required="">
+						<input name="Search" type="search" placeholder="Bagaimana kami dapat membantu anda hari ini?" required="">
 						<button type="submit" class="btn btn-default" aria-label="Left Align">
 							<span class="fa fa-search" aria-hidden="true"> </span>
 						</button>
@@ -102,11 +102,11 @@
 						<span class="fa fa-envelope-o" aria-hidden="true"></span>
 					</div>
 					<div class="modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">Sign In </h3>
+						<h3 class="agileinfo_sign">Login </h3>
 						<p>
-							Sign In now, Let's start your Grocery Shopping. Don't have an account?
+							Masuk sekarang, Mari mulai Belanja Makanan dan Minuman Anda. Punya akun?
 							<a href="#" data-toggle="modal" data-target="#myModal2">
-								Sign Up Now</a>
+								Register Sekarang</a>
 						</p>
 						<form action="#" method="post">
 							<div class="styled-input agile-styled-input-top">
@@ -115,7 +115,7 @@
 							<div class="styled-input">
 								<input type="password" placeholder="Password" name="password" required="">
 							</div>
-							<input type="submit" value="Sign In">
+							<input type="submit" value="Login">
 						</form>
 						<div class="clearfix"></div>
 					</div>
@@ -141,9 +141,9 @@
 						<span class="fa fa-envelope-o" aria-hidden="true"></span>
 					</div>
 					<div class="modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">Sign Up</h3>
+						<h3 class="agileinfo_sign">Register</h3>
 						<p>
-							Come join the Grocery Shoppy! Let's set up your Account.
+							Ayo bergabung dengan GoStand! Mari siapkan Akun Anda.
 						</p>
 						<form action="#" method="post">
 							<div class="styled-input agile-styled-input-top">
@@ -158,10 +158,10 @@
 							<div class="styled-input">
 								<input type="password" placeholder="Confirm Password" name="Confirm Password" id="password2" required="">
 							</div>
-							<input type="submit" value="Sign Up">
+							<input type="submit" value="Register">
 						</form>
 						<p>
-							<a href="#">By clicking register, I agree to your terms</a>
+							<a href="#">Dengan mengklik register, saya menyetujui persyaratan Anda</a>
 						</p>
 					</div>
 				</div>
@@ -178,7 +178,7 @@
 			<div class="agileits-navi_search">
 				<form action="#" method="post">
 					<select id="agileinfo-nav_search" name="agileinfo_search" required="">
-						<option value="">All Categories</option>
+						<option value="">Semua Kategori</option>
 						<option value="Kitchen">Kitchen</option>
 						<option value="Household">Household</option>
 						<option value="Snacks &amp; Beverages">Snacks & Beverages</option>
@@ -233,7 +233,7 @@
 	<div class="featured-section" id="projects">
 		<div class="container">
 			<!-- tittle heading -->
-			<h3 class="tittle-w3l">Special Offers
+			<h3 class="tittle-w3l">Penawaran khusus
 				<span class="heading-style">
 					<i></i>
 					<i></i>
@@ -246,20 +246,20 @@
 				<div class="wrapper">
 					<!-- first section (nuts) -->
 					<div class="product-sec1">
-						<h3 class="heading-tittle">Nuts</h3>
+						<h3 class="heading-tittle">Hot Menu</h3>
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/ramen.jpg'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Almonds, 100g</a>
+										<a href="single.html">Ramen</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$149.00</span>
-										<del>$280.00</del>
+										<span class="item_price">Rp 25.000</span>
+										<del>Rp 35.000</del>
 									</div>
 									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 										<form action="#" method="post">
@@ -276,16 +276,16 @@
                         <div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/pearl.jpg'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Almonds, 100g</a>
+										<a href="single.html">Jus Melon</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$149.00</span>
-										<del>$280.00</del>
+										<span class="item_price">Rp 10.000</span>
+										<del>Rp 15.000</del>
 									</div>
 									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 										<form action="#" method="post">
@@ -302,16 +302,16 @@
                         <div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/snack.jpg'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Almonds, 100g</a>
+										<a href="single.html">Snack Pedas</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$149.00</span>
-										<del>$280.00</del>
+										<span class="item_price">Rp 20.000</span>
+										<del>Rp 25.000</del>
 									</div>
 									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 										<form action="#" method="post">
@@ -338,38 +338,41 @@
 	<footer>
 		<div class="container">
 			<!-- footer first section -->
-			<p class="footer-main">
-				<span>"Grocery Shoppy"</span> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-				magni dolores eos qui ratione voluptatem sequi nesciunt.Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-				accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-				beatae vitae dicta sunt explicabo.</p>
+			<p class="footer-main"  align="justify">
+				<span>"Grocery Shoppy"</span> Website GoStand ini sengaja kami ciptakan untuk mencari makanan  dan minuman yang 
+				sangat special yang berasal dari setiap UKM di Universitas Dian Nuswantoro, karena kami percaya bahwa 
+				di setiap UKM pasti memiliki keunikan menu dari masing masing produk. Melalui GoStand kami ingin mengajak 
+				untuk setiap mahasiswa bisa menikmati makanan dan minuman dari UKM tersebut. Keunikan dari GoStand 
+				mahasiswa dapat memesan makanan dan minuman secara online, dan dapat menerimanya sesuai tempat perjanjian
+				dengan UKM. Jadi GoStand memudahkan mahasiswa dalam membeli makanan dan minuman, serta membantu UKM
+				untuk lebih profesional dan maju.</p>
 			<!-- //footer first section -->
 			<!-- footer second section -->
 			<div class="w3l-grids-footer">
 				<div class="col-xs-4 offer-footer">
 					<div class="col-xs-4 icon-fot">
-						<span class="fa fa-map-marker" aria-hidden="true"></span>
+						<span class="fa fa-thumbs-up" aria-hidden="true"></span>
 					</div>
 					<div class="col-xs-8 text-form-footer">
-						<h3>Track Your Order</h3>
+						<h3> Cita Rasa Khas </h3>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="col-xs-4 offer-footer">
 					<div class="col-xs-4 icon-fot">
-						<span class="fa fa-refresh" aria-hidden="true"></span>
+						<span class="fa fa-heart" aria-hidden="true"></span>
 					</div>
 					<div class="col-xs-8 text-form-footer">
-						<h3>Free & Easy Returns</h3>
+						<h3>Higienis </h3>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="col-xs-4 offer-footer">
 					<div class="col-xs-4 icon-fot">
-						<span class="fa fa-times" aria-hidden="true"></span>
+						<span class="fa fa-star" aria-hidden="true"></span>
 					</div>
 					<div class="col-xs-8 text-form-footer">
-						<h3>Online cancellation </h3>
+						<h3> Berkualitas </h3>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -381,7 +384,7 @@
 				<!-- footer categories -->
 				<div class="col-sm-5 address-right">
 					<div class="col-xs-6 footer-grids">
-						<h3>Categories</h3>
+						<h3>Kategori</h3>
 						<ul>
 							<li>
 								<a href="product.html">Grocery</a>
@@ -431,15 +434,15 @@
 				<!-- quick links -->
 				<div class="col-sm-5 address-right">
 					<div class="col-xs-6 footer-grids">
-						<h3>Quick Links</h3>
+						<h3>Tautan Langsung</h3>
 						<ul>
 							<li>
-								<a href="about.html">About Us</a>
+								<a href="about.html">Tentang Kami</a>
 							</li>
 							<li>
-								<a href="contact.html">Contact Us</a>
+								<a href="contact.html">Hubungi Kami</a>
 							</li>
-							<li>
+							<!-- <li>
 								<a href="help.html">Help</a>
 							</li>
 							<li>
@@ -450,18 +453,18 @@
 							</li>
 							<li>
 								<a href="privacy.html">Privacy Policy</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 					<div class="col-xs-6 footer-grids">
-						<h3>Get in Touch</h3>
+						<h3>Hubungi Kami</h3>
 						<ul>
 							<li>
-								<i class="fa fa-map-marker"></i> 123 Sebastian, USA.</li>
+								<i class="fa fa-map-marker"></i> Jalan Imam Bonjol No. 207, Pindrikan Lor, Semarang </li>
 							<li>
-								<i class="fa fa-mobile"></i> 333 222 3333 </li>
+								<i class="fa fa-mobile"></i> 081225225988 </li>
 							<li>
-								<i class="fa fa-phone"></i> +222 11 4444 </li>
+								<i class="fa fa-phone"></i> (024) 3565580 </li>
 							<li>
 								<i class="fa fa-envelope-o"></i>
 								<a href="mailto:example@mail.com"> mail@example.com</a>
@@ -472,7 +475,7 @@
 				<!-- //quick links -->
 				<!-- social icons -->
 				<div class="col-sm-2 footer-grids  w3l-socialmk">
-					<h3>Follow Us on</h3>
+					<h3>Ikuti Kami</h3>
 					<div class="social">
 						<ul>
 							<li>
@@ -516,8 +519,8 @@
 	<!-- copyright -->
 	<div class="copy-right">
 		<div class="container">
-			<p>© 2017 Grocery Shoppy. All rights reserved | Design by
-				<a href="http://w3layouts.com"> W3layouts.</a>
+			<p>© 2018 GoStand. All rights reserved | Design with
+				<a href="http://w3layouts.com"> Love.</a>
 			</p>
 		</div>
 	</div>

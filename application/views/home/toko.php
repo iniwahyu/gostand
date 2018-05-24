@@ -18,53 +18,118 @@
 <?php require_once(APPPATH. 'views/home/navbar.php'); ?>
 <!-- INI AKHIR NAVBAR -->
 
-<!-- INI CONTAINER IKLAN/HOT PRODUK -->
-<div class="section1">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/33392/s-1256-824/New_Banner_1.jpg" alt="" width="100%" height="450" >
-            </div>
-            <div class="col-sm-6">
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="225" style="padding-bottom: 5px;" >
-                <img src="https://s3.bukalapak.com/uploads/flash_banner/30392/s-824-392/Banner_2_BukaYangBaik_massvucher_.jpg" alt="" width="100%" height="225">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- INI PENUTUP CONTAINER IKLAN/HOT PRODUK -->
-
 <!-- INI CARD AWAL MAKANAN DAN MINUMAN -->
-<div class="section2">
+<div class="section-p-1">
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <div class="card kiri">
-			  <div class="card-body">
-			    <!-- <h5 class="card-title">Card title</h5> -->
-			    	<center><i class="fa fa-cutlery" aria-hidden="true"></i></center>
-			    	<!-- <a href="#" class="card-link">Another link</a> -->
-			  </div>
-			</div>
+        <div class="col-md-12">
+            <h2>Semua Produk</h2>
+            <hr>
         </div>
-
-        <div class="col-md-6">
-            <div class="card kanan">
-			  <div class="card-body">
-			    <!-- <h5 class="card-title">Card title</h5> -->
-			    <center><i class="fa fa-coffee" aria-hidden="true"></i></center>
-			    <!-- <a href="#" class="card-link">Another link</a> -->
-			  </div>
-			</div>
-        </div> 
     </div>
 </div>
 </div>
-<!-- INI CARD AKHIR MAKANAN DAN MINUMAN -->
+<div class="section-p-2">
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <a href="">
+            <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+                    <h5>Nama Produk</h5>
+                    <span>Rp. 50.000</span>
+        </div>
+            </div>
+            </a>
+        </div>
 
-<!-- INI AWAL ABOUT -->
-<div class="section3">
-<h1><center>ABOUT</center></h1>
+        <div class="col-md-3">
+            <a href="">
+            <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+                    <h5>Nama Produk</h5>
+                    <span>Rp. 50.000</span>
+        </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <a href="">
+            <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+                    <h5>Nama Produk</h5>
+                    <span>Rp. 50.000</span>
+        </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <a href="">
+            <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+                    <h5>Nama Produk</h5>
+                    <span>Rp. 50.000</span>
+        </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <a href="">
+            <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+                    <h5>Nama Produk</h5>
+                    <span>Rp. 50.000</span>
+        </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <a href="">
+            <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+                    <h5>Nama Produk</h5>
+                    <span>Rp. 50.000</span>
+        </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <a href="">
+            <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+                    <h5>Nama Produk</h5>
+                    <span>Rp. 50.000</span>
+        </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <a href="">
+            <div class="card">
+      <img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
+        <div class="card-body">
+                    <h5>Nama Produk</h5>
+                    <span>Rp. 50.000</span>
+        </div>
+            </div>
+            </a>
+        </div>
+
+    </div>
+</div>
 </div>
 
 <!-- INI AKHIR ABOUT -->
