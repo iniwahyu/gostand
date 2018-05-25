@@ -14,13 +14,13 @@
 			$nama=$this->session->userdata('nama');
 			$where=array('username'=>$nama);
 			$cek=$this->home_model->login('penjual',$where)->num_rows();
-				if($cek>0){
-					//$this->load->view('penjual/profil1');
-					$this->load->view('penjual/index');
-				}
 				if($cek==NULL){
 					$this->load->view('penjual/profil1');
-					//$this->load->view('penjual/index');
+					
+				}
+				if($cek!=NULL){
+					
+					$this->load->view('penjual/index');
 				}
 				
 			}
