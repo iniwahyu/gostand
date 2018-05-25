@@ -64,6 +64,28 @@
 		{
 			$this->load->view('penjual/tambahproduk');
 		}
+		function prosestambahproduk(){
+			$this->load->model('penjual_model');
+			$data = array(
+	        	'nama_toko' => $this->session->userdata('nama'),
+				'nama_produk' => $this->input->post('namaproduk'),
+				'harga' => $this->input->post('harga'),
+				'deskripsi' => $this->input->post('deskripsi')
+	        );
+
+			$data = $this->penjual_model->Insertproduk('produk', $data);
+
+			if( $data )
+			{
+				$this->session->set_flashdata('success', 'berhasil MENAMBAHAN');
+				redirect(base_url('penjual/tambahproduk'));
+			}
+			else
+			{
+				$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
+				redirect(base_url('penjual/tambahproduk'));
+			}
+		}
 		function riwayatpemesanan()
 		{
 			$this->load->view('penjual/riwayatpemesanan');
