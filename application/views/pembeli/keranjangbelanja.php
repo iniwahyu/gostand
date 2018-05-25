@@ -1,148 +1,400 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    
-    
-    <title>Profil Pembeli</title>
+<html>
 
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/stylehome.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/stylepembeli.css'); ?>">
+<head>
+  <title>Cart</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
- 
-
-
-    
-
-  </head>
   
-<body id="body-pembeli">
+  <!--/tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" />
+  <!--//tags -->
+  <link href="<?php echo base_url('asset/home/css/bootstrap.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php echo base_url('asset/home/css/style.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php echo base_url('asset/css/stylecustom.css');?>" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!--pop-up-box-->
+  <link href="<?php echo base_url('asset/home/css/popuo-box.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+  <!--//pop-up-box-->
+  <!-- price range -->
+  <link href="<?php echo base_url('asset/home/css/jquery-ui1.css');?>" rel="stylesheet" type="text/css">
+  <!-- fonts -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url('asset/css/stylepembeli.css'); ?>">
 
-<!-- INI AWAL NAVBAR -->
-<?php require_once(APPPATH. 'views/pembeli/navbarpembeli.php'); ?>
-<!-- INI AKHIR NAVBAR -->
+</head>
+
+<body>
 
 
-<!--Ini Navbar Samping -->  
-<?php require_once(APPPATH. 'views/pembeli/navbarsamping.php'); ?>
-<!-- Akhir Navbar Samping -->
+  <!-- Awal Navbar Pembeli-->  
+  <?php require_once(APPPATH. 'views/pembeli/navbarpembeli.php'); ?>
+  <!-- Akhir Navbar Pembeli-->  
+
 
 <!-- Content -->
-<div class="col-md-9">
-  <div class="panel-right">
-    <div class="card">
-      
-      <!-- Page wrapper  -->
-        <div class="page-wrapper">
-            
-            <!-- Container fluid  -->
-            <div class="container-fluid">
-                <!-- Start Page Content -->
-                <div class="row bg-white m-l-0 m-r-0 box-shadow ">
 
-                    <div class="col-lg-12">
-                    <div class="card">
-                            <div class="card-body">                               
-                                <h4 class="card-title">Keranjang Belanja</h4>
-                                <div class="table-responsive m-t-20">
-                    <table id="example" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-            </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-            </tr>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-                <td>2012/03/29</td>
-                <td>$433,060</td>
-            </tr>
-
-            </tbody>      
-    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End PAge Content -->
-            </div>
-            <!-- End Container fluid  -->
-        </div>
-        <!-- End Page wrapper  -->                         
-      </div>                    
-                </div>
-            </div>
-        </div>
+<!-- Content -->
+  <!-- page -->
+  <div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+      <div class="container">
+        <ul class="w3_short">
+          <li>
+            <a href="index.html">Home</a>
+            <i>|</i>
+          </li>
+          <li>Keranjang Belanja</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+
+  <div class="container">
+    <div>
+      <!-- tittle heading -->
+      <h3 style="margin-top: 50px;" class="tittle-w3l">List Order
+        <span class="heading-style">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </h3>
+      <!-- //tittle heading -->  
+    </div>
+    
+
 <!-- Content -->
+<div class="checkout-right">
+                <h4>Your shopping cart contains:
+                    <span>3 Products</span>
+                </h4>
+                <div class="table-responsive">
+                    <table class="timetable_sub">
+                        <thead>
+                            <tr>
+                                <th>SL No.</th>
+                                <th>Product</th>
+                                <th>Quality</th>
+                                <th>Product Name</th>
 
+                                <th>Price</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="rem1">
+                                <td class="invert">1</td>
+                                <td class="invert-image">
+                                    <a href="single2.html">
+                                        <img src="images/a7.jpg" alt=" " class="img-responsive">
+                                    </a>
+                                </td>
+                                <td class="invert">
+                                    <div class="quantity">
+                                        <div class="quantity-select">
+                                            <div class="entry value-minus">&nbsp;</div>
+                                            <div class="entry value">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="entry value-plus active">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="invert">Spotzero Spin Mop</td>
+                                <td class="invert">$888.00</td>
+                                <td class="invert">
+                                    <div class="rem">
+                                        <div class="close1"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="rem2">
+                                <td class="invert">2</td>
+                                <td class="invert-image">
+                                    <a href="single2.html">
+                                        <img src="images/s6.jpg" alt=" " class="img-responsive">
+                                    </a>
+                                </td>
+                                <td class="invert">
+                                    <div class="quantity">
+                                        <div class="quantity-select">
+                                            <div class="entry value-minus">&nbsp;</div>
+                                            <div class="entry value">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="entry value-plus active">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="invert">Fair & Lovely, 80 g</td>
+                                <td class="invert">$121.60</td>
+                                <td class="invert">
+                                    <div class="rem">
+                                        <div class="close2"> </div>                                
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="rem3">
+                                <td class="invert">3</td>
+                                <td class="invert-image">
+                                    <a href="single.html">
+                                        <img src="images/s5.jpg" alt=" " class="img-responsive">
+                                    </a>
+                                </td>
+                                <td class="invert">
+                                    <div class="quantity">
+                                        <div class="quantity-select">
+                                            <div class="entry value-minus">&nbsp;</div>
+                                            <div class="entry value">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="entry value-plus active">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="invert">Sprite, 2.25L (Pack of 2)</td>
+                                <td class="invert">$180.00</td>
+                                <td class="invert">
+                                    <div class="rem">
+                                        <div class="close3"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+            </div>                  
+    <!-- //checkout page -->
 
+  <!-- footer -->
+  <footer>
+    <?php require_once(APPPATH. 'views/home/footer.php'); ?>
+  </footer>
+  <!-- //footer -->
+  <!-- copyright -->
+  <div class="copy-right">
+    <div class="container">
+      <p>© 2018 Go Stand. All rights reserved</p>
+    </div>
+  </div>
+  <!-- //copyright -->
 
-            
+  <!-- js-files -->
+  <!-- jquery -->
+  <script src="<?php echo base_url('asset/home/js/jquery-2.1.4.min.js');?>"></script>
+  <!-- //jquery -->
 
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <!-- popup modal (for signin & signup)-->
+  <script src="<?php echo base_url('asset/home/js/jquery.magnific-popup.js');?>"></script>
+  <script>
+    $(document).ready(function () {
+      $('.popup-with-zoom-anim').magnificPopup({
+        type: 'inline',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        closeBtnInside: true,
+        preloader: false,
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+      });
 
-<script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
-<script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    });
+  </script>
+  <!-- Large modal -->
+  <!-- <script>
+    $('#').modal('show');
+  </script> -->
+  <!-- //popup modal (for signin & signup)-->
 
+  <!-- cart-js -->
+  <script src="<?php echo base_url('asset/home/js/minicart.js');?>"></script>
+  <script>
+    paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
 
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+    paypalm.minicartk.cart.on('checkout', function (evt) {
+      var items = this.items(),
+        len = items.length,
+        total = 0,
+        i;
 
-<script type="text/javascript">
-$(document).ready( function () 
-{
-    $('#example').DataTable();
-} );     
-</script>
+      // Count the number of each item in the cart
+      for (i = 0; i < len; i++) {
+        total += items[i].get('quantity');
+      }
+
+      if (total < 3) {
+        alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+        evt.preventDefault();
+      }
+    });
+  </script>
+  <!-- //cart-js -->
+
+  <!-- price range (top products) -->
+  <script src="<?php echo base_url('asset/home/js/jquery-ui.js');?>"></script>
+  <script>
+    //<![CDATA[ 
+    $(window).load(function () {
+      $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 9000,
+        values: [50, 6000],
+        slide: function (event, ui) {
+          $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        }
+      });
+      $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+    }); //]]>
+  </script>
+  <!-- //price range (top products) -->
+
+  <!-- flexisel (for special offers) -->
+  <script src="<?php echo base_url('asset/home/js/jquery.flexisel.js');?>"></script>
+  <script>
+    $(window).load(function () {
+      $("#flexiselDemo1").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: {
+          portrait: {
+            changePoint: 480,
+            visibleItems: 1
+          },
+          landscape: {
+            changePoint: 640,
+            visibleItems: 2
+          },
+          tablet: {
+            changePoint: 768,
+            visibleItems: 2
+          }
+        }
+      });
+
+    });
+  </script>
+  <!-- //flexisel (for special offers) -->
+
+  <!-- password-script -->
+  <script>
+    window.onload = function () {
+      document.getElementById("password1").onchange = validatePassword;
+      document.getElementById("password2").onchange = validatePassword;
+    }
+
+    function validatePassword() {
+      var pass2 = document.getElementById("password2").value;
+      var pass1 = document.getElementById("password1").value;
+      if (pass1 != pass2)
+        document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+      else
+        document.getElementById("password2").setCustomValidity('');
+      //empty string means no validation error
+    }
+  </script>
+  <!-- //password-script -->
+
+  <!-- smoothscroll -->
+  <script src="<?php echo base_url('asset/home/js/SmoothScroll.min.js');?>"></script>
+  <!-- //smoothscroll -->
+
+  <!-- start-smooth-scrolling -->
+  <script src="<?php echo base_url('asset/home/js/move-top.js');?>"></script>
+  <script src="<?php echo base_url('asset/home/js/easing.js');?>"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1000);
+      });
+    });
+  </script>
+  <!-- //end-smooth-scrolling -->
+
+  <!-- smooth-scrolling-of-move-up -->
+  <script>
+    $(document).ready(function () {
+      /*
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+      };
+      */
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
+  <!-- //smooth-scrolling-of-move-up -->
+
+  <!-- for bootstrap working -->
+  <script src="<?php echo base_url('asset/home/js/bootstrap.js');?>"></script>
+  <!-- //for bootstrap working -->
+  <!-- //js-files -->
+
+  <!--quantity-->
+    <script>
+        $('.value-plus').on('click', function () {
+            var divUpd = $(this).parent().find('.value'),
+                newVal = parseInt(divUpd.text(), 10) + 1;
+            divUpd.text(newVal);
+        });
+
+        $('.value-minus').on('click', function () {
+            var divUpd = $(this).parent().find('.value'),
+                newVal = parseInt(divUpd.text(), 10) - 1;
+            if (newVal >= 1) divUpd.text(newVal);
+        });
+    </script>
+    <!--quantity-->
+    <script>
+        $(document).ready(function (c) {
+            $('.close1').on('click', function (c) {
+                $('.rem1').fadeOut('slow', function (c) {
+                    $('.rem1').remove();
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function (c) {
+            $('.close2').on('click', function (c) {
+                $('.rem2').fadeOut('slow', function (c) {
+                    $('.rem2').remove();
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function (c) {
+            $('.close3').on('click', function (c) {
+                $('.rem3').fadeOut('slow', function (c) {
+                    $('.rem3').remove();
+                });
+            });
+        });
+    </script>
+    <!--//quantity-->
+
 
 
 </body>
+
 </html>

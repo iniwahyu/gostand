@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Profil</title>
+  <title>Profile</title>
 
   
   <!--/tags -->

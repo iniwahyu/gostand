@@ -96,6 +96,9 @@
                 <li class="">
                   <a class="nav-stylehead" href="<?php echo base_url('pembeli/history'); ?>">Riwayat Pembelian</a>
                 </li>
+                <li class="">
+                  <a class="nav-stylehead" href="<?php echo base_url('pembeli/keranjang'); ?>">Keranjang Belanja</a>
+                </li>
               </ul>
             </div>
           </div>
