@@ -112,7 +112,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi Penjual</label>
-                    <textarea name="deskripsi" class="form-control" cols="30" rows="5" value="<?php echo $profil['deskripsi_penjual'];?>"></textarea>
+                    <textarea name="deskripsi" class="form-control" cols="30" rows="5" ><?php echo $profil['deskripsi_penjual'];?></textarea>
                   </div>
                   <p>Jam Operasional</p>
                   <div class="form-group">

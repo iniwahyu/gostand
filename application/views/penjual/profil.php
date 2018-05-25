@@ -65,9 +65,9 @@
           <div class="col-sm-6">
             <h1>Profil Penjual</h1>
             <?php
-            if($this->session->flashdata('berhasil'))
+            if($this->session->flashdata('succes'))
             {
-              echo $this->session->flashdata('berhasil');
+              echo $this->session->flashdata('succes');
             }
             else
             {
