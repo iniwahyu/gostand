@@ -122,10 +122,21 @@
 	        	'jam_tutup' => $this->input->post('jamtutup')
 	        );
 	        $user=$this->session->userdata('nama');
+	        
 	        $where=array(
 	        	'username'=>$user
 	        );
-	        $this->penjual_model->edit($where,$data,'penjual');
+
+	        $data=$this->penjual_model->edit($where,$data,'penjual');
+
+	        if($data){
+				$this->session->set_flashdata('berhasil', 'BERHASIL UPDATE');
+				redirect(base_url('penjual/profil'));
+			}
+			else{
+				$this->session->set_flashdata('error', 'GAGAL UPDATE');
+				redirect(base_url('penjual/profil'));
+			}
 		}
 }
 ?>
