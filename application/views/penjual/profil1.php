@@ -86,7 +86,7 @@
               <div class="card-header">
                 <h3 class="card-title">Edit Profil</h3>
               </div>
-                <form role="form">
+                <form role="form" method="post" action="<?php echo site_url('penjual/inptdatadiri'); ?>">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Toko</label>
@@ -102,7 +102,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="email" placeholder="">
+                    <input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Lokasi Stand</label>

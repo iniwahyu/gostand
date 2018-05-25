@@ -58,28 +58,31 @@
 			$this->load->view('penjual/riwayatpemesanan');
 		}
 
-		public function prosestambahproduk()
+		public function inptdatadiri()
 		{
 			$this->load->model('penjual_model');
 			$data = array(
-	        	'nama_toko' => $this->input->post('namatoko'),
-				'nama_produk' => $this->input->post('namaproduk'),
-	        	//'gambar' => $this->input->post('nama'),
-	        	'harga' => $this->input->post('harga'),
-	        	'deskripsi' => $this->input->post('deskripsi')
+	        	'username' => $this->session->userdata('nama'),
+				'nama_toko' => $this->input->post('namatoko'),
+				'nama_pemilik' => $this->input->post('namapemilik'),
+				'no_hp' => $this->input->post('nomorhp'),
+				'email' => $this->input->post('namatoko'),
+				'lokasi' => $this->input->post('lokasi'),
+				'deskripsi_penjual' => $this->input->post('deskripsi'),
+	        	'jam_buka' => $this->input->post('jambuka'),
+	        	'jam_tutup' => $this->input->post('jamtutup')
 	        );
 
-			$data = $this->penjual_model->Insertproduk('produk', $data);
+			$data = $this->penjual_model->Insertproduk('penjual', $data);
 
 			if( $data )
 			{
-				$this->session->set_flashdata('success', 'BERHASIL DITAMBAHKAN');
-				redirect(base_url('penjual/tambahproduk'));
+				redirect(base_url('penjual/index'));
 			}
 			else
 			{
 				$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
-				redirect(base_url('penjual/tambahproduk'));
+				redirect(base_url('penjual/profil1'));
 			}
 		}
 		public function hapusproduk($id)
@@ -94,6 +97,30 @@
 				
 			}
 			
+		}
+		public function prosestambahproduk()
+		{
+			$this->load->model('penjual_model');
+			$data = array(
+	        	'nama_toko' => $this->input->post('namatoko'),
+				'nama_produk' => $this->input->post('namaproduk'),
+	        	//'gambar' => $this->input->post('nama'),
+	        	'harga' => $this->input->post('harga'),
+	        	'deskripsi' => $this->input->post('deskripsi')
+	        );
+
+			$data = $this->penjual_model->Insertproduk('penjual', $data);
+
+			if( $data )
+			{
+				$this->session->set_flashdata('success', 'BERHASIL DITAMBAHKAN');
+				redirect(base_url('penjual/tambahproduk'));
+			}
+			else
+			{
+				$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
+				redirect(base_url('penjual/tambahproduk'));
+			}
 		}
 		
 	}
