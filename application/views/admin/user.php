@@ -74,18 +74,22 @@
                                                 <th>Nim / Username</th>
                                                 <th>Password</th>
                                                 <th>Level</th>
+                                                <th collapse="2">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php
-                                        $query = $this->db->get('user');                               
-                                        foreach ($query->result() as $row)
+                                        <?php                              
+                                        foreach ($user as $row)
                                         { ?>
                                             <tr>
-                                                <td><?php echo $row->nim; ?></td>
-                                                <td><?php echo $row->nama; ?></td>
-                                                <td><?php echo $row->password; ?></td>
-                                                <td><?php echo $row->level; ?></td>
+                                                <td><?php echo $row['username']; ?></td>
+                                                <td><?php echo $row['nama']; ?></td>
+                                                <td><?php echo $row['password']; ?></td>
+                                                <td><?php echo $row['level']; ?></td>
+                                                <td>
+                                                    <a href="" class="btn btn-sm btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                    <a href="<?php echo base_url('admin/deleteuser/').$row['id']; ?>" class="btn btn-sm btn-danger" ><i class="fa fa-times" aria-hidden="true"></i></a>
+                                                </td>
                                             </tr>
                                         <?php } ?>
                                         </tbody>

@@ -28,6 +28,12 @@ class Admin_Model extends CI_Model{
         $res=$this->db->get_where($table, $data);
         return $res->result_array();
     }
+
+    public function tampiluser($table)
+    {
+        $res = $this->db->get('user');
+        return $res->result_array();
+    }
 }
 
 

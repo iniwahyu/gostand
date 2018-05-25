@@ -21,7 +21,22 @@ class Admin extends CI_Controller {
 
 	public function user()
 	{
-		$this->load->view('admin/user');
+		$this->load->model('Admin_model');
+		$user = $this->Admin_model->tampiluser('user');
+		$user = array('user' => $user);
+		$this->load->view('admin/user', $user);
+	}
+
+	public function deleteuser($id)
+	{
+		$id = array('id' => $id);
+		$this->load->model('Admin_model');
+		$this->Admin_model->Delete('user', $id);
+		redirect('admin/user');
+		// $noinduk = array('no_induk' => $noinduk);
+		// $this->load->model('mymodel');
+		// $this->mymodel->Delete('mahasiswa', $noinduk);
+		// redirect(base_url(),'refresh');
 	}
 
 	public function penjual()

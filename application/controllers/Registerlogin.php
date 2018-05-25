@@ -26,12 +26,12 @@ class Registerlogin extends CI_Controller
 
 		if( $data )
 		{
-			$this->session->set_flashdata('success', 'BERHASIL DAFTAR');
+			$this->session->set_flashdata('success', 'Selamat! Anda Berhasil Melakukan Pendaftaran. Silahkan Login!');
 			redirect('registrasi');
 		}
 		else
 		{
-			$this->session->set_flashdata('error', 'GAGAL MENDAFTAR');
+			$this->session->set_flashdata('error', 'Mohon Maaf Pendaftaran Gagal. Silahkan Ulangi Kembali');
 			redirect('registrasi');
 		}
     	//redirect(base_url(),'refresh');
@@ -84,7 +84,7 @@ class Registerlogin extends CI_Controller
 				'status'=> 'login'
 			);
 			$this->session->set_userdata($data_session);
-			redirect(base_url('penjual/profil1'));
+			redirect(base_url('/'));
 		}else{
 			echo "Salah Password/Username";
 		}

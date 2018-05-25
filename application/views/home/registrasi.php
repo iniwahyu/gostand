@@ -37,12 +37,27 @@
 							Sudah mempunyai Akun? Mohon untuk 
 							<a href="<?php echo base_url('login'); ?>">Sign In Now</a>
 						</p>
-						<form action="<?php echo base_url('registrasilogin/prosesregister'); ?>" method="post">
+						<?php
+						if($this->session->flashdata('success'))
+						{
+							echo '<div class="alert alert-info">';
+							echo $this->session->flashdata('success');
+							echo '</div>';
+						}
+						else
+						{
+							echo $this->session->flashdata('error');
+						}
+						?>
+						<form action="<?php echo base_url('registerlogin/prosesregister'); ?>" method="post">
 							<div class="styled-input agile-styled-input-top">
-								<input type="text" placeholder="User Name" name="Name" required="">
+								<input type="text" placeholder="Nim" name="username" required>
 							</div>
 							<div class="styled-input">
-								<input type="password" placeholder="Password" name="password" required="">
+								<input type="text" placeholder="Nama Lengkap" name="nama" required>
+							</div>
+							<div class="styled-input">
+								<input type="password" placeholder="Password" name="password" required>
 							</div>
 							<input type="submit" name="registrasi" value="Daftar">
 						</form>

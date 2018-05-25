@@ -32,13 +32,13 @@
     <div id="main-wrapper">
         <!-- header header  -->
         <div class="header">
-            <?php require_once(APPPATH. 'views/admin/menu.php'); ?>
+            <?php require_once(APPPATH. 'views/admin/src/menu.php'); ?>
         </div>
         <!-- End header header -->
         <!-- Left Sidebar  -->
         <div class="left-sidebar">
             <!-- Sidebar scroll-->
-            <?php require_once(APPPATH.'views/admin/sidebar.php'); ?>
+            <?php require_once(APPPATH.'views/admin/src/sidebar.php'); ?>
             <!-- End Sidebar scroll-->
         </div>
         <!-- End Left Sidebar  -->
