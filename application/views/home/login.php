@@ -37,7 +37,7 @@
 							Belum Mempunyai Akun? Silahkan mendaftar di 
 							<a href="<?php echo base_url('registrasi'); ?>">Sign Up Now</a>
 						</p>
-						<form action="#" method="post">
+						<form action="<?php echo base_url('registerlogin/proseslogin'); ?>" method="post">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" placeholder="User Name" name="Name" required="">
 							</div>

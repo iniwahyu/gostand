@@ -37,7 +37,7 @@
 							Sudah mempunyai Akun? Mohon untuk 
 							<a href="<?php echo base_url('login'); ?>">Sign In Now</a>
 						</p>
-						<form action="#" method="post">
+						<form action="<?php echo base_url('registrasilogin/prosesregister'); ?>" method="post">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" placeholder="User Name" name="Name" required="">
 							</div>
