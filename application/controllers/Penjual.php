@@ -64,6 +64,7 @@
 		{
 			$this->load->view('penjual/tambahproduk');
 		}
+		
 		function prosestambahproduk(){
 			$this->load->model('penjual_model');
 			$data = array(

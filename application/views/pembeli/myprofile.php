@@ -78,8 +78,27 @@
               <tr>
                 <td><label>NIM</label></td>              
                 <td><label>:</label></td>
-                <td>A11.2016.09358</td>
+                <td><?php echo $this->session->userdata('nama');?></td>
               </tr>
+
+              <?php                  
+                  foreach ($data as $pembeli) {?>
+                  <tr>
+                    <td><label>Nama</label></td>
+                    <td><label>:</label></td>
+                    <td><?php echo $pembeli['nama'];?></td>
+                  </tr>
+                  <tr>
+                    <td><label>Email</label></td>
+                    <td><label>:</label></td>                
+                <td><?php echo $pembeli['email'];?></td>
+              </tr>
+              <tr>
+                <td><label>No. Handphone</label></td>
+                <td><label>:</label></td>
+                <td><?php echo $pembeli['nohape'];?></td>
+              </tr>
+                  <?php } ?>
               <tr>
                 <td><label>Nama</label></td>
                 <td><label>:</label></td>

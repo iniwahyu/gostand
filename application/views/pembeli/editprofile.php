@@ -76,16 +76,17 @@
           </div>
 
           <div class="col-md-6">
-            <table class="table">
+            <form role="form" action="<?php echo base_url('pembeli/inputdataprofile'); ?>" method="post">
+              <table class="table">
               <tr>
                 <td><label>NIM</label></td>              
                 <td><label>:</label></td>
-                <td>A11.2016.09358</td>
+                <td><?php echo $this->session->userdata('nama');?></td>
               </tr>
               <tr>
                 <td><label>Nama</label></td>
                 <td><label>:</label></td>
-                <td><input type="text" name="nama" placeholder="Nama Anda..."></td>
+                <td><input type="text" name="namaorang" placeholder="Nama Anda..."></td>
               </tr>
               <tr>
                 <td><label>Email</label></td>
@@ -98,7 +99,9 @@
                 <td><input type="text" name="nohape" placeholder="No. Handphone Anda..."></td>
               </tr>
             </table>
-            <a href="<?php echo base_url('pembeli/profile'); ?>" class="btn btn-primary">Save</a>
+            <button type="submit" class="btn btn-primary">Save</button>  
+            </form>
+            
           </div>
         </div>
       </div>
