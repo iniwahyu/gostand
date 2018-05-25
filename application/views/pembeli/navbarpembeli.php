@@ -94,7 +94,7 @@
                   <a class="nav-stylehead" href="<?php echo base_url('minuman'); ?>">Minuman</a>
                 </li>
                 <li class="">
-                  <a class="nav-stylehead" href="#">Riwayat Pembelian</a>
+                  <a class="nav-stylehead" href="<?php echo base_url('pembeli/history'); ?>">Riwayat Pembelian</a>
                 </li>
               </ul>
             </div>

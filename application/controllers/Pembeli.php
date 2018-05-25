@@ -34,9 +34,9 @@ class Pembeli extends CI_Controller {
 		$this->load->view('pembeli/editprofile');
 	}
 
-	 public function riwayat()
+	 public function history()
 	{
-		$this->load->view('pembeli/riwayat');
+		$this->load->view('pembeli/riwayatpembelian');
 	}
 
 	public function keranjang()
