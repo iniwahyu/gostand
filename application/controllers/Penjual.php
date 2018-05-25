@@ -164,9 +164,26 @@
 		}
 		function formupdateproduk($id){
 			$this->load->model('penjual_model');
-			$data=$this->penjual_model->tampilproduk('produk',$id);
+			$data=$this->penjual_model->editproduk('produk',$id);
 			$data=array('data'=> $data);
 			$this->load->view('penjual/editproduk',$data);
+		}
+		function prosesupdateproduk($id){
+			$this->load->model('penjual_model');
+			$data = array(
+				'nama_toko' => $this->input->post('namatoko'),
+				'nama_produk' => $this->input->post('namaproduk'),
+				'harga' => $this->input->post('harga'),
+				'deskripsi' => $this->input->post('deskripsi')
+	        );
+
+	        $where=array(
+	        	'id'=>$id
+	        );
+
+	        $this->penjual_model->edit($where,$data,'produk');
+	        
+				redirect(base_url('penjual/produk'));
 		}
 }
 ?>

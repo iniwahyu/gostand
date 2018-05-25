@@ -17,6 +17,11 @@ class penjual_model extends CI_Model
 		$res=$this->db->get_where($table,array('nama_toko'=>$username));//memilih tabel
 		return $res->result_array();//mengembalikan hasil
   }
+  public function editproduk($table,$id)
+  {
+    $res=$this->db->get_where($table,array('id'=>$id));//memilih tabel
+    return $res->result_array();//mengembalikan hasil
+  }
     
   public function hapus($table,$id)
   {
@@ -28,6 +33,10 @@ class penjual_model extends CI_Model
   {
     $this->db->where($where);
     $this->db->update($table,$data);
+  }
+  public function prosesupdateproduk()
+  {
+
   }
 	
 }

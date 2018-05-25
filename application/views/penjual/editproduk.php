@@ -80,10 +80,12 @@
         <div class="col-md-6">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Tambah Produk</h3>
+              <h3 class="card-title">Update Produk</h3>
             </div>
-            
-            <form role="form" action="<?php echo site_url('penjual/prosesupdateproduk'); ?>" method="post">
+            <?php
+                  foreach($data as $produk) {?>
+            <form role="form" action="<?php echo base_url();?>penjual/prosesupdateproduk/<?php echo $produk['id'];?>" method="post">
+              
               <div class="card-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nama Toko</label>
@@ -91,20 +93,20 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nama Produk</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" placeholder="">
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" value="<?php echo $produk['nama_produk'];?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Harga (Rp)</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" placeholder="">
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" value="<?php echo $produk['harga'];?>">
                 </div>
                 <div class="form-group">
                   <label>Deskripsi Produk</label>
-                  <textarea class="form-control" rows="3" placeholder="Enter ..." name="deskripsi"></textarea>
+                  <textarea class="form-control" rows="3" name="deskripsi"><?php echo $produk['deskripsi'];?></textarea>
                 </div>
               </div>
-            
+            <?php } ?>
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Tambahkan</button>
+              <button type="submit" class="btn btn-primary">Rubah</button>
             </div>
             
             </form>
