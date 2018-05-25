@@ -82,6 +82,16 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Daftar Produk</h3>
+                 <?php
+            if($this->session->flashdata('success'))
+            {
+              echo $this->session->flashdata('success');
+            }
+            else
+            {
+              echo $this->session->flashdata('error');
+            }
+            ?>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -91,7 +101,7 @@
                     <th>Nama Produk</th>
                     <th>Deskripsi Produk</th>
                     <th>Harga Produk</th>
-                    <th style="width: 130px">Action</th>
+                    <th style="width: 160px">Action</th>
                   </tr>
                   <?php
                   $no=1;
@@ -101,7 +111,7 @@
                     <td><?php echo $produk['nama_produk'];?></td>
                     <td><?php echo $produk['deskripsi'];?></td>
                     <td><?php echo $produk['harga'];?></td>
-                    <td><a href="">Edit</a> | <a href="<?php echo base_url();?>penjual/hapusproduk/<?php echo $produk['id'];?>">Delete</a> </td>
+                    <td><a href="" class="btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> <a href="<?php echo base_url();?>penjual/hapusproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="ture"></i></a> </td>
                   </tr>
                   <?php } ?>
                 </table>

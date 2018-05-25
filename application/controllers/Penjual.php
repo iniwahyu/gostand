@@ -124,10 +124,12 @@
 			$where = array('id' => $id);
 			$data=$this->penjual_model->hapus('produk',$where);
 			if($data){
-				//redirect(base_url('penjual/produk');
+				$this->session->set_flashdata('success', 'BERHASIL MENGHAPUS');
+				redirect(base_url('penjual/produk'));
 			}
 			else{
-				
+				$this->session->set_flashdata('error', 'GAGAL MENGHAPUS');
+				redirect(base_url('penjual/produk'));
 			}
 			
 		}
