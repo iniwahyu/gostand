@@ -86,47 +86,49 @@
               <div class="card-header">
                 <h3 class="card-title">Edit Profil</h3>
               </div>
-                <form role="form">
+                <form role="form" method="post">
                 <div class="card-body">
+                  <?php
+                  foreach ($data as $profil) {?>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Toko</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" value="<?php echo $profil['nama_toko'];?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Pemilik</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="namapemilik" placeholder="">
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="namapemilik" value="<?php echo $profil['nama_pemilik'];?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nomor Handphone</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="nomorhp" placeholder="">
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="nomorhp" value="<?php echo $profil['no_hp'];?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="email" placeholder="">
+                    <input type="email" class="form-control" id="exampleInputPassword1" name="email" value="<?php echo $profil['email'];?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Lokasi Stand</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" name="
-                    lokasi" placeholder="">
+                    lokasi" value="<?php echo $profil['lokasi'];?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi Penjual</label>
-                    <textarea name="deskripsi" class="form-control" cols="30" rows="5"></textarea>
+                    <textarea name="deskripsi" class="form-control" cols="30" rows="5" value="<?php echo $profil['deskripsi_penjual'];?>"></textarea>
                   </div>
                   <p>Jam Operasional</p>
                   <div class="form-group">
                     <div class="row">
                     <div class="col-md-6">
                       <label for="exampleInputEmail1">Jam Buka</label>
-                      <input type="time" class="form-control" id="exampleInputPassword1" name="jambuka" placeholder="">
+                      <input type="time" class="form-control" id="exampleInputPassword1" name="jambuka" value="<?php echo $profil['jam_buka'];?>">
                     </div>
                     <div class="col-md-6">
                       <label for="exampleInputEmail1">Jam Tutup</label>
-                      <input type="time" class="form-control" id="exampleInputPassword1" name="jamtutup" placeholder="">
+                      <input type="time" class="form-control" id="exampleInputPassword1" name="jamtutup" value="<?php echo $profil['jam_tutup'];?>">
                     </div>
                   </div>
                   </div>
-
+                     <?php } ?>
                    </div>
                 <!-- /.card-body -->
 

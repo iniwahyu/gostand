@@ -45,7 +45,11 @@
 		}
 		function editprofil()
 		{
-			$this->load->view('penjual/editprofil');
+			$namadata=$this->session->userdata('nama');
+			$this->load->model('penjual_model');
+			$data=$this->penjual_model->tampilproduk('penjual',$namadata);
+			$data=array('data'=> $data);
+			$this->load->view('penjual/editprofil',$data);
 		}
 		function produk()
 		{
