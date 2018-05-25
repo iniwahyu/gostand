@@ -15,7 +15,7 @@ class Registerlogin extends CI_Controller
 	{
 		$this->load->model('home_model');
 		$data = array(
-			'nim' => $this->input->post('nim'),
+			'username' => $this->input->post('username'),
 			'nama' => $this->input->post('nama'),
 			'password' => md5($this->input->post('password')),
 			//'level' => $this->input->post('')
@@ -41,7 +41,7 @@ class Registerlogin extends CI_Controller
 	{
 		$this->load->model('Home_model');
 		$data = array(
-			'nim' => $this->input->post('username'),
+			'username' => $this->input->post('username'),
 			'nama' => $this->input->post('nama'),
 			'password' => md5($this->input->post('password')),
 			'level' => 'Penjual'
@@ -73,7 +73,7 @@ class Registerlogin extends CI_Controller
 		$username=$this->input->post('username');
 		$password=$this->input->post('password');
 		$where=array(
-			'nim'=> $username,
+			'username'=> $username,
 			'password'=> md5($password)
 		);
 		$cek=$this->home_model->login('user',$where)->num_rows();
@@ -84,7 +84,7 @@ class Registerlogin extends CI_Controller
 				'status'=> 'login'
 			);
 			$this->session->set_userdata($data_session);
-			redirect(base_url('penjual/index'));
+			redirect(base_url('/'));
 		}else{
 			echo "Salah Password/Username";
 		}
