@@ -162,5 +162,11 @@
 				redirect(base_url('penjual/profil'));
 			}
 		}
+		function formupdateproduk($id){
+			$this->load->model('penjual_model');
+			$data=$this->penjual_model->tampilproduk('produk',$id);
+			$data=array('data'=> $data);
+			$this->load->view('penjual/editproduk',$data);
+		}
 }
 ?>

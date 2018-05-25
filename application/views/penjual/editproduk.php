@@ -73,59 +73,57 @@
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </div>
-  
 
-   <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Daftar Produk</h3>
-                 <?php
-            if($this->session->flashdata('success'))
-            {
-              echo $this->session->flashdata('success');
-            }
-            else
-            {
-              echo $this->session->flashdata('error');
-            }
-            ?>
-              </div>
-              <!-- /.card-header -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Tambah Produk</h3>
+            </div>
+            
+            <form role="form" action="<?php echo site_url('penjual/prosesupdateproduk'); ?>" method="post">
               <div class="card-body">
-                <table class="table table-bordered">
-                  <tr>
-                    <th style="width: 10px">#</th>
-                    <th>Nama Produk</th>
-                    <th>Deskripsi Produk</th>
-                    <th>Harga Produk</th>
-                    <th style="width: 160px">Action</th>
-                  </tr>
-                  <?php
-                  $no=1;
-                  foreach ($data as $produk) {?>
-                  <tr>
-                    <td><?php echo $no++ ?></td>
-                    <td><?php echo $produk['nama_produk'];?></td>
-                    <td><?php echo $produk['deskripsi'];?></td>
-                    <td><?php echo $produk['harga'];?></td>
-                    <td><a href="<?php echo base_url();?>penjual/formupdateproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> <a href="<?php echo base_url();?>penjual/hapusproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="ture"></i></a> </td>
-                  </tr>
-                  <?php } ?>
-                </table>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Toko</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="" readonly="" value="<?php echo $this->session->userdata('nama');?>">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Produk</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Harga (Rp)</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label>Deskripsi Produk</label>
+                  <textarea class="form-control" rows="3" placeholder="Enter ..." name="deskripsi"></textarea>
+                </div>
               </div>
-              <!-- /.card-body -->
-              <div class="card-footer clearfix">
-                <ul class="pagination pagination-sm m-0 float-right">
-                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                </ul>
-              </div>
+            
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Tambahkan</button>
+            </div>
+            
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-info">
+            <div class="card-header">
+              <h3 class="card-title">Upload Foto Produk</h3>
+            </div>
+            <p>untuk foto</p>
+          </div>
+        </div>
+      </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+</div>
 
 </div><!--divakhir-->
 
