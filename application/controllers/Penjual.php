@@ -109,5 +109,8 @@
 			}
 			
 		}
+		public function updateprofil(){
+			
+		}
 }
 ?>
