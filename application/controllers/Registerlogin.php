@@ -84,7 +84,7 @@ class Registerlogin extends CI_Controller
 				'status'=> 'login'
 			);
 			$this->session->set_userdata($data_session);
-			redirect(base_url('/'));
+			redirect(base_url('penjual/profil1'));
 		}else{
 			echo "Salah Password/Username";
 		}

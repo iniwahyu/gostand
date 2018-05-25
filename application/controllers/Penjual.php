@@ -98,38 +98,5 @@
 			}
 			
 		}
-<<<<<<< HEAD
-		public function prosestambahproduk()
-=======
-		public function prsesdatadiri()
->>>>>>> 7d9570d2c0c7569d78dee948137eba6e69041826
-		{
-			$this->load->model('penjual_model');
-			$data = array(
-	        	'nama_toko' => $this->input->post('namatoko'),
-				'nama_produk' => $this->input->post('namaproduk'),
-	        	//'gambar' => $this->input->post('nama'),
-	        	'harga' => $this->input->post('harga'),
-	        	'deskripsi' => $this->input->post('deskripsi')
-	        );
-
-<<<<<<< HEAD
-			$data = $this->penjual_model->Insertproduk('penjual', $data);
-=======
-			$data = $this->penjual_model->Insertproduk('produk', $data);
->>>>>>> 7d9570d2c0c7569d78dee948137eba6e69041826
-
-			if( $data )
-			{
-				$this->session->set_flashdata('success', 'BERHASIL DITAMBAHKAN');
-				redirect(base_url('penjual/tambahproduk'));
-			}
-			else
-			{
-				$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
-				redirect(base_url('penjual/tambahproduk'));
-			}
-		}
-		
-	}
+}
 ?>
