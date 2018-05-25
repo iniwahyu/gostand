@@ -106,8 +106,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Lokasi Stand</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="
-                    lokasi" placeholder="">
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="lokasi" placeholder="">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi Penjual</label>
