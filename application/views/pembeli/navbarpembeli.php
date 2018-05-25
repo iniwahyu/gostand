@@ -27,7 +27,7 @@
             </a>
           </li>
           <li>
-            <a href="<?php echo base_url('logout'); ?>">
+            <a href="<?php echo base_url('registerlogin/logout'); ?>">
               <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> LogOut
             </a>
           </li>
