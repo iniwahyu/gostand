@@ -7,9 +7,20 @@
 		
 		function index()
 		{
-			if($this->session->userdata('status'))
+			
+			if($this->session->userdata('nama'))
 			{
-				$this->load->view('penjual/index');
+			$this->load->model('home_model');
+			$nama=$this->session->userdata('nama');
+			$where=array('username'=>$nama);
+			$cek=$this->home_model->login('penjual',$where)->num_rows();
+				if($cek==NULL){
+					$this->load->view('penjual/profil1');
+				}
+				else{
+					$this->load->view('penjual/index');
+				}
+				
 			}
 			else
 			{
@@ -20,6 +31,10 @@
 		function profil()
 		{
 			$this->load->view('penjual/profil');
+		}
+		function profil1()
+		{
+			$this->load->view('penjual/profil1');
 		}
 		function editprofil()
 		{
