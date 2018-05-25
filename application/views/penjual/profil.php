@@ -93,27 +93,33 @@
                 </div>
                    <div class="card-body">
                 <table class="table table-bordered">
+                  <?php
+                  foreach ($data as $info) {?>
                   <tr>
                     <td>Username</td>
-                    <td></td>
+                    <td><?php echo $info['username'];?></td>
                   </tr>
                   <tr>
                     <td>Nama Toko</td>
-                    <td>Update software</td>
+                    <td><?php echo $info['nama_toko'];?></td>
                   </tr>
                   <tr>
                     <td>Nama Pemilik</td>
-                    <td>Clean database</td>
+                    <td><?php echo $info['nama_pemilik'];?></td>
                   </tr>
                   <tr>
                     <td>Nomor Hp</td>
-                    <td>Cron job running</td>
+                    <td><?php echo $info['no_hp'];?></td>
                   </tr>
                   <tr>
                     <td>Email</td>
-                    <td>Fix and squish bugs</td>
+                    <td><?php echo $info['email'];?></td>
                   </tr>
-                  
+                  <tr>
+                    <td>Jam Operasional</td>
+                    <td><?php echo $info['jam_buka'];?>-<?php echo $info['jam_tutup'];?></td>
+                  </tr>
+                  <?php } ?>
                 </table>
               </div>
             </div>

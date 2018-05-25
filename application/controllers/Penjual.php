@@ -14,11 +14,13 @@
 			$nama=$this->session->userdata('nama');
 			$where=array('username'=>$nama);
 			$cek=$this->home_model->login('penjual',$where)->num_rows();
+				if($cek>0){
+					//$this->load->view('penjual/profil1');
+					$this->load->view('penjual/index');
+				}
 				if($cek==NULL){
 					$this->load->view('penjual/profil1');
-				}
-				else{
-					$this->load->view('penjual/index');
+					//$this->load->view('penjual/index');
 				}
 				
 			}
@@ -30,7 +32,12 @@
 		
 		function profil()
 		{
-			$this->load->view('penjual/profil');
+			$namadata=$this->session->userdata('nama');
+			$this->load->model('penjual_model');
+			$data=$this->penjual_model->tampilproduk('penjual',$namadata);
+			$data=array('data'=> $data);
+			//$this->load->view('terserah',$data);
+			$this->load->view('penjual/profil',$data);
 		}
 		function profil1()
 		{
