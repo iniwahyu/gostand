@@ -42,7 +42,7 @@
 			<div class="footer-info w3-agileits-info">
 				<!-- footer categories -->
 				<div class="col-sm-5 address-right">
-					<div class="col-xs-2 footer-grids">
+					<div class="col-xs-5 footer-grids">
 						<h3>Kategori</h3>
 						<ul>
 							<li>
@@ -58,7 +58,7 @@
 				<!-- //footer categories -->
 				<!-- quick links -->
 				<div class="col-sm-5 address-right">
-					<div class="col-xs-6 footer-grids">
+					<div class="col-xs-5 footer-grids">
 						<h3>Tautan Langsung</h3>
 						<ul>
 							<li>

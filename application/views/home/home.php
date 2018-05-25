@@ -45,18 +45,17 @@
 				<div class="wrapper">
 					<!-- first section (nuts) -->
 					<div class="product-sec1">
-						<h3 class="heading-tittle">Hot Menu</h3>
 						<h3 class="heading-tittle">MAKANAN</h3>
 
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/ramen.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/ayam.jpg'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Ramen</a>
+										<a href="single.html">Fried Chicken</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">Rp 25.000</span>
@@ -70,12 +69,12 @@
                         <div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/pearl.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/donat.jpg'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Jus Melon</a>
+										<a href="single.html">Berry Donut</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">Rp 10.000</span>
@@ -89,12 +88,12 @@
                         <div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/nugget.png'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Almonds, 100g</a>
+										<a href="single.html">Banana Nugget Chocolate</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$149.00</span>
@@ -113,12 +112,12 @@
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/kopi.jpg'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Almonds, 100g</a>
+										<a href="single.html">Americanno</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$149.00</span>
@@ -132,12 +131,12 @@
                         <div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/snack.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/teh.jpg'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Snack Pedas</a>
+										<a href="single.html">Thai Tea</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">Rp 20.000</span>
@@ -151,12 +150,12 @@
                         <div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/home/images/eskrim.jpg'); ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Almonds, 100g</a>
+										<a href="single.html">Metropolitan</a>
 									</h4>
 									<div class="info-product-price">
 										<span class="item_price">$149.00</span>

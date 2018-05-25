@@ -1,145 +1,307 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/stylehome.css'); ?>">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    
+<title>GoStand</title>
+  <!--/tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" />
+  <!--//tags -->
+  <link href="<?php echo base_url('asset/home/css/bootstrap.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php echo base_url('asset/home/css/style.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php echo base_url('asset/css/stylecustom.css');?>" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!--pop-up-box-->
+  <link href="<?php echo base_url('asset/home/css/popuo-box.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+  <!--//pop-up-box-->
+  <!-- price range -->
+  <link href="<?php echo base_url('asset/home/css/jquery-ui1.css');?>" rel="stylesheet" type="text/css">
+  <!-- fonts -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
 </head>
-<body id="body">
 
-<!-- INI AWAL NAVBAR -->
-<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
-<!-- INI AKHIR NAVBAR -->
+<body>
+  <?php require_once(APPPATH. 'views/home/navbar.php'); ?>
+  <!-- banner-2 -->
+  <!-- <div class="page-head_agile_info_w3l">
 
-<!-- INI CARD AWAL MAKANAN DAN MINUMAN -->
-<div class="section-p-1">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Semua Produk</h2>
-            <hr>
-        </div>
+  </div> -->
+  <!-- //banner-2 -->
+  <!-- page -->
+  <div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+      <div class="container">
+        <ul class="w3_short">
+          <li>
+            <a href="<?php echo base_url('/'); ?>">Home</a>
+            <i>|</i>
+          </li>
+          <li>Minuman</li>
+        </ul>
+      </div>
     </div>
-</div>
-</div>
-<div class="section-p-2">
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
+  </div>
+  <!-- //page -->
+  <!-- top Products -->
+  <div class="banner-bootom-w3-agileits">
+    <div class="container">
+      <!-- tittle heading -->
+      <h3 class="tittle-w3l">Single Page
+        <span class="heading-style">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </h3>
+      <!-- //tittle heading -->
+      <div class="col-md-5 single-right-left ">
+        <div class="grid images_3_of_2">
+          <div class="flexslider">
+            <ul class="slides">
+              <li data-thumb="images/si.jpg">
+                <div class="thumb-image">
+                  <img src="images/si.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+              </li>
+              <li data-thumb="images/si2.jpg">
+                <div class="thumb-image">
+                  <img src="images/si2.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+              </li>
+              <li data-thumb="images/si3.jpg">
+                <div class="thumb-image">
+                  <img src="images/si3.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 single-right-left simpleCart_shelfItem">
+        <h3>Zeeba Premium Basmati Rice - 5 KG</h3>
+        <div class="rating1">
+          <span class="starRating">
+            <input id="rating5" type="radio" name="rating" value="5">
+            <label for="rating5">5</label>
+            <input id="rating4" type="radio" name="rating" value="4">
+            <label for="rating4">4</label>
+            <input id="rating3" type="radio" name="rating" value="3" checked="">
+            <label for="rating3">3</label>
+            <input id="rating2" type="radio" name="rating" value="2">
+            <label for="rating2">2</label>
+            <input id="rating1" type="radio" name="rating" value="1">
+            <label for="rating1">1</label>
+          </span>
+        </div>
+        <p>
+          <span class="item_price">$950.00</span>
+          <del>$1300.00</del>
+          <label>Free delivery</label>
+        </p>
+        
+        <div class="product-single-w3l">
+          <p>
+            <i class="fa fa-hand-o-right" aria-hidden="true"></i>This is a
+            <label>Vegetarian</label> product.</p>
+        </div>
+        <div class="single-infoagile">
+          <p>Ini deskripsi</p>
+        </div>
+        <div class="occasion-cart">
+          <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+            <form action="#" method="post">
+              <fieldset>
+                <input type="submit" name="submit" value="Add to cart" class="button" />
+              </fieldset>
+            </form>
+          </div>
+
         </div>
 
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
-
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
-
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
-
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
-
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
-
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
-
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
-
+      </div>
+      <div class="clearfix"> </div>
     </div>
-</div>
-</div>
+  </div>
+  <!-- //top products -->
+  <!-- footer -->
+  <footer>
+    <?php require_once(APPPATH. 'views/home/footer.php'); ?>
+  </footer>
+  <!-- //footer -->
+  <!-- copyright -->
+  <div class="copy-right">
+    <div class="container">
+      <p>© 2018 Go Stand. All rights reserved
+      </p>
+    </div>
+  </div>
+  <!-- //copyright -->
 
-<!-- INI AKHIR ABOUT -->
+  <!-- js-files -->
+  <!-- jquery -->
+  <script src="<?php echo base_url('asset/home/js/jquery-2.1.4.min.js');?>"></script>
+  <!-- //jquery -->
 
-<!-- SCRIPT -->
-<script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
-<script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!-- popup modal (for signin & signup)-->
+  <script src="<?php echo base_url('asset/home/js/jquery.magnific-popup.js');?>"></script>
+  <script>
+    $(document).ready(function () {
+      $('.popup-with-zoom-anim').magnificPopup({
+        type: 'inline',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        closeBtnInside: true,
+        preloader: false,
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+      });
 
+    });
+  </script>
+  <!-- Large modal -->
+  <!-- <script>
+    $('#').modal('show');
+  </script> -->
+  <!-- //popup modal (for signin & signup)-->
+
+  <!-- cart-js -->
+  <script src="<?php echo base_url('asset/home/js/minicart.js');?>"></script>
+  <script>
+    paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
+
+    paypalm.minicartk.cart.on('checkout', function (evt) {
+      var items = this.items(),
+        len = items.length,
+        total = 0,
+        i;
+
+      // Count the number of each item in the cart
+      for (i = 0; i < len; i++) {
+        total += items[i].get('quantity');
+      }
+
+      if (total < 3) {
+        alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+        evt.preventDefault();
+      }
+    });
+  </script>
+  <!-- //cart-js -->
+
+  <!-- price range (top products) -->
+  <script src="<?php echo base_url('asset/home/js/jquery-ui.js');?>"></script>
+  <script>
+    //<![CDATA[ 
+    $(window).load(function () {
+      $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 9000,
+        values: [50, 6000],
+        slide: function (event, ui) {
+          $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        }
+      });
+      $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+    }); //]]>
+  </script>
+  <!-- //price range (top products) -->
+
+  <!-- flexisel (for special offers) -->
+  <script src="<?php echo base_url('asset/home/js/jquery.flexisel.js');?>"></script>
+  <script>
+    $(window).load(function () {
+      $("#flexiselDemo1").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: {
+          portrait: {
+            changePoint: 480,
+            visibleItems: 1
+          },
+          landscape: {
+            changePoint: 640,
+            visibleItems: 2
+          },
+          tablet: {
+            changePoint: 768,
+            visibleItems: 2
+          }
+        }
+      });
+
+    });
+  </script>
+  <!-- //flexisel (for special offers) -->
+
+  <!-- password-script -->
+  <script>
+    window.onload = function () {
+      document.getElementById("password1").onchange = validatePassword;
+      document.getElementById("password2").onchange = validatePassword;
+    }
+
+    function validatePassword() {
+      var pass2 = document.getElementById("password2").value;
+      var pass1 = document.getElementById("password1").value;
+      if (pass1 != pass2)
+        document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+      else
+        document.getElementById("password2").setCustomValidity('');
+      //empty string means no validation error
+    }
+  </script>
+  <!-- //password-script -->
+
+  <!-- smoothscroll -->
+  <script src="<?php echo base_url('asset/home/js/SmoothScroll.min.js');?>"></script>
+  <!-- //smoothscroll -->
+
+  <!-- start-smooth-scrolling -->
+  <script src="<?php echo base_url('asset/home/js/move-top.js');?>"></script>
+  <script src="<?php echo base_url('asset/home/js/easing.js');?>"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1000);
+      });
+    });
+  </script>
+  <!-- //end-smooth-scrolling -->
+
+  <!-- smooth-scrolling-of-move-up -->
+  <script>
+    $(document).ready(function () {
+      /*
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+      };
+      */
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
+  <!-- //smooth-scrolling-of-move-up -->
+
+  <!-- for bootstrap working -->
+  <script src="<?php echo base_url('asset/home/js/bootstrap.js');?>"></script>
+  <!-- //for bootstrap working -->
+  <!-- //js-files -->
 </body>
+
 </html>
