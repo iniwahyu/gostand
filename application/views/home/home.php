@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
 
 <head>
+<<<<<<< HEAD
 	<title>GOSTAND</title>
+=======
+	<title>GoStand</title>
+>>>>>>> refs/remotes/origin/master
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,6 +27,7 @@
 
 <body>
 
+<<<<<<< HEAD
 	<!-- header-bot-->
 	<div class="header-bot">
 		<div class="header-bot_inner_wthreeinfo_header_mid">
@@ -229,11 +234,18 @@
 	</div>
 	<!-- //navigation -->
 
+=======
+	<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
+>>>>>>> refs/remotes/origin/master
 	<!-- special offers -->
 	<div class="featured-section" id="projects">
 		<div class="container">
 			<!-- tittle heading -->
+<<<<<<< HEAD
 			<h3 class="tittle-w3l">Penawaran khusus
+=======
+			<h3 class="tittle-w3l">HOT PRODUK
+>>>>>>> refs/remotes/origin/master
 				<span class="heading-style">
 					<i></i>
 					<i></i>
@@ -246,7 +258,11 @@
 				<div class="wrapper">
 					<!-- first section (nuts) -->
 					<div class="product-sec1">
+<<<<<<< HEAD
 						<h3 class="heading-tittle">Hot Menu</h3>
+=======
+						<h3 class="heading-tittle">MAKANAN</h3>
+>>>>>>> refs/remotes/origin/master
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
@@ -261,14 +277,7 @@
 										<span class="item_price">Rp 25.000</span>
 										<del>Rp 35.000</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Lihat Produk" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
@@ -287,17 +296,53 @@
 										<span class="item_price">Rp 10.000</span>
 										<del>Rp 15.000</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Lihat Produk" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
                         </div>
+                        
+                        <div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Almonds, 100g</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$149.00</span>
+										<del>$280.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+                        </div>
+                        
+						<div class="clearfix"></div>
+					</div>
+					<!-- //first section (nuts) -->
+					<div class="product-sec1">
+						<h3 class="heading-tittle">MINUMAN</h3>
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Almonds, 100g</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$149.00</span>
+										<del>$280.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+						</div>
                         
                         <div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
@@ -313,21 +358,32 @@
 										<span class="item_price">Rp 20.000</span>
 										<del>Rp 25.000</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Lihat Produk" class="button" />
-											</fieldset>
-										</form>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Almonds, 100g</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$149.00</span>
+										<del>$280.00</del>
 									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
                         </div>
                         
 						<div class="clearfix"></div>
 					</div>
-					<!-- //first section (nuts) -->
 				</div>
 			</div>
 			</div>
@@ -336,6 +392,7 @@
 	<!-- //special offers -->
 	<!-- footer -->
 	<footer>
+<<<<<<< HEAD
 		<div class="container">
 			<!-- footer first section -->
 			<p class="footer-main"  align="justify">
@@ -514,13 +571,20 @@
 
 			<!-- //footer fourth section (text) -->
 		</div>
+=======
+		<?php require_once(APPPATH. 'views/home/footer.php'); ?>
+>>>>>>> refs/remotes/origin/master
 	</footer>
 	<!-- //footer -->
 	<!-- copyright -->
 	<div class="copy-right">
 		<div class="container">
+<<<<<<< HEAD
 			<p>© 2018 GoStand. All rights reserved | Design with
 				<a href="http://w3layouts.com"> Love.</a>
+=======
+			<p>© 2018 Go Stand. All rights reserved
+>>>>>>> refs/remotes/origin/master
 			</p>
 		</div>
 	</div>
@@ -692,8 +756,6 @@
 	<script src="<?php echo base_url('asset/home/js/bootstrap.js');?>"></script>
 	<!-- //for bootstrap working -->
 	<!-- //js-files -->
-
-
 </body>
 
 </html>

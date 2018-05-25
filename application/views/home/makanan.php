@@ -1,145 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/stylehome.css'); ?>">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    
+<title>GoStand</title>
+	<!--/tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<!--//tags -->
+	<link href="<?php echo base_url('asset/home/css/bootstrap.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php echo base_url('asset/home/css/style.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php echo base_url('asset/css/stylecustom.css');?>" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!--pop-up-box-->
+	<link href="<?php echo base_url('asset/home/css/popuo-box.css'); ?>" rel="stylesheet" type="text/css" media="all" />
+	<!--//pop-up-box-->
+	<!-- price range -->
+	<link href="<?php echo base_url('asset/home/css/jquery-ui1.css');?>" rel="stylesheet" type="text/css">
+	<!-- fonts -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
 </head>
-<body id="body">
 
-<!-- INI AWAL NAVBAR -->
-<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
-<!-- INI AKHIR NAVBAR -->
+<body>
+	<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
+	<!-- banner-2 -->
+	<!-- <div class="page-head_agile_info_w3l">
 
-<!-- INI CARD AWAL MAKANAN DAN MINUMAN -->
-<div class="section-p-1">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Makanan</h2>
-            <hr>
-        </div>
-    </div>
-</div>
-</div>
-<div class="section-p-2">
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
+	</div> -->
+	<!-- //banner-2 -->
+	<!-- page -->
+	<div class="services-breadcrumb">
+		<div class="agile_inner_breadcrumb">
+			<div class="container">
+				<ul class="w3_short">
+					<li>
+						<a href="index.html">Home</a>
+						<i>|</i>
+					</li>
+					<li>Makanan</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //page -->
+	<!-- top Products -->
+	<div class="ads-grid">
+		<div class="container">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l">MAKANAN
+				<span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+			</h3>
+			<!-- //tittle heading -->
+			<!-- product right -->
+			<div class="agileinfo-ads-display col-md-12 w3l-rightpro">
+				<div class="wrapper">
+					<!-- first section -->
+					<div class="product-sec1">
+						<div class="col-xs-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Zeeba Basmati Rice</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$950.00</span>
+										<del>$1020.00</del>
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="#" method="post">
+											<fieldset>
+												<input type="submit" name="submit" value="Add to cart" class="button" />
+											</fieldset>
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Maiyas Gulab Jamun</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$137.00</span>
+										<del>$420.00</del>
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="#" method="post">
+											<fieldset>
+												<input type="submit" name="submit" value="Add to cart" class="button" />
+											</fieldset>
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Lipton Green Tea</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$384.00</span>
+										<del>$480.00</del>
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<form action="#" method="post">
+											<fieldset>
+												<input type="submit" name="submit" value="Add to cart" class="button" />
+											</fieldset>
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<!-- //first section -->
 				</div>
-            </div>
-            </a>
-        </div>
+			</div>
+			<!-- //product right -->
+		</div>
+	</div>
+	<!-- //top products -->
+	<!-- footer -->
+	<footer>
+		<?php require_once(APPPATH. 'views/home/footer.php'); ?>
+	</footer>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copy-right">
+		<div class="container">
+			<p>© 2017 Grocery Shoppy. All rights reserved | Design by
+				<a href="http://w3layouts.com"> W3layouts.</a>
+			</p>
+		</div>
+	</div>
+	<!-- //copyright -->
 
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
+	<!-- js-files -->
+	<!-- jquery -->
+	<script src="<?php echo base_url('asset/home/js/jquery-2.1.4.min.js');?>"></script>
+	<!-- //jquery -->
 
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
+	<!-- popup modal (for signin & signup)-->
+	<script src="<?php echo base_url('asset/home/js/jquery.magnific-popup.js');?>"></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
 
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
+		});
+	</script>
+	<!-- Large modal -->
+	<!-- <script>
+		$('#').modal('show');
+	</script> -->
+	<!-- //popup modal (for signin & signup)-->
 
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
+	<!-- cart-js -->
+	<script src="<?php echo base_url('asset/home/js/minicart.js');?>"></script>
+	<script>
+		paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
 
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
+		paypalm.minicartk.cart.on('checkout', function (evt) {
+			var items = this.items(),
+				len = items.length,
+				total = 0,
+				i;
 
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
+			// Count the number of each item in the cart
+			for (i = 0; i < len; i++) {
+				total += items[i].get('quantity');
+			}
 
-        <div class="col-md-3">
-            <a href="">
-            <div class="card">
-			<img class="card-img-top" src="https://ecs.tokopedia.com/img/cache/300-square/attachment/2018/5/8/22150512/22150512_84f116df-5e56-4adb-93d5-4ca7e03b4602.jpg" alt="Card image cap">
-				<div class="card-body">
-                    <h5>Nama Produk</h5>
-                    <span>Rp. 50.000</span>
-				</div>
-            </div>
-            </a>
-        </div>
+			if (total < 3) {
+				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+				evt.preventDefault();
+			}
+		});
+	</script>
+	<!-- //cart-js -->
 
-    </div>
-</div>
-</div>
+	<!-- price range (top products) -->
+	<script src="<?php echo base_url('asset/home/js/jquery-ui.js');?>"></script>
+	<script>
+		//<![CDATA[ 
+		$(window).load(function () {
+			$("#slider-range").slider({
+				range: true,
+				min: 0,
+				max: 9000,
+				values: [50, 6000],
+				slide: function (event, ui) {
+					$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+				}
+			});
+			$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
 
-<!-- INI AKHIR ABOUT -->
+		}); //]]>
+	</script>
+	<!-- //price range (top products) -->
 
-<!-- SCRIPT -->
-<script src="<?php echo base_url('asset/js/jquery.js');?>"></script>
-<script src="<?php echo base_url('asset/js/bootstrap.min.js');?>"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	<!-- flexisel (for special offers) -->
+	<script src="<?php echo base_url('asset/home/js/jquery.flexisel.js');?>"></script>
+	<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 480,
+						visibleItems: 1
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 2
+					}
+				}
+			});
 
+		});
+	</script>
+	<!-- //flexisel (for special offers) -->
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<!-- smoothscroll -->
+	<script src="<?php echo base_url('asset/home/js/SmoothScroll.min.js');?>"></script>
+	<!-- //smoothscroll -->
+
+	<!-- start-smooth-scrolling -->
+	<script src="<?php echo base_url('asset/home/js/move-top.js');?>"></script>
+	<script src="<?php echo base_url('asset/home/js/easing.js');?>"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+
+	<!-- smooth-scrolling-of-move-up -->
+	<script>
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+
+	<!-- for bootstrap working -->
+	<script src="<?php echo base_url('asset/home/js/bootstrap.js');?>"></script>
+	<!-- //for bootstrap working -->
+	<!-- //js-files -->
 </body>
+
 </html>

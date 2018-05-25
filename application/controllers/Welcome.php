@@ -3,21 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Home_model');
+	}
+	
 	public function index()
 	{
 		$this->load->view('home/home');
@@ -41,6 +32,44 @@ class Welcome extends CI_Controller {
 	public function home2()
 	{
 		$this->load->view('home/home2');
+	}
+
+	// public function gambar()
+	// {
+	// 	$this->load->view('home/gambar');
+	// }
+
+	public function gambar()
+	{
+		$data['gambar'] = $this->Home_model->gambar();
+		$this->load->view('home/gambar', $data);
+	}
+	  
+	public function tambah()
+	{
+		$data = array();
+		
+		if($this->input->post('submit')) // Jika user menekan tombol Submit (Simpan) pada form
+		{ 
+		  // lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
+		  $upload = $this->Home_model->upload();
+		  
+		  if($upload['result'] == "success") // Jika proses upload sukses
+		  { 
+			 // Panggil function save yang ada di GambarModel.php untuk menyimpan data ke database
+			$this->Home_model->save($upload);
+			
+			redirect('welcome/gambar'); // Redirect kembali ke halaman awal / halaman view data
+		  }else{ // Jika proses upload gagal
+			$data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
+		  }
+		}
+		
+		$this->load->view('home/formgambar', $data);
+	}
+	public function formgambar()
+	{
+		$this->load->view('home/formgambar');
 	}
 
 	

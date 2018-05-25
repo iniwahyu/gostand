@@ -8,7 +8,7 @@ class Registerlogin extends CI_Controller
 	
 	function registrasi()
 	{
-		$this->load->view('penjual/registrasi');
+		$this->load->view('home/registrasi');
 	}
 	
 	public function prosesregister()
@@ -64,7 +64,7 @@ class Registerlogin extends CI_Controller
 
 	function login()
 	{
-		$this->load->view('penjual/login');
+		$this->load->view('home/login');
 	}
 
 	public function proseslogin()
