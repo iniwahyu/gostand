@@ -21,17 +21,17 @@ class Pembeli extends CI_Controller {
     public function index()
     {
         
-        $this->load->view('pembeli/homepembeli');
+        $this->load->view('home/home');
     }
 
-    public function profilpembeli()
+    public function profile()
 	{
-		$this->load->view('pembeli/profilpembeli');
+		$this->load->view('pembeli/myprofile');
 	}
     
-     public function editprofil()
+     public function editprofile()
 	{
-		$this->load->view('pembeli/editprofil');
+		$this->load->view('pembeli/editprofile');
 	}
 
 	 public function riwayat()
