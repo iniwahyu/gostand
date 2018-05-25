@@ -86,7 +86,7 @@
               <div class="card-header">
                 <h3 class="card-title">Edit Profil</h3>
               </div>
-                <form role="form">
+                <form role="form" method="post" action="<?php echo site_url('penjual/prsesdatadiri'); ?>">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Toko</label>
