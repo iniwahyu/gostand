@@ -24,9 +24,10 @@ class penjual_model extends CI_Model
 		$res=$this->db->delete($table);
 		return $res;
   }
-  public function edit($table,$where)
+  public function edit($where,$data,$table)
   {
-    return $this->db->where($table,$where);
+    $this->db->where($where);
+    $this->db->update($table,$data);
   }
 	
 }

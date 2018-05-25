@@ -86,7 +86,7 @@
               <div class="card-header">
                 <h3 class="card-title">Edit Profil</h3>
               </div>
-                <form role="form" method="post">
+                <form role="form" method="post" action="<?php echo base_url(). 'penjual/updateprofil'; ?>">
                 <div class="card-body">
                   <?php
                   foreach ($data as $profil) {?>
@@ -108,8 +108,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Lokasi Stand</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="
-                    lokasi" value="<?php echo $profil['lokasi'];?>">
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="lokasi" value="<?php echo $profil['lokasi'];?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi Penjual</label>

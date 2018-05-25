@@ -110,7 +110,22 @@
 			
 		}
 		public function updateprofil(){
-			
+			$this->load->model('penjual_model');
+			$data = array(
+				'nama_toko' => $this->input->post('namatoko'),
+				'nama_pemilik' => $this->input->post('namapemilik'),
+				'no_hp' => $this->input->post('nomorhp'),
+				'email' => $this->input->post('email'),
+				'lokasi' => $this->input->post('lokasi'),
+				'deskripsi_penjual' => $this->input->post('deskripsi'),
+	        	'jam_buka' => $this->input->post('jambuka'),
+	        	'jam_tutup' => $this->input->post('jamtutup')
+	        );
+	        $user=$this->session->userdata('nama');
+	        $where=array(
+	        	'username'=>$user
+	        );
+	        $this->penjual_model->edit($where,$data,'penjual');
 		}
 }
 ?>
