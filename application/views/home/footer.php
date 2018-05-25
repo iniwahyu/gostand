@@ -10,28 +10,28 @@
 			<div class="w3l-grids-footer">
 				<div class="col-xs-4 offer-footer">
 					<div class="col-xs-4 icon-fot">
-						<span class="fa fa-map-marker" aria-hidden="true"></span>
+						<span class="fa fa-thumbs-up" aria-hidden="true"></span>
 					</div>
 					<div class="col-xs-8 text-form-footer">
-						<h3>Track Your Order</h3>
+						<h3>Cita Rasa Yang Khas</h3>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="col-xs-4 offer-footer">
 					<div class="col-xs-4 icon-fot">
-						<span class="fa fa-refresh" aria-hidden="true"></span>
+						<span class="fa fa-heart" aria-hidden="true"></span>
 					</div>
 					<div class="col-xs-8 text-form-footer">
-						<h3>Free & Easy Returns</h3>
+						<h3>Terjamin Mutunya</h3>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="col-xs-4 offer-footer">
 					<div class="col-xs-4 icon-fot">
-						<span class="fa fa-times" aria-hidden="true"></span>
+						<span class="fa fa-star" aria-hidden="true"></span>
 					</div>
 					<div class="col-xs-8 text-form-footer">
-						<h3>Online cancellation </h3>
+						<h3>Berkualitas Tinggi</h3>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -42,48 +42,14 @@
 			<div class="footer-info w3-agileits-info">
 				<!-- footer categories -->
 				<div class="col-sm-5 address-right">
-					<div class="col-xs-6 footer-grids">
-						<h3>Categories</h3>
+					<div class="col-xs-2 footer-grids">
+						<h3>Kategori</h3>
 						<ul>
 							<li>
-								<a href="product.html">Grocery</a>
+								<a href="<?php echo base_url('makanan'); ?>">Makanan</a>
 							</li>
 							<li>
-								<a href="product.html">Fruits</a>
-							</li>
-							<li>
-								<a href="product.html">Soft Drinks</a>
-							</li>
-							<li>
-								<a href="product2.html">Dishwashers</a>
-							</li>
-							<li>
-								<a href="product.html">Biscuits & Cookies</a>
-							</li>
-							<li>
-								<a href="product2.html">Baby Diapers</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-xs-6 footer-grids agile-secomk">
-						<ul>
-							<li>
-								<a href="product.html">Snacks & Beverages</a>
-							</li>
-							<li>
-								<a href="product.html">Bread & Bakery</a>
-							</li>
-							<li>
-								<a href="product.html">Sweets</a>
-							</li>
-							<li>
-								<a href="product.html">Chocolates & Biscuits</a>
-							</li>
-							<li>
-								<a href="product2.html">Personal Care</a>
-							</li>
-							<li>
-								<a href="product.html">Dried Fruits & Nuts</a>
+								<a href="<?php echo base_url('minuman'); ?>">Minuman</a>
 							</li>
 						</ul>
 					</div>
@@ -93,40 +59,40 @@
 				<!-- quick links -->
 				<div class="col-sm-5 address-right">
 					<div class="col-xs-6 footer-grids">
-						<h3>Quick Links</h3>
+						<h3>Tautan Langsung</h3>
 						<ul>
 							<li>
-								<a href="about.html">About Us</a>
+								<a href="about.html">Tentang Kami</a>
 							</li>
 							<li>
-								<a href="contact.html">Contact Us</a>
+								<a href="contact.html">Hubungi Kami</a>
 							</li>
 							<li>
-								<a href="help.html">Help</a>
+								<a href="help.html">Bantuan</a>
 							</li>
 							<li>
 								<a href="faqs.html">Faqs</a>
 							</li>
 							<li>
-								<a href="terms.html">Terms of use</a>
+								<a href="terms.html">Aturan Penggunaan</a>
 							</li>
 							<li>
-								<a href="privacy.html">Privacy Policy</a>
+								<a href="privacy.html">Kebijakan pribadi</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-xs-6 footer-grids">
-						<h3>Get in Touch</h3>
+						<h3>Hubungi Kami</h3>
 						<ul>
 							<li>
-								<i class="fa fa-map-marker"></i> 123 Sebastian, USA.</li>
+								<i class="fa fa-map-marker"></i> Jalan Imam Bonjol No. 207, Pindrikan Lor, Semarang. </li>
 							<li>
-								<i class="fa fa-mobile"></i> 333 222 3333 </li>
+								<i class="fa fa-mobile"></i> 081225225988 </li>
 							<li>
-								<i class="fa fa-phone"></i> +222 11 4444 </li>
+								<i class="fa fa-phone"></i> (024) 3565580 </li>
 							<li>
 								<i class="fa fa-envelope-o"></i>
-								<a href="mailto:example@mail.com"> mail@example.com</a>
+								<a href="mailto:example@mail.com"> gostand@gmail.com </a>
 							</li>
 						</ul>
 					</div>
@@ -134,7 +100,7 @@
 				<!-- //quick links -->
 				<!-- social icons -->
 				<div class="col-sm-2 footer-grids  w3l-socialmk">
-					<h3>Follow Us on</h3>
+					<h3>Ikuti Kami</h3>
 					<div class="social">
 						<ul>
 							<li>
@@ -155,7 +121,7 @@
 						</ul>
 					</div>
 					<div class="agileits_app-devices">
-						<h5>Download the App</h5>
+						<h5>Download Aplikasi</h5>
 						<a href="#">
 							<img src="images/1.png" alt="">
 						</a>

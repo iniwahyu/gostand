@@ -34,7 +34,7 @@
 			<div class="container">
 				<ul class="w3_short">
 					<li>
-						<a href="index.html">Home</a>
+						<a href="<?php echo base_url('/'); ?>">Home</a>
 						<i>|</i>
 					</li>
 					<li>Minuman</li>
@@ -154,8 +154,7 @@
 	<!-- copyright -->
 	<div class="copy-right">
 		<div class="container">
-			<p>© 2017 Grocery Shoppy. All rights reserved | Design by
-				<a href="http://w3layouts.com"> W3layouts.</a>
+			<p>© 2018 Go Stand. All rights reserved
 			</p>
 		</div>
 	</div>

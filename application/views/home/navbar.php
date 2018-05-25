@@ -16,23 +16,19 @@
 				<ul>
 					<li>
 						<a class="play-icon popup-with-zoom-anim">
-							<span class="fa fa-map-marker" aria-hidden="true"></span> Indonesia</a>
+							<span class="fa fa-map-marker" aria-hidden="true"></span> Semarang</a>
 					</li>
 					<li>
-						<a href="#" data-toggle="modal">
-							<span class="fa fa-truck" aria-hidden="true"></span>Track Order</a>
-					</li>
-					<li>
-						<span class="fa fa-phone" aria-hidden="true"></span> 001 234 5678
+						<span class="fa fa-phone" aria-hidden="true"></span> (024) 3565580
 					</li>
 					<li>
 						<a href="<?php echo base_url('login'); ?>">
-							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In 
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Login 
 						</a>
 					</li>
 					<li>
 						<a href="<?php echo base_url('registrasi'); ?>">
-							<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up
+							<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Register
 						</a>
 					</li>
 				</ul>
@@ -40,7 +36,7 @@
 				<!-- search -->
 				<div class="agileits_search">
 					<form action="#" method="post">
-						<input name="Search" type="search" placeholder="How can we help you today?" required="">
+						<input name="Search" type="search" placeholder="Bagaimana kami dapat membantu anda hari ini?" required="">
 						<button type="submit" class="btn btn-default" aria-label="Left Align">
 							<span class="fa fa-search" aria-hidden="true"> </span>
 						</button>
@@ -88,6 +84,9 @@
 								<li class="active">
 									<a class="nav-stylehead" href="<?php echo base_url('/'); ?>">Home</a>
 								</li>
+                <li class="">
+                  <a class="nav-stylehead" href="<?php echo base_url('toko'); ?>">Stand</a>
+                </li>
 								<li class="">
 									<a class="nav-stylehead" href="<?php echo base_url('makanan'); ?>">Makanan</a>
 								</li>

@@ -29,10 +29,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('home/minuman');
 	}
 
-	public function home2()
+	public function toko()
 	{
-		$this->load->view('home/home2');
+		$this->load->view('home/toko');
 	}
+
+
+
 
 	// public function gambar()
 	// {

@@ -56,6 +56,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['produk'] = 'Welcome/produk';
 $route['makanan'] = 'Welcome/makanan';
 $route['minuman'] = 'Welcome/minuman';
-$route['home2'] = 'Welcome/home2';
+$route['toko'] = 'Welcome/toko';
 $route['registrasi'] = 'Registerlogin/registrasi';
 $route['login'] = 'Registerlogin/login';
