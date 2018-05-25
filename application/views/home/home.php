@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
 
 <head>
+
 	<title>GOSTAND</title>
+
+	<title>GoStand</title>
+
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -22,6 +26,7 @@
 </head>
 
 <body>
+
 
 	<!-- header-bot-->
 	<div class="header-bot">
@@ -172,68 +177,21 @@
 	<!-- //Modal2 -->
 	<!-- //signup Model -->
 	<!-- //header-bot -->
-	<!-- navigation -->
-	<div class="ban-top">
-		<div class="container">
-			<div class="agileits-navi_search">
-				<form action="#" method="post">
-					<select id="agileinfo-nav_search" name="agileinfo_search" required="">
-						<option value="">Semua Kategori</option>
-						<option value="Kitchen">Kitchen</option>
-						<option value="Household">Household</option>
-						<option value="Snacks &amp; Beverages">Snacks & Beverages</option>
-						<option value="Personal Care">Personal Care</option>
-						<option value="Gift Hampers">Gift Hampers</option>
-						<option value="Fruits &amp; Vegetables">Fruits & Vegetables</option>
-						<option value="Baby Care">Baby Care</option>
-						<option value="Soft Drinks &amp; Juices">Soft Drinks & Juices</option>
-						<option value="Frozen Food">Frozen Food</option>
-						<option value="Bread &amp; Bakery">Bread & Bakery</option>
-						<option value="Sweets">Sweets</option>
-					</select>
-				</form>
-			</div>
-			<div class="top_nav_left">
-				<nav class="navbar navbar-default">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-							    aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav menu__list">
-								<li class="active">
-									<a class="nav-stylehead" href="index.html">Home
-										<span class="sr-only">(current)</span>
-									</a>
-								</li>
-								<li class="">
-									<a class="nav-stylehead" href="about.html">Makanan</a>
-								</li>
-								<li class="">
-									<a class="nav-stylehead" href="faqs.html">Minuman</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<!-- //navigation -->
+	
 
+	<!-- Navigation Bar -->
+	<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
+	<!-- Navigation Bar -->
+	
 	<!-- special offers -->
 	<div class="featured-section" id="projects">
 		<div class="container">
 			<!-- tittle heading -->
+
 			<h3 class="tittle-w3l">Penawaran khusus
+
+			<h3 class="tittle-w3l">HOT PRODUK
+
 				<span class="heading-style">
 					<i></i>
 					<i></i>
@@ -246,7 +204,11 @@
 				<div class="wrapper">
 					<!-- first section (nuts) -->
 					<div class="product-sec1">
+
 						<h3 class="heading-tittle">Hot Menu</h3>
+
+						<h3 class="heading-tittle">MAKANAN</h3>
+
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
@@ -261,14 +223,7 @@
 										<span class="item_price">Rp 25.000</span>
 										<del>Rp 35.000</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Lihat Produk" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
@@ -287,17 +242,53 @@
 										<span class="item_price">Rp 10.000</span>
 										<del>Rp 15.000</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Lihat Produk" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
                         </div>
+                        
+                        <div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Almonds, 100g</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$149.00</span>
+										<del>$280.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+                        </div>
+                        
+						<div class="clearfix"></div>
+					</div>
+					<!-- //first section (nuts) -->
+					<div class="product-sec1">
+						<h3 class="heading-tittle">MINUMAN</h3>
+						<div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Almonds, 100g</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$149.00</span>
+										<del>$280.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+						</div>
                         
                         <div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
@@ -313,21 +304,32 @@
 										<span class="item_price">Rp 20.000</span>
 										<del>Rp 25.000</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Lihat Produk" class="button" />
-											</fieldset>
-										</form>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="col-md-4 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Almonds, 100g</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$149.00</span>
+										<del>$280.00</del>
 									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
                         </div>
                         
 						<div class="clearfix"></div>
 					</div>
-					<!-- //first section (nuts) -->
 				</div>
 			</div>
 			</div>
@@ -336,6 +338,8 @@
 	<!-- //special offers -->
 	<!-- footer -->
 	<footer>
+
+
 		<div class="container">
 			<!-- footer first section -->
 			<p class="footer-main"  align="justify">
@@ -514,13 +518,20 @@
 
 			<!-- //footer fourth section (text) -->
 		</div>
+
+		<?php require_once(APPPATH. 'views/home/footer.php'); ?>
+
 	</footer>
 	<!-- //footer -->
 	<!-- copyright -->
 	<div class="copy-right">
 		<div class="container">
+
 			<p>© 2018 GoStand. All rights reserved | Design with
 				<a href="http://w3layouts.com"> Love.</a>
+
+			<p>© 2018 Go Stand. All rights reserved
+
 			</p>
 		</div>
 	</div>
@@ -692,8 +703,6 @@
 	<script src="<?php echo base_url('asset/home/js/bootstrap.js');?>"></script>
 	<!-- //for bootstrap working -->
 	<!-- //js-files -->
-
-
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>GoStand</title>
+	<title>GoStand</title>
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -22,130 +22,38 @@
 </head>
 
 <body>
+
 	<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
-	<!-- banner-2 -->
-	<!-- <div class="page-head_agile_info_w3l">
-
-	</div> -->
-	<!-- //banner-2 -->
-	<!-- page -->
-	<div class="services-breadcrumb">
-		<div class="agile_inner_breadcrumb">
-			<div class="container">
-				<ul class="w3_short">
-					<li>
-						<a href="index.html">Home</a>
-						<i>|</i>
-					</li>
-					<li>Minuman</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- //page -->
-	<!-- top Products -->
-	<div class="ads-grid">
+	<!-- special offers -->
+	<div class="featured-section" id="projects">
 		<div class="container">
-			<!-- tittle heading -->
-			<h3 class="tittle-w3l">MINUMAN
-				<span class="heading-style">
-					<i></i>
-					<i></i>
-					<i></i>
-				</span>
-			</h3>
-			<!-- //tittle heading -->
-			<!-- product right -->
-			<div class="agileinfo-ads-display col-md-12 w3l-rightpro">
-				<div class="wrapper">
-					<!-- first section -->
-					<div class="product-sec1">
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
+    		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body modal-body-sub_agile">
+					<div class="modal_body_left modal_body_left1">
+						<h3 class="agileinfo_sign">Registrasi </h3>
+						<p>
+							Sudah mempunyai Akun? Mohon untuk 
+							<a href="<?php echo base_url('login'); ?>">Sign In Now</a>
+						</p>
+						<form action="#" method="post">
+							<div class="styled-input agile-styled-input-top">
+								<input type="text" placeholder="User Name" name="Name" required="">
 							</div>
-						</div>
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Maiyas Gulab Jamun</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$137.00</span>
-										<del>$420.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
+							<div class="styled-input">
+								<input type="password" placeholder="Password" name="password" required="">
 							</div>
-						</div>
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Lipton Green Tea</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$384.00</span>
-										<del>$480.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<!-- //first section -->
+							<input type="submit" name="registrasi" value="Daftar">
+						</form>
+					<div class="clearfix"></div>
+                    </div>
 				</div>
-			</div>
-			<!-- //product right -->
+		    </div>
+	        </div>
 		</div>
 	</div>
-	<!-- //top products -->
+	<!-- //special offers -->
 	<!-- footer -->
 	<footer>
 		<?php require_once(APPPATH. 'views/home/footer.php'); ?>
@@ -154,8 +62,7 @@
 	<!-- copyright -->
 	<div class="copy-right">
 		<div class="container">
-			<p>© 2017 Grocery Shoppy. All rights reserved | Design by
-				<a href="http://w3layouts.com"> W3layouts.</a>
+			<p>© 2018 Go Stand. All rights reserved
 			</p>
 		</div>
 	</div>
