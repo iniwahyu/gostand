@@ -34,6 +34,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('home/toko');
 	}
 
+	public function coba()
+	{
+		$this->load->view('home/coba');
+	}
+
 
 
 

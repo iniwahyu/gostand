@@ -15,6 +15,8 @@
   <!--pop-up-box-->
   <link href="<?php echo base_url('asset/home/css/popuo-box.css'); ?>" rel="stylesheet" type="text/css" media="all" />
   <!--//pop-up-box-->
+  <!-- flexslider -->
+  <link rel="stylesheet" href="<?php echo base_url('asset/home/css/flexslider.css');?>" type="text/css" media="screen" />
   <!-- price range -->
   <link href="<?php echo base_url('asset/home/css/jquery-ui1.css');?>" rel="stylesheet" type="text/css">
   <!-- fonts -->
@@ -37,7 +39,7 @@
             <a href="<?php echo base_url('/'); ?>">Home</a>
             <i>|</i>
           </li>
-          <li>Minuman</li>
+          <li>Lihat Produk</li>
         </ul>
       </div>
     </div>
@@ -47,7 +49,7 @@
   <div class="banner-bootom-w3-agileits">
     <div class="container">
       <!-- tittle heading -->
-      <h3 class="tittle-w3l">Single Page
+      <h3 class="tittle-w3l">Lihat Produk
         <span class="heading-style">
           <i></i>
           <i></i>
@@ -59,17 +61,17 @@
         <div class="grid images_3_of_2">
           <div class="flexslider">
             <ul class="slides">
-              <li data-thumb="images/si.jpg">
+              <li data-thumb="<?php echo base_url('asset/home/images/ayam1.jpg'); ?>">
                 <div class="thumb-image">
-                  <img src="images/si.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                  <img src="<?php echo base_url('asset/home/images/ayam1.jpg'); ?>" data-imagezoom="true" class="img-responsive" alt=""> </div>
               </li>
-              <li data-thumb="images/si2.jpg">
+              <li data-thumb="<?php echo base_url('asset/home/images/ayam2.jpg'); ?>">
                 <div class="thumb-image">
-                  <img src="images/si2.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                  <img src="<?php echo base_url('asset/home/images/ayam2.jpg'); ?>" data-imagezoom="true" class="img-responsive" alt=""> </div>
               </li>
-              <li data-thumb="images/si3.jpg">
+              <li data-thumb="<?php echo base_url('asset/home/images/ayam3.jpg'); ?>">
                 <div class="thumb-image">
-                  <img src="images/si3.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                  <img src="<?php echo base_url('asset/home/images/ayam3.jpg'); ?>" data-imagezoom="true" class="img-responsive" alt=""> </div>
               </li>
             </ul>
             <div class="clearfix"></div>
@@ -189,57 +191,6 @@
   </script>
   <!-- //cart-js -->
 
-  <!-- price range (top products) -->
-  <script src="<?php echo base_url('asset/home/js/jquery-ui.js');?>"></script>
-  <script>
-    //<![CDATA[ 
-    $(window).load(function () {
-      $("#slider-range").slider({
-        range: true,
-        min: 0,
-        max: 9000,
-        values: [50, 6000],
-        slide: function (event, ui) {
-          $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-        }
-      });
-      $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-
-    }); //]]>
-  </script>
-  <!-- //price range (top products) -->
-
-  <!-- flexisel (for special offers) -->
-  <script src="<?php echo base_url('asset/home/js/jquery.flexisel.js');?>"></script>
-  <script>
-    $(window).load(function () {
-      $("#flexiselDemo1").flexisel({
-        visibleItems: 3,
-        animationSpeed: 1000,
-        autoPlay: true,
-        autoPlaySpeed: 3000,
-        pauseOnHover: true,
-        enableResponsiveBreakpoints: true,
-        responsiveBreakpoints: {
-          portrait: {
-            changePoint: 480,
-            visibleItems: 1
-          },
-          landscape: {
-            changePoint: 640,
-            visibleItems: 2
-          },
-          tablet: {
-            changePoint: 768,
-            visibleItems: 2
-          }
-        }
-      });
-
-    });
-  </script>
-  <!-- //flexisel (for special offers) -->
-
   <!-- password-script -->
   <script>
     window.onload = function () {
@@ -297,6 +248,54 @@
     });
   </script>
   <!-- //smooth-scrolling-of-move-up -->
+
+  <!-- imagezoom -->
+  <script src="<?php echo base_url('asset/home/js/imagezoom.js');?>"></script>
+  <!-- //imagezoom -->
+
+  <!-- FlexSlider -->
+  <script src="<?php echo base_url('asset/home/js/jquery.flexslider.js');?>"></script>
+  <script>
+    // Can also be used with $(document).ready()
+    $(window).load(function () {
+      $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails"
+      });
+    });
+  </script>
+  <!-- //FlexSlider-->
+
+  <!-- flexisel (for special offers) -->
+  <script src="<?php echo base_url('asset/home/js/jquery.flexisel.js');?>"></script>
+  <script>
+    $(window).load(function () {
+      $("#flexiselDemo1").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: {
+          portrait: {
+            changePoint: 480,
+            visibleItems: 1
+          },
+          landscape: {
+            changePoint: 640,
+            visibleItems: 2
+          },
+          tablet: {
+            changePoint: 768,
+            visibleItems: 2
+          }
+        }
+      });
+
+    });
+  </script>
+  <!-- //flexisel (for special offers) -->  
 
   <!-- for bootstrap working -->
   <script src="<?php echo base_url('asset/home/js/bootstrap.js');?>"></script>
