@@ -2,11 +2,19 @@
 <html>
 
 <head>
+<<<<<<< HEAD
 
 	<title>GOSTAND</title>
 
 	<title>GoStand</title>
 
+=======
+<<<<<<< HEAD
+	<title>GOSTAND</title>
+=======
+	<title>GoStand</title>
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master
 	<!--/tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,7 +35,11 @@
 
 <body>
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/master
 	<!-- header-bot-->
 	<div class="header-bot">
 		<div class="header-bot_inner_wthreeinfo_header_mid">
@@ -179,19 +191,33 @@
 	<!-- //header-bot -->
 	
 
+<<<<<<< HEAD
 	<!-- Navigation Bar -->
 	<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
 	<!-- Navigation Bar -->
 	
+=======
+=======
+	<?php require_once(APPPATH. 'views/home/navbar.php'); ?>
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master
 	<!-- special offers -->
 	<div class="featured-section" id="projects">
 		<div class="container">
 			<!-- tittle heading -->
+<<<<<<< HEAD
 
 			<h3 class="tittle-w3l">Penawaran khusus
 
 			<h3 class="tittle-w3l">HOT PRODUK
 
+=======
+<<<<<<< HEAD
+			<h3 class="tittle-w3l">Penawaran khusus
+=======
+			<h3 class="tittle-w3l">HOT PRODUK
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master
 				<span class="heading-style">
 					<i></i>
 					<i></i>
@@ -204,11 +230,19 @@
 				<div class="wrapper">
 					<!-- first section (nuts) -->
 					<div class="product-sec1">
+<<<<<<< HEAD
 
 						<h3 class="heading-tittle">Hot Menu</h3>
 
 						<h3 class="heading-tittle">MAKANAN</h3>
 
+=======
+<<<<<<< HEAD
+						<h3 class="heading-tittle">Hot Menu</h3>
+=======
+						<h3 class="heading-tittle">MAKANAN</h3>
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master
 						<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
@@ -338,8 +372,12 @@
 	<!-- //special offers -->
 	<!-- footer -->
 	<footer>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/master
 		<div class="container">
 			<!-- footer first section -->
 			<p class="footer-main"  align="justify">
@@ -518,20 +556,35 @@
 
 			<!-- //footer fourth section (text) -->
 		</div>
+<<<<<<< HEAD
 
 		<?php require_once(APPPATH. 'views/home/footer.php'); ?>
 
+=======
+=======
+		<?php require_once(APPPATH. 'views/home/footer.php'); ?>
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master
 	</footer>
 	<!-- //footer -->
 	<!-- copyright -->
 	<div class="copy-right">
 		<div class="container">
+<<<<<<< HEAD
 
 			<p>© 2018 GoStand. All rights reserved | Design with
 				<a href="http://w3layouts.com"> Love.</a>
 
 			<p>© 2018 Go Stand. All rights reserved
 
+=======
+<<<<<<< HEAD
+			<p>© 2018 GoStand. All rights reserved | Design with
+				<a href="http://w3layouts.com"> Love.</a>
+=======
+			<p>© 2018 Go Stand. All rights reserved
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master
 			</p>
 		</div>
 	</div>
