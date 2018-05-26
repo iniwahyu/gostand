@@ -56,7 +56,7 @@
   <div class="container">
     <div>
       <!-- tittle heading -->
-      <h3 style="margin-top: 50px;" class="tittle-w3l">Edit Profile
+      <h3 style="margin-top: 50px;" class="tittle-w3l">Silahkan Isi Profile Anda
         <span class="heading-style">
           <i></i>
           <i></i>

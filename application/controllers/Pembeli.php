@@ -21,7 +21,33 @@ class Pembeli extends CI_Controller {
     public function index()
     {      
 
-        $this->load->view('pembeli/profile');
+    	if($this->session->userdata('username'))
+			{
+			$this->load->model('home_model');
+			$nama=$this->session->userdata('username');
+			$where=array('nim'=>$nama);
+			$cek=$this->home_model->login('pembeli',$where)->num_rows();
+				if($cek==NULL){
+					$this->load->view('pembeli/inputprofile');
+					
+				}
+				if($cek!=NULL){
+					
+					$this->load->view('home/home');
+				}
+				
+			}
+			else
+			{
+				redirect('login');
+			}		
+
+        $this->load->view('pembeli/myprofile');
+    }
+
+    public function firstprofile()
+    {
+    		$this->load->view('pembeli/inputprofile');
     }
 
     public function profile()    		
