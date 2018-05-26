@@ -24,14 +24,23 @@ class Pembeli extends CI_Controller {
         $this->load->view('pembeli/profile');
     }
 
-    public function profile()
+    public function profile()    		
 	{
-		$this->load->view('pembeli/myprofile');
+			$namadata=$this->session->userdata('username');
+			$this->load->model('pembeli_model');
+			$data=$this->pembeli_model->tampildata('pembeli',$namadata);
+			$data=array('data'=> $data);
+			$this->load->view('pembeli/myprofile',$data);	
 	}
     
      public function editprofile()
 	{
-		$this->load->view('pembeli/editprofile');
+			$namadata=$this->session->userdata('username');
+			$this->load->model('pembeli_model');
+			$data=$this->pembeli_model->tampildata('pembeli',$namadata);
+			$data=array('data'=> $data);
+			$this->load->view('pembeli/editprofile',$data);
+		
 	}
 
 	 public function history()
@@ -54,6 +63,7 @@ class Pembeli extends CI_Controller {
 			$this->load->model('pembeli_model');
 			$data = array
 			(
+				'nim' => $this->session->userdata('username'),
 	        	'nama' => $this->input->post('namaorang'), // Yang kiri nama field di db
 				'email' => $this->input->post('email'), // yang kanan nama di form
 				'nohape' => $this->input->post('nohape')
@@ -69,6 +79,31 @@ class Pembeli extends CI_Controller {
 			{
 				$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
 				redirect(base_url('pembeli/editprofile'));
+			}
+	}
+
+	public function updatedataprofile(){
+			$this->load->model('pembeli_model');
+			$data = array(				
+	        	'nama' => $this->input->post('namaorang'), // Yang kiri nama field di db
+				'email' => $this->input->post('email'), // yang kanan nama di form
+				'nohape' => $this->input->post('nohape')
+	        );
+	        $user=$this->session->userdata('username');
+
+	        $where=array(
+	        	'nim'=>$user
+	        );
+
+	        $data=$this->pembeli_model->edit($where,$data,'pembeli');
+
+	        if($data){
+				$this->session->set_flashdata('succes', 'BERHASIL UPDATE');
+				redirect(base_url('pembeli/profile'));
+			}
+			else{
+				$this->session->set_flashdata('error', 'GAGAL UPDATE');
+				redirect(base_url('pembeli/profile'));
 			}
 		}
 

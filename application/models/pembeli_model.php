@@ -12,10 +12,16 @@ class pembeli_model extends CI_Model
     return $res; // Kode ini digunakan untuk mengembalikan hasil $res
   }
   
-  public function tampilproduk($table,$username)
+  public function tampildata($table,$username)
   {
-		$res=$this->db->get_where($table,array('nama_toko'=>$username));//memilih tabel
+		$res=$this->db->get_where($table,array('nim'=>$username));//memilih tabel
 		return $res->result_array();//mengembalikan hasil
+  }
+
+  public function edit($where,$data,$table) /// Fungsi Untuk Edit data
+  {
+    $this->db->where($where);
+    $this->db->update($table,$data);
   }
     
   public function hapus($table,$id)
@@ -24,11 +30,7 @@ class pembeli_model extends CI_Model
 		$res=$this->db->delete($table);
 		return $res;
   }
-  public function edit($where,$data,$table)
-  {
-    $this->db->where($where);
-    $this->db->update($table,$data);
-  }
+  
 	
 }
 	
