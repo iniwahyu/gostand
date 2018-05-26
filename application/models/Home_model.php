@@ -15,6 +15,15 @@ class Home_model extends CI_Model
     {
     	return $this->db->get_where($table,$where);
     }
+
+    public function cek2($username, $password)
+    {
+        $res = $this->db->get_where('user', array(
+            'username' => $username,
+            'password' => $password
+        ));
+        return $res;
+    }
     
     // Fungsi untuk menampilkan semua data gambar
     public function gambar()

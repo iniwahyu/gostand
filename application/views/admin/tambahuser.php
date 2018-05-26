@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <title>Admin | Daftar Penjual GoStand</title>
+    <title>Ela - Bootstrap Admin Dashboard Template</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('asset/admin/css/lib/bootstrap/bootstrap.min.css');?>" rel="stylesheet">
     <!-- Custom CSS -->
@@ -23,6 +23,8 @@
     <link href="<?php echo base_url('asset/admin/css/helper.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('asset/admin/css/style.css');?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('asset/css/styleadmin.css');?>">
+    
+
 </head>
 
 <body class="fix-header fix-sidebar">
@@ -58,50 +60,39 @@
             <!-- Container fluid  -->
             <div class="container-fluid">
                 <!-- Start Page Content -->
-                <div class="row bg-white m-l-0 m-r-0 box-shadow ">
-
+                <div class="row">
                     <div class="col-lg-12">
-                    <div class="card">
+                        <div class="card">
+                        
+                            <div class="card-title">
+                                <h4>Tambah User</h4>
+                            </div>
                             <div class="card-body">
-                                <?php
-                                if($this->session->flashdata('success'))
-                                {
-                                    echo $this->session->flashdata('success');
-                                }
-                                else
-                                {
-                                    echo $this->session->flashdata('error');
-                                }
-                                ?>
-                                <h4 class="card-title">Daftar Penjual Toko </h4>
-                                <div class="table-responsive m-t-20">
-                                    <table id="myTable" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nama Toko</th>
-                                                <th>Nama Pemmilik</th>
-                                                <th>Email</th>
-                                                <th>No Hp</th>
-                                                <th>Lokasi Stand</th>
-                                                <th>Deskripsi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
-                                                <td>$320,800</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="basic-form">
+                                    <form action="<?php echo base_url('registerlogin/prosesregisteruser'); ?>" name="form" method="post" >
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-default" name="username" placeholder="Username">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-default" name="nama" placeholder="Nama" >
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control input-flat" name="password" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Level </label>
+                                            <select name="level" class="form-control">
+                                                <option value="Pembeli">Pembeli</option>
+                                                <option value="Penjual">Penjual</option>
+                                                <option value="Admin">Admin</option>
+                                            </select>
+                                        </div>
+                                        <input type="submit" name="submit" class="btn btn-primary" value="Tambah Penjual" >
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 <!-- End PAge Content -->
             </div>
             <!-- End Container fluid  -->

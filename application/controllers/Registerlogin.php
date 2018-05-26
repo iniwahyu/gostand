@@ -37,14 +37,14 @@ class Registerlogin extends CI_Controller
     	//redirect(base_url(),'refresh');
 	}
 	
-	public function prosesregisterpenjual()
+	public function prosesregisteruser()
 	{
 		$this->load->model('Home_model');
 		$data = array(
 			'username' => $this->input->post('username'),
 			'nama' => $this->input->post('nama'),
 			'password' => md5($this->input->post('password')),
-			'level' => 'Penjual'
+			'level' => $this->input->post('level')
 		);
 
 		$data = $this->Home_model->Insert('user', $data);
@@ -59,7 +59,28 @@ class Registerlogin extends CI_Controller
 			$this->session->set_flashdata('error', 'GAGAL MENDAFTAR');
 			redirect('admin/tambahpenjual');
 		}
+	}
+	
+	public function tambahadmin()
+	{
+		$this->load->model('Home_model');
+		$data = array(
+			'username' => 'admin',
+			'nama' => 'Super Admin',
+			'password' => md5('admin'),
+			'level' => 'Admin'
+		);
 
+		$data = $this->Home_model->Insert('user', $data);
+
+		if( $data )
+		{
+			redirect('admin/index');
+		}
+		else
+		{
+			echo "Gagal";
+		}
 	}
 
 	function login()
@@ -89,6 +110,38 @@ class Registerlogin extends CI_Controller
 			echo "Salah Password/Username";
 		}
 	}
+
+	public function login2()
+	{
+		$cek=$this->home_model->cek2($username,$password);
+
+		if( $cek->num_rows() > 0 )
+		{
+			$data = $cek->row_array();
+			$this->session->set_userdata('login', TRUE);
+			if($data['level'] == 'Pembeli' )
+			{
+				$this->session->set_userdata('akses', 'Pembeli');
+				$this->session->set_userdata('nama', $data['username']);
+			}
+		}
+	}
+
+	// $data=$cek_dosen->row_array();
+    //             $this->session->set_userdata('masuk',TRUE);
+    //              if($data['user_level']=='1'){ //Akses admin
+    //                 $this->session->set_userdata('akses','1');
+    //                 $this->session->set_userdata('ses_id',$data['nip']);
+    //                 $this->session->set_userdata('ses_nama',$data['nama']);
+    //                 redirect('page');
+ 
+    //              }else{ //akses dosen
+    //                 $this->session->set_userdata('akses','2');
+    //                             $this->session->set_userdata('ses_id',$data['nip']);
+    //                 $this->session->set_userdata('ses_nama',$data['nama']);
+    //                 redirect('page');
+    //              }
+
 	public function logout()
 	{
 		$this->session->sess_destroy();

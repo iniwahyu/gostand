@@ -65,19 +65,19 @@
                         <div class="card">
                         
                             <div class="card-title">
-                                <h4>Tambah Akun Penjual</h4>
+                                <h4>Edit User</h4>
                             </div>
                             <div class="card-body">
                                 <div class="basic-form">
-                                    <form action="<?php echo base_url('registerlogin/prosesregisterpenjual'); ?>" name="form" method="post" >
+                                    <form action="<?php echo base_url('admin/updateuser'); ?>" name="form" method="post" >
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-default" name="username" placeholder="Username">
+                                            <input type="text" class="form-control input-default" name="username" value="<?php echo $username; ?>" readonly>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-default" name="nama" placeholder="Nama" >
+                                            <input type="text" class="form-control input-default" name="nama" value="<?php echo $nama; ?>" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control input-flat" name="password" placeholder="Password">
+                                            <input type="text" class="form-control input-flat" name="password" value="<?php echo $password ?>" >
                                         </div>
                                         <input type="submit" name="submit" class="btn btn-primary" value="Tambah Penjual" >
                                     </form>

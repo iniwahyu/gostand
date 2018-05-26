@@ -27,6 +27,50 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/user', $user);
 	}
 
+	public function tambahuser()
+	{
+		$this->load->view('admin/tambahuser');
+	}
+
+	public function edituser($id)
+	{
+		$this->load->model('Admin_model');
+		$where = array(
+			'id' => $id
+		);
+		$user = $this->Admin_model->GetWhere('user', $where);
+		$data = array(
+			'username' => $user[0]['username'],
+			'nama' => $user[0]['nama'],
+			'password' => $user[0]['password'] 
+		);
+		$this->load->view('admin/edituser', $data);
+	}
+
+	public function updateuser()
+	{
+		$username = $_POST['username'];
+		$nama = $_POST['nama'];
+		$password = $_POST['password'];
+
+		$data = array(
+			'nama' => $nama,
+			'password' => $password
+		);
+
+		$where = array(
+			'username' => $username,
+		);
+
+		$this->load->model('Admin_model');
+		$query = $this->Admin_model->Update('user', $data, $where);
+		if( $query > 0 )
+		{
+			redirect('admin/user', 'refresh');
+		}
+		
+	}
+
 	public function deleteuser($id)
 	{
 		$id = array('id' => $id);
@@ -59,10 +103,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/pembeli');		
 	}
 
-	public function tambahpenjual()
-	{
-		$this->load->view('admin/tambahpenjual');
-	}
+	
 
 
 	public function insert(){
@@ -75,6 +116,8 @@ class Admin extends CI_Controller {
 		$data = $this->mymodel->Insert('mahasiswa', $data);
 		redirect(base_url(),'refresh');
 	}
+
+	
 
 
 }

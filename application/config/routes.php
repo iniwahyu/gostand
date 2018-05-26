@@ -58,5 +58,11 @@ $route['makanan'] = 'Welcome/makanan';
 $route['minuman'] = 'Welcome/minuman';
 $route['toko'] = 'Welcome/toko';
 $route['coba'] = 'Welcome/coba';
+
+// REGISTERLGOIN CONTROLLER
 $route['registrasi'] = 'Registerlogin/registrasi';
 $route['login'] = 'Registerlogin/login';
+$route['logout'] = 'Registerlogin/logout';
+$route['tambahadmin'] = 'Registerlogin/tambahadmin';
+
+// ADMIN

@@ -60,34 +60,59 @@
             <!-- Container fluid  -->
             <div class="container-fluid">
                 <!-- Start Page Content -->
-                <div class="row bg-white m-l-0 m-r-0 box-shadow ">
+                <div class="row">
+                    <?php
+                    $seller = $this->db->get_where('user', array('level' => 'Penjual' ));
+                    $buyer = $this->db->get_where('user', array('level' => 'Pembeli' ));
+                    ?>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <p>
+                                Total Pembeli
+                                <span class="float-right" ><b><?php echo $buyer->num_rows(); ?></b></span>
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <p>
+                                Total Penjual
+                                <span class="float-right" ><?php echo $seller->num_rows(); ?></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bg-white m-l-0 m-r-0 box-shadow ">
                     <div class="col-lg-12">
                     <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Daftar User </h4>
+                                <h4 class="card-title">Daftar User <a href="<?php echo base_url('admin/tambahuser');?>" class="btn btn-primary" >Tambah User</a> </h4>
                                 <div class="table-responsive m-t-20">
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Nama / Nama Toko</th>
-                                                <th>Nim / Username</th>
+                                                <th>#</th>
+                                                <th>Nim/ Username</th>
+                                                <th>Nama</th>
                                                 <th>Password</th>
                                                 <th>Level</th>
                                                 <th collapse="2">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php                              
+                                        <?php
+                                        $no = 1;    
                                         foreach ($user as $row)
                                         { ?>
                                             <tr>
+                                                <td><?php echo $no++; ?></td>
                                                 <td><?php echo $row['username']; ?></td>
                                                 <td><?php echo $row['nama']; ?></td>
                                                 <td><?php echo $row['password']; ?></td>
                                                 <td><?php echo $row['level']; ?></td>
                                                 <td>
-                                                    <a href="" class="btn btn-sm btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                    <a href="<?php echo base_url('admin/edituser/').$row['id']; ?>" class="btn btn-sm btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     <a href="<?php echo base_url('admin/deleteuser/').$row['id']; ?>" class="btn btn-sm btn-danger" ><i class="fa fa-times" aria-hidden="true"></i></a>
                                                 </td>
                                             </tr>
