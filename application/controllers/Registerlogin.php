@@ -101,7 +101,7 @@ class Registerlogin extends CI_Controller
 		
 		if($cek>0){
 			$data_session=array(
-				'nama' => $username,
+				'username' => $username,				
 				'status'=> 'login'
 			);
 			$this->session->set_userdata($data_session);

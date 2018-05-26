@@ -76,28 +76,32 @@
           </div>
 
           <div class="col-md-6">
-            <form role="form" action="<?php echo base_url('pembeli/inputdataprofile'); ?>" method="post">
+            <form role="form" action="<?php echo base_url('pembeli/updatedataprofile'); ?>" method="post">
               <table class="table">
+              <?php
+                  foreach ($data as $profil) {?>
               <tr>
                 <td><label>NIM</label></td>              
                 <td><label>:</label></td>
-                <td><?php echo $this->session->userdata('nama');?></td>
+                <td><?php echo $this->session->userdata('username');?></td>
               </tr>
               <tr>
                 <td><label>Nama</label></td>
                 <td><label>:</label></td>
-                <td><input type="text" name="namaorang" placeholder="Nama Anda..."></td>
+                <td><input type="text" name="namaorang" placeholder="Nama Anda..." 
+                  value="<?php echo $profil['nama'];?>"> </td>
               </tr>
               <tr>
                 <td><label>Email</label></td>
                 <td><label>:</label></td>                
-                <td><input type="email" name="email" placeholder="Email Anda..."></td>
+                <td><input type="email" name="email" placeholder="Email Anda..." value="<?php echo $profil['email'];?>">></td>
               </tr>
               <tr>
                 <td><label>No. Handphone</label></td>
                 <td><label>:</label></td>
-                <td><input type="text" name="nohape" placeholder="No. Handphone Anda..."></td>
+                <td><input type="text" name="nohape" placeholder="No. Handphone Anda..." value="<?php echo $profil['nohape'];?>">></td>
               </tr>
+              <?php } ?>
             </table>
             <button type="submit" class="btn btn-primary">Save</button>  
             </form>
