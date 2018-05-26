@@ -16,7 +16,16 @@ class Admin extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('admin/indexadmin');
+		$cek = $this->session->userdata('akses');
+		if( $cek == 'Admin')
+		{
+			$this->load->view('admin/indexadmin');
+		}
+		else
+		{
+			redirect(base_url('/'));
+		}
+		
 	}
 
 	public function user()

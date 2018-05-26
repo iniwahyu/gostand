@@ -21,6 +21,62 @@
 					<li>
 						<span class="fa fa-phone" aria-hidden="true"></span> (024) 3565580
 					</li>
+					<!-- BAGIAN PEMBELI -->
+					<?php
+					$cek = $this->session->userdata('akses');
+					// BAGIAN PEMBELI
+					if( $cek == 'Pembeli' ) 
+					{
+					?>
+
+					<li>
+						<a href="<?php echo base_url('pembeli/profile'); ?>">
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Profil
+						</a>
+					</li>
+
+					<li>
+						<a href="<?php echo base_url('logout'); ?>">
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
+						</a>
+					</li>
+					
+					<?php } ?>				
+
+					<?php
+					if ( $cek == 'Penjual' ) { ?>
+					<li>
+						<a href="<?php echo base_url('penjual'); ?>">
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Profil
+						</a>
+					</li>
+
+					<li>
+						<a href="<?php echo base_url('logout'); ?>">
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
+						</a>
+					</li>
+					
+					<?php } ?>
+
+					<?php
+					if ( $cek == 'Admin' ) { ?>
+					<li>
+						<a href="<?php echo base_url('admin'); ?>">
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Profil
+						</a>
+					</li>
+
+					<li>
+						<a href="<?php echo base_url('logout'); ?>">
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
+						</a>
+					</li>
+					
+					<?php } ?>
+
+					<?php $status = $this->session->userdata('status'); if ( $status != 'login' ) { ?>
+					
 					<li>
 						<a href="<?php echo base_url('login'); ?>">
 							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Login 
@@ -31,6 +87,9 @@
 							<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Register
 						</a>
 					</li>
+					<?php } ?>
+
+
 				</ul>
 				<!-- //header lists -->
 				<!-- search -->
@@ -45,15 +104,13 @@
 				<!-- //search -->
 				<!-- cart details -->
 				<div class="top_nav_right">
+					<a href="<?php echo base_url('pembeli/keranjang'); ?>">
 					<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-						<form action="#" method="post" class="last">
-							<input type="hidden" name="cmd" value="_cart">
-							<input type="hidden" name="display" value="1">
-							<button class="w3view-cart" type="submit" name="submit" value="">
-								<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-							</button>
-						</form>
+						<button class="custom-cart">
+							<i class="fa fa-cart-arrow-down text-white" aria-hidden="true"></i>
+						</button>
 					</div>
+					</a>
 				</div>
 				<!-- //cart details -->
 				<div class="clearfix"></div>
@@ -81,18 +138,29 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav menu__list">
-								<li class="active">
+								<li class="<?php if ( $this->uri->uri_string() == '' ){ echo 'active'; } ?>">
 									<a class="nav-stylehead" href="<?php echo base_url('/'); ?>">Home</a>
 								</li>
-                <li class="">
-                  <a class="nav-stylehead" href="<?php echo base_url('toko'); ?>">Stand</a>
-                </li>
-								<li class="">
+								<li class="<?php if ( $this->uri->uri_string() == 'toko' ){ echo 'active'; } ?>">
+									<a class="nav-stylehead" href="<?php echo base_url('toko'); ?>">Stand</a>
+								</li>
+								<li class="<?php if ( $this->uri->uri_string() == 'makanan' ){ echo 'active'; } ?>">
 									<a class="nav-stylehead" href="<?php echo base_url('makanan'); ?>">Makanan</a>
 								</li>
-								<li class="">
+								<li class="<?php if ( $this->uri->uri_string() == 'minuman' ){ echo 'active'; } ?>">
 									<a class="nav-stylehead" href="<?php echo base_url('minuman'); ?>">Minuman</a>
 								</li>
+
+								<?php if ( $cek == 'Pembeli' ) { ?>
+
+								<li class="<?php if ( $this->uri->uri_string() == 'makanan' ){ echo 'active'; } ?>">
+									<a class="nav-stylehead" href="<?php echo base_url('makanan'); ?>">Riwayat Pembelian</a>
+								</li>
+								<li class="<?php if ( $this->uri->uri_string() == 'minuman' ){ echo 'active'; } ?>">
+									<a class="nav-stylehead" href="<?php echo base_url('minuman'); ?>">Keranjang Belanja</a>
+								</li>
+								<?php } ?>
+
 							</ul>
 						</div>
 					</div>

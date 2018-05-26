@@ -20,7 +20,7 @@ class Home_model extends CI_Model
     {
         $res = $this->db->get_where('user', array(
             'username' => $username,
-            'password' => $password
+            'password' => md5($password),
         ));
         return $res;
     }

@@ -39,6 +39,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('home/coba');
 	}
 
+	public function error()
+	{
+		$this->output->set_status_header('404');
+
+        // Make sure you actually have some view file named 404.php
+        $this->load->view('error');
+	}
+
 
 
 

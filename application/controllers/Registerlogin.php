@@ -52,12 +52,12 @@ class Registerlogin extends CI_Controller
 		if( $data )
 		{
 			$this->session->set_flashdata('success', 'BERHASIL DAFTAR');
-			redirect('admin/tambahpenjual');
+			redirect('admin/user');
 		}
 		else
 		{
 			$this->session->set_flashdata('error', 'GAGAL MENDAFTAR');
-			redirect('admin/tambahpenjual');
+			redirect('admin/user');
 		}
 	}
 	
@@ -111,36 +111,50 @@ class Registerlogin extends CI_Controller
 		}
 	}
 
-	public function login2()
+	public function proseslogin2()
 	{
-		$cek=$this->home_model->cek2($username,$password);
+		$this->load->model('Home_model');
+		
+		$username=$this->input->post('username');
+		$password=$this->input->post('password');
+
+		$cek=$this->Home_model->cek2($username,$password);
 
 		if( $cek->num_rows() > 0 )
 		{
-			$data = $cek->row_array();
+			$data = $cek->row_array();	
 			$this->session->set_userdata('login', TRUE);
-			if($data['level'] == 'Pembeli' )
+			if($data['level'] === 'Pembeli' )
 			{
 				$this->session->set_userdata('akses', 'Pembeli');
-				$this->session->set_userdata('nama', $data['username']);
+				$this->session->set_userdata('username', $data['username']);
+				$this->session->set_userdata('status', 'login');
+				redirect(base_url('/'));
 			}
+			else if($data['level'] === 'Penjual' )
+			{
+				$this->session->set_userdata('akses', 'Penjual');
+				$this->session->set_userdata('username', $data['username']);
+				$this->session->set_userdata('status', 'login');
+				redirect(base_url('/'));
+			}
+			else if($data['level'] === 'Admin' )
+			{
+				$this->session->set_userdata('akses', 'Admin');
+				$this->session->set_userdata('username', $data['username']);
+				$this->session->set_userdata('status', 'login');
+				redirect(base_url('/'));
+			}
+			else
+			{
+				echo "Hayo pasti belum daftar";
+			}
+		}else{
+			echo "Hayo pasti belum daftar";
+			
 		}
+		
 	}
-
-	// $data=$cek_dosen->row_array();
-    //             $this->session->set_userdata('masuk',TRUE);
-    //              if($data['user_level']=='1'){ //Akses admin
-    //                 $this->session->set_userdata('akses','1');
-    //                 $this->session->set_userdata('ses_id',$data['nip']);
-    //                 $this->session->set_userdata('ses_nama',$data['nama']);
-    //                 redirect('page');
- 
-    //              }else{ //akses dosen
-    //                 $this->session->set_userdata('akses','2');
-    //                             $this->session->set_userdata('ses_id',$data['nip']);
-    //                 $this->session->set_userdata('ses_nama',$data['nama']);
-    //                 redirect('page');
-    //              }
 
 	public function logout()
 	{
