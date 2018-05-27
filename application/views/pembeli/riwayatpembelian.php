@@ -35,7 +35,7 @@
 
 
   <!-- Awal Navbar Pembeli-->  
-  <?php require_once(APPPATH. 'views/pembeli/navbarpembeli.php'); ?>
+  <?php require_once(APPPATH. 'views/home/navbar.php'); ?>
   <!-- Akhir Navbar Pembeli-->  
 
 

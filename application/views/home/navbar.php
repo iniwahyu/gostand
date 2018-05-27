@@ -31,13 +31,13 @@
 
 					<li>
 						<a href="<?php echo base_url('pembeli/profile'); ?>">
-							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Profil
+							<span class="fa fa-user-o" aria-hidden="true"></span> My Profile
 						</a>
 					</li>
 
 					<li>
 						<a href="<?php echo base_url('logout'); ?>">
-							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Logout
+							<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout
 						</a>
 					</li>
 					
@@ -153,11 +153,11 @@
 
 								<?php if ( $cek == 'Pembeli' ) { ?>
 
-								<li class="<?php if ( $this->uri->uri_string() == 'makanan' ){ echo 'active'; } ?>">
-									<a class="nav-stylehead" href="<?php echo base_url('makanan'); ?>">Riwayat Pembelian</a>
+								<li class="<?php if ( $this->uri->uri_string() == 'pembeli/history' ){ echo 'active'; } ?>">
+									<a class="nav-stylehead" href="<?php echo base_url('pembeli/history'); ?>">Riwayat Pembelian</a>
 								</li>
-								<li class="<?php if ( $this->uri->uri_string() == 'minuman' ){ echo 'active'; } ?>">
-									<a class="nav-stylehead" href="<?php echo base_url('minuman'); ?>">Keranjang Belanja</a>
+								<li class="<?php if ( $this->uri->uri_string() == 'pembeli/keranjang' ){ echo 'active'; } ?>">
+									<a class="nav-stylehead" href="<?php echo base_url('pembeli/keranjang'); ?>">Keranjang Belanja</a>
 								</li>
 								<?php } ?>
 

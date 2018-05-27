@@ -81,23 +81,23 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav menu__list">
-                <li class="active">
+                <li class="<?php if ( $this->uri->uri_string() == '' ){ echo 'active'; } ?>">
                   <a class="nav-stylehead" href="<?php echo base_url('/'); ?>">Home</a>
                 </li>
-                <li class="">
+                <li class="<?php if ( $this->uri->uri_string() == 'toko' ){ echo 'active'; } ?>">
                   <a class="nav-stylehead" href="<?php echo base_url('toko'); ?>">Stand</a>
                 </li>
-                <li class="">
+                <li class="<?php if ( $this->uri->uri_string() == 'makanan' ){ echo 'active'; } ?>">
                   <a class="nav-stylehead" href="<?php echo base_url('makanan'); ?>">Makanan</a>
                 </li>
-                <li class="">
+                <li class="<?php if ( $this->uri->uri_string() == 'minuman' ){ echo 'active'; } ?>">
                   <a class="nav-stylehead" href="<?php echo base_url('minuman'); ?>">Minuman</a>
                 </li>
-                <li class="">
+                <li class="<?php if ( $this->uri->uri_string() == 'pembeli/history' ){ echo 'active'; } ?>">
                   <a class="nav-stylehead" href="<?php echo base_url('pembeli/history'); ?>">Riwayat Pembelian</a>
                 </li>
-                <li class="">
-                  <a class="nav-stylehead" href="<?php echo base_url('pembeli/keranjang'); ?>">Keranjang Belanja</a>
+                <li class="<?php if ( $this->uri->uri_string() == 'pembeli/keranjang' ){ echo 'active'; } ?>">
+                  <a class="nav-stylehead" href="<?php echo base_url('pembeli/keranjang'); ?>">Riwayat Pembelian</a>
                 </li>
               </ul>
             </div>

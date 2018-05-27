@@ -40,9 +40,7 @@ class Pembeli extends CI_Controller {
 			else
 			{
 				redirect('login');
-			}		
-
-        $this->load->view('pembeli/myprofile');
+			}		      
     }
 
     public function firstprofile()
