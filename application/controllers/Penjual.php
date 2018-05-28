@@ -11,7 +11,7 @@
 			if($this->session->userdata('nama'))
 			{
 			$this->load->model('home_model');
-			$nama=$this->session->userdata('nama');
+			$nama=$this->session->userdata('username');
 			$where=array('username'=>$nama);
 			$cek=$this->home_model->login('penjual',$where)->num_rows();
 				if($cek==NULL){

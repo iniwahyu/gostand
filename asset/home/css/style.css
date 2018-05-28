@@ -1440,11 +1440,6 @@ p.footer-main span {
     -ms-background-size: cover;
     -moz-background-size: cover;
     min-height: 300px;
-    /*background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 300px;*/
 }
 ul.w3_short li {
     display: inline-block;
