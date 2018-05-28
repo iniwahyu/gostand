@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 		// $config['per_page'] = 3;
 		// $from = $this->uri->segment(3);
 		// $this->pagination->initialize($config);		
-		// $data['user'] = $this->m_data->data($config['per_page'],$from);
+		// $data['produk'] = $this->m_data->data($config['per_page'],$from);
 		// $this->load->view('makanan',$data);
 		// tutup pagination
 	}
@@ -96,6 +96,11 @@ class Welcome extends CI_Controller {
 		
 		$this->load->view('home/formgambar', $data);
 	}
+
+	//Search Engine
+	
+	// Tutup Search Engine
+
 	public function formgambar()
 	{
 		$this->load->view('home/formgambar');
