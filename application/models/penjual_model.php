@@ -17,8 +17,8 @@ class penjual_model extends CI_Model
     $config['upload_path']   = './images';
         $config['allowed_types'] = 'jpg|png|jpeg';
         $config['max_size']      = '2048';
-        $config['max_width']     = 1366;
-      $config['max_height']    = 768;
+        $config['max_width']     = 200;
+      $config['max_height']    = 200;
         $config['remove_space'] = TRUE;
     
         $this->load->library('upload', $config); // Load konfigurasi uploadnya
@@ -55,8 +55,13 @@ class penjual_model extends CI_Model
 
   public function tampilproduk($table,$username)
   {
-		$res=$this->db->get_where($table,array('username'=>$username));//memilih tabel
+		$res=$this->db->get_where($table,array('nama_toko'=>$username));//memilih tabel
 		return $res->result_array();//mengembalikan hasil
+  }
+   public function takename($table,$username)
+  {
+    $res=$this->db->get_where($table,array('username'=>$username));//memilih tabel
+    return $res->result_array();//mengembalikan hasil
   }
 
   public function tampilpenjual($table)

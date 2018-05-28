@@ -69,7 +69,10 @@
 		}
 		function tambahproduk()
 		{
-			$this->load->view('penjual/tambahproduk');
+			$username=$this->session->userdata('username');
+			$data=$this->penjual_model->takename('penjual',$username);
+			$data=array('data'=> $data);
+			$this->load->view('penjual/tambahproduk',$data);
 		}
 		
 		function prosestambahproduk(){

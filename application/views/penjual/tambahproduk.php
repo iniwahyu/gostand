@@ -96,22 +96,26 @@
             //   echo $this->session->flashdata('error');
             // }
             ?>
+
+             
               <div class="card-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nama Toko</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="username">
+                  <?php foreach ($data as $profil) {?>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="username" value="<?php echo $profil['nama_toko'];?>" readonly>
+                  <?php } ?>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nama Produk</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" value="">
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" value="<?php echo set_value('namaproduk'); ?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Harga (Rp)</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" value="">
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" value="<?php echo set_value('harga'); ?>">
                 </div>
                 <div class="form-group">
                   <label>Deskripsi Produk</label>
-                  <input type="text" name="deskripsi" value="">
+                  <textarea class="form-control" rows="3" name="deskripsi" ><?php echo set_value('deskripsi'); ?></textarea>
                 </div>
                  <div class="form-group">
                   <label>Foto Produk</label>
@@ -120,7 +124,7 @@
               </div>
             
             <div class="card-footer">
-              <input type="submit" name="submit" class="btn btn-primary">Tambahkan</input>
+              <input type="submit" name="submit" class="btn btn-primary" value="Upload"></input>
             </div>
             
             <?php echo form_close(); ?>

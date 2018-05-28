@@ -86,8 +86,7 @@
               <div class="card-header">
                 <h3 class="card-title">Edit Profil</h3>
               </div>
-              <?php
-                  foreach ($data as $profil) {?>
+              <?php foreach ($data as $profil) {?>
                 <form role="form" method="post" action="<?php echo base_url(). 'penjual/updateprofil'; ?>">
                 <div class="card-body">
                   
