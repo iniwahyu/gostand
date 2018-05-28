@@ -1434,11 +1434,17 @@ p.footer-main span {
 /* contact page */
 .page-head_agile_info_w3l {
     background: url(https://madhang.id/images/icon/mdh.png);
-    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 300px;
+    /*background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 300px;
+    min-height: 300px;*/
 }
 ul.w3_short li {
     display: inline-block;
