@@ -60,7 +60,7 @@ class Home_model extends CI_Model
     public function save($upload)
     {
         $data = array(
-        'deskripsi'=>$this->input->post('input_deskripsi'),
+        'deskripsi'=>$this->input->post('input_deskripsi'), // Podo kan carane dewe?
         'nama_file' => $upload['file']['file_name'],
         'ukuran_file' => $upload['file']['file_size'],
         'tipe_file' => $upload['file']['file_type']

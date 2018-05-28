@@ -11,12 +11,60 @@ class penjual_model extends CI_Model
     $res = $this->db->insert($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
     return $res; // Kode ini digunakan untuk mengembalikan hasil $res
   }
-  
+
+  public function upload()
+  {
+    $config['upload_path']   = './images';
+        $config['allowed_types'] = 'jpg|png|jpeg';
+        $config['max_size']      = '2048';
+        $config['max_width']     = 1366;
+      $config['max_height']    = 768;
+        $config['remove_space'] = TRUE;
+    
+        $this->load->library('upload', $config); // Load konfigurasi uploadnya
+        if($this->upload->do_upload('input_gambar')) // Lakukan upload dan Cek jika proses upload berhasil
+        { 
+            // Jika berhasil :
+            $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
+            return $return;
+        }
+        else
+        {
+            // Jika gagal :
+            $return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+            return $return;
+        }
+  }
+
+  public function save($upload)
+    {
+        $data = array(
+        'nama_toko' => $this->input->post('username'),
+        'nama_produk' => $this->input->post('namaproduk'),
+        'harga' => $this->input->post('harga'),
+        'deskripsi' => $this->input->post('deskripsi'),
+        'nama_file' => $upload['file']['file_name'],
+        'tipe_file' => $upload['file']['file_type'],
+        'ukuran' => $upload['file']['file_size']
+        
+        );
+        
+        $this->db->insert('produk', $data);
+    }
+
+
   public function tampilproduk($table,$username)
   {
-		$res=$this->db->get_where($table,array('nama_toko'=>$username));//memilih tabel
+		$res=$this->db->get_where($table,array('username'=>$username));//memilih tabel
 		return $res->result_array();//mengembalikan hasil
   }
+
+  public function tampilpenjual($table)
+  {
+    $res = $this->db->get('penjual');
+    return $res->result_array();
+  }
+
   public function editproduk($table,$id)
   {
     $res=$this->db->get_where($table,array('id'=>$id));//memilih tabel

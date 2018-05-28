@@ -86,18 +86,16 @@
               <div class="card-header">
                 <h3 class="card-title">Edit Profil</h3>
               </div>
+              <?php
+                  foreach ($data as $profil) {?>
                 <form role="form" method="post" action="<?php echo base_url(). 'penjual/updateprofil'; ?>">
                 <div class="card-body">
-                  <?php
-                  foreach ($data as $profil) {?>
+                  
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Toko</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" value="<?php echo $profil['nama_toko'];?>">
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Pemilik</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="namapemilik" value="<?php echo $profil['nama_pemilik'];?>">
-                  </div>
+                  
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nomor Handphone</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" name="nomorhp" value="<?php echo $profil['no_hp'];?>">
@@ -127,8 +125,9 @@
                     </div>
                   </div>
                   </div>
-                     <?php } ?>
+                    
                    </div>
+                    <?php } ?>
                 <!-- /.card-body -->
 
                 <div class="card-footer">

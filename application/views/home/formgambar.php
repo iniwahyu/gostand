@@ -6,6 +6,15 @@
     <tr>
       <td>Deskripsi</td>
       <td><input type="text" name="input_deskripsi" value="<?php echo set_value('input_deskripsi'); ?>"></td>
+
+      <!-- 
+      SEK2 KUWI VALUE DALAM INPUT DESKRIPSI OPO YA?
+      controller'e di sih
+      CONTRO = WELCOME
+      MODEL = HOME_MODEL
+      VIEWS = GAMBAR, FORMGAMBAR
+      kok ono set value harang
+       -->
     </tr>
     <tr>
       <td>Gambar</td>

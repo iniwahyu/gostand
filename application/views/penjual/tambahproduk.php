@@ -83,52 +83,50 @@
               <h3 class="card-title">Tambah Produk</h3>
             </div>
             
-            <form role="form" action="<?php echo site_url('penjual/prosestambahproduk'); ?>" method="post">
+            <!-- <form role="form" action="<?php //echo site_url('penjual/prosestambahproduk'); ?>" method="post"> -->
+            <div style="color: red;"><?php echo (isset($message))? $message : ""; ?></div> 
+            <?php echo form_open("penjual/prosestambahproduk", array('enctype'=>'multipart/form-data')); ?>
             <?php
-            if($this->session->flashdata('success'))
-            {
-              echo $this->session->flashdata('success');
-            }
-            else
-            {
-              echo $this->session->flashdata('error');
-            }
+            // if($this->session->flashdata('success'))
+            // {
+            //   echo $this->session->flashdata('success');
+            // }
+            // else
+            // {
+            //   echo $this->session->flashdata('error');
+            // }
             ?>
               <div class="card-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nama Toko</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="" readonly="" value="<?php echo $this->session->userdata('nama');?>">
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="username">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nama Produk</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" placeholder="">
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" value="">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Harga (Rp)</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" placeholder="">
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" value="">
                 </div>
                 <div class="form-group">
                   <label>Deskripsi Produk</label>
-                  <textarea class="form-control" rows="3" placeholder="Enter ..." name="deskripsi"></textarea>
+                  <input type="text" name="deskripsi" value="">
+                </div>
+                 <div class="form-group">
+                  <label>Foto Produk</label>
+                  <input type="file" class="form-control" name="input_gambar">
                 </div>
               </div>
             
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Tambahkan</button>
+              <input type="submit" name="submit" class="btn btn-primary">Tambahkan</input>
             </div>
             
-            </form>
+            <?php echo form_close(); ?>
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="card card-info">
-            <div class="card-header">
-              <h3 class="card-title">Upload Foto Produk</h3>
-            </div>
-            <p>untuk foto</p>
-          </div>
-        </div>
       </div>
         <!-- /.row -->
     </div><!-- /.container-fluid -->

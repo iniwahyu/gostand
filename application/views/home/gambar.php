@@ -12,7 +12,7 @@
 if( ! empty($gambar)){ // Jika data pada database tidak sama dengan empty (alias ada datanya)
   foreach($gambar as $data){ // Lakukan looping pada variabel gambar dari controller
     echo "<tr>";
-    echo "<td><img src='".base_url("images/".$data->nama_file)."' width='100' height='100'></td>";
+    echo "<td><img src='".base_url("asset/img/produk/".$data->nama_file)."' width='100' height='100'></td>";
     echo "<td>".$data->deskripsi."</td>";
     echo "<td>".$data->nama_file."</td>";
     echo "<td>".$data->ukuran_file." kB</td>";

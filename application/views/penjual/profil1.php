@@ -93,10 +93,6 @@
                     <input type="text" class="form-control" id="exampleInputEmail1" name="namatoko" placeholder="">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Pemilik</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="namapemilik" placeholder="">
-                  </div>
-                  <div class="form-group">
                     <label for="exampleInputEmail1">Nomor Handphone</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" name="nomorhp" placeholder="">
                   </div>

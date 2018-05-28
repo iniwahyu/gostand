@@ -81,7 +81,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="callout callout-info">
-            <h5>Selamat Datang <?php echo $this->session->userdata('nama'); ?> !</h5>
+            <h5>Selamat Datang <?php echo $this->session->userdata('username'); ?> !</h5>
             <p>Follow the steps to continue to payment.</p>
           </div>
         </div>

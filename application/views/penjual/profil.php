@@ -115,7 +115,7 @@
                   </tr>
                   <tr>
                     <td>Nama Pemilik</td>
-                    <td><?php echo $info['nama_pemilik'];?></td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Nomor Hp</td>

@@ -4,6 +4,13 @@
 	 */
 	class penjual extends CI_Controller
 	{
+
+		public function __construct()
+		{
+			parent::__construct();
+			$this->load->model('Home_model');
+			$this->load->model('penjual_model');
+		}
 		
 		function index()
 		{
@@ -32,9 +39,9 @@
 		
 		function profil()
 		{
-			$namadata=$this->session->userdata('nama');
+			//$namadata=$this->session->userdata('username');
 			$this->load->model('penjual_model');
-			$data=$this->penjual_model->tampilproduk('penjual',$namadata);
+			$data=$this->penjual_model->tampilpenjual('penjual');
 			$data=array('data'=> $data);
 			//$this->load->view('terserah',$data);
 			$this->load->view('penjual/profil',$data);
@@ -45,7 +52,7 @@
 		}
 		function editprofil()
 		{
-			$namadata=$this->session->userdata('nama');
+			$namadata=$this->session->userdata('username');
 			$this->load->model('penjual_model');
 			$data=$this->penjual_model->tampilproduk('penjual',$namadata);
 			$data=array('data'=> $data);
@@ -53,7 +60,7 @@
 		}
 		function produk()
 		{
-			$namadata=$this->session->userdata('nama');
+			$namadata=$this->session->userdata('username');
 			$this->load->model('penjual_model');
 			$data=$this->penjual_model->tampilproduk('produk',$namadata);
 			$data=array('data'=> $data);
@@ -66,26 +73,47 @@
 		}
 		
 		function prosestambahproduk(){
-			$this->load->model('penjual_model');
-			$data = array(
-	        	'nama_toko' => $this->session->userdata('nama'),
-				'nama_produk' => $this->input->post('namaproduk'),
-				'harga' => $this->input->post('harga'),
-				'deskripsi' => $this->input->post('deskripsi')
-	        );
+			//$this->load->model('penjual_model');
+			// $data = array(
+	  //       	'nama_toko' => $this->session->userdata('username'),
+			// 	'nama_produk' => $this->input->post('namaproduk'),
+			// 	'harga' => $this->input->post('harga'),
+			// 	'deskripsi' => $this->input->post('deskripsi')
+	  //       );
 
-			$data = $this->penjual_model->Insertproduk('produk', $data);
+			// $data = $this->penjual_model->Insertproduk('produk', $data);
 
-			if( $data )
-			{
-				$this->session->set_flashdata('success', 'berhasil MENAMBAHAN');
-				redirect(base_url('penjual/tambahproduk'));
+			// if( $data )
+			// {
+			// 	$this->session->set_flashdata('success', 'berhasil MENAMBAHAN');
+			// 	redirect(base_url('penjual/tambahproduk'));
+			// }
+			// else
+			// {
+			// 	$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
+			// 	redirect(base_url('penjual/tambahproduk'));
+			// }
+
+			$data = array();
+		
+			if($this->input->post('submit')) // Jika user menekan tombol Submit (Simpan) pada form
+			{ 
+			  // lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
+			  $upload = $this->penjual_model->upload();
+			  
+			  if($upload['result'] == "success") // Jika proses upload sukses
+			  { 
+				 // Panggil function save yang ada di GambarModel.php untuk menyimpan data ke database
+				$this->penjual_model->save($upload);
+				
+				redirect('penjual'); // Redirect kembali ke halaman awal / halaman view data
+			  }else{ // Jika proses upload gagal
+				$data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
+			  }
 			}
-			else
-			{
-				$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
-				redirect(base_url('penjual/tambahproduk'));
-			}
+			
+			$this->load->view('penjual/tambahproduk', $data);
+
 		}
 		function riwayatpemesanan()
 		{
@@ -96,9 +124,8 @@
 		{
 			$this->load->model('penjual_model');
 			$data = array(
-	        	'username' => $this->session->userdata('nama'),
+	        	'username' => $this->session->userdata('username'),
 				'nama_toko' => $this->input->post('namatoko'),
-				'nama_pemilik' => $this->input->post('namapemilik'),
 				'no_hp' => $this->input->post('nomorhp'),
 				'email' => $this->input->post('namatoko'),
 				'lokasi' => $this->input->post('lokasi'),
