@@ -216,5 +216,10 @@
 	        
 				redirect(base_url('penjual/produk'));
 		}
+
+		public function gambar()
+		{
+			
+		}
 }
 ?>

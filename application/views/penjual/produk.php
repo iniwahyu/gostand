@@ -98,6 +98,7 @@
                 <table class="table table-bordered">
                   <tr>
                     <th style="width: 10px">#</th>
+                    <th>Gambar</th>
                     <th>Nama Produk</th>
                     <th>Deskripsi Produk</th>
                     <th>Harga Produk</th>
@@ -108,6 +109,7 @@
                   foreach ($data as $produk) {?>
                   <tr>
                     <td><?php echo $no++ ?></td>
+                    <td> <?php echo "<img src=./asset/img/produk/".$produk['nama_file'].">"; ?> </td>
                     <td><?php echo $produk['nama_produk'];?></td>
                     <td><?php echo $produk['deskripsi'];?></td>
                     <td><?php echo $produk['harga'];?></td>

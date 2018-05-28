@@ -14,7 +14,7 @@ class penjual_model extends CI_Model
 
   public function upload()
   {
-    $config['upload_path']   = './images';
+    $config['upload_path']   = './asset/img/produk';
         $config['allowed_types'] = 'jpg|png|jpeg';
         $config['max_size']      = '2048';
         $config['max_width']     = 200;
