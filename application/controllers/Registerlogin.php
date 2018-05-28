@@ -4,8 +4,6 @@ defined('BASEPATH') OR exit('No Direct Script Access Allowed');
 
 class Registerlogin extends CI_Controller
 {
-	
-	
 	function registrasi()
 	{
 		$this->load->view('home/registrasi');
@@ -129,26 +127,25 @@ class Registerlogin extends CI_Controller
 				$this->session->set_userdata('akses', 'Pembeli');
 				$this->session->set_userdata('username', $data['username']);
 				$this->session->set_userdata('status', 'login');
-				redirect(base_url('/'));
+				redirect(base_url('pembeli'));
 			}
-			else if($data['level'] === 'Penjual' )
+			
+			if($data['level'] === 'Penjual' )
 			{
 				$this->session->set_userdata('akses', 'Penjual');
 				$this->session->set_userdata('username', $data['username']);
 				$this->session->set_userdata('status', 'login');
 				redirect(base_url('/'));
 			}
-			else if($data['level'] === 'Admin' )
+			
+			if($data['level'] === 'Admin' )
 			{
 				$this->session->set_userdata('akses', 'Admin');
 				$this->session->set_userdata('username', $data['username']);
 				$this->session->set_userdata('status', 'login');
 				redirect(base_url('/'));
 			}
-			else
-			{
-				echo "Hayo pasti belum daftar";
-			}
+
 		}else{
 			echo "Hayo pasti belum daftar";
 			

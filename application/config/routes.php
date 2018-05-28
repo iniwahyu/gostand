@@ -66,3 +66,4 @@ $route['logout'] = 'Registerlogin/logout';
 $route['tambahadmin'] = 'Registerlogin/tambahadmin';
 
 // ADMIN
+$route['user/viewuser'] = 'Admin/viewuser';

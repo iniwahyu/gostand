@@ -79,7 +79,7 @@
                                         <div class="form-group">
                                             <input type="text" class="form-control input-flat" name="password" value="<?php echo $password ?>" >
                                         </div>
-                                        <input type="submit" name="submit" class="btn btn-primary" value="Tambah Penjual" >
+                                        <input type="submit" name="submit" class="btn btn-primary" value="Edit Penjual" >
                                     </form>
                                 </div>
                             </div>

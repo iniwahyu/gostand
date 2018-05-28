@@ -37,8 +37,8 @@ class Home_model extends CI_Model
         $config['upload_path']   = './images/';
         $config['allowed_types'] = 'jpg|png|jpeg';
         $config['max_size']	     = '2048';
-        $config['max_width']     = 300;
-	    $config['max_height']    = 250;
+        $config['max_width']     = 1366;
+	    $config['max_height']    = 768;
         $config['remove_space'] = TRUE;
     
         $this->load->library('upload', $config); // Load konfigurasi uploadnya

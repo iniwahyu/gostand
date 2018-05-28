@@ -107,7 +107,7 @@
                                         { ?>
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
-                                                <td><?php echo $row['username']; ?></td>
+                                                <td> <a href="<?php echo base_url('admin/viewuser/').$row['id']; ?>"> <?php echo $row['username']; ?> </a> </td>
                                                 <td><?php echo $row['nama']; ?></td>
                                                 <td><?php echo $row['password']; ?></td>
                                                 <td><?php echo $row['level']; ?></td>

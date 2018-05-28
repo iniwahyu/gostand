@@ -84,11 +84,6 @@
                 <td><?php echo $this->session->userdata('username');?></td>
               </tr>
               <tr>
-                <td><label>Nama</label></td>
-                <td><label>:</label></td>
-                <td><input type="text" name="namaorang" placeholder="Nama Anda..."></td>
-              </tr>
-              <tr>
                 <td><label>Email</label></td>
                 <td><label>:</label></td>                
                 <td><input type="email" name="email" placeholder="Email Anda..."></td>

@@ -3,17 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-	public function __construct() {
-        parent::__construct();
-        // memuat model
-        $this->load->model('Admin_Model');
-        $this->model = $this->Admin_Model;
- 
-        $this->load->database();
-        // memuat helper url
-        $this->load->helper('url'); // sebagai redirect
-	}
-	
 	public function index()
 	{
 		$cek = $this->session->userdata('akses');
@@ -34,6 +23,17 @@ class Admin extends CI_Controller {
 		$user = $this->Admin_model->tampiluser('user');
 		$user = array('user' => $user);
 		$this->load->view('admin/user', $user);
+	}
+
+	public function viewuser($id)
+	{
+		$this->load->model('Admin_model');
+		$where = array( 'id' => $id );
+		$user = $this->Admin_model->GetWhere('user', $where);
+		$data = array(
+			'username' => $user[0]['username'],
+		);
+		$this->load->view('admin/viewuser', $data);
 	}
 
 	public function tambahuser()
@@ -75,7 +75,7 @@ class Admin extends CI_Controller {
 		$query = $this->Admin_model->Update('user', $data, $where);
 		if( $query > 0 )
 		{
-			redirect('admin/user', 'refresh');
+			redirect(base_url('admin/user'));
 		}
 		
 	}
@@ -85,11 +85,7 @@ class Admin extends CI_Controller {
 		$id = array('id' => $id);
 		$this->load->model('Admin_model');
 		$this->Admin_model->Delete('user', $id);
-		redirect('admin/user');
-		// $noinduk = array('no_induk' => $noinduk);
-		// $this->load->model('mymodel');
-		// $this->mymodel->Delete('mahasiswa', $noinduk);
-		// redirect(base_url(),'refresh');
+		redirect(base_url('admin/user'));
 	}
 
 	public function penjual()

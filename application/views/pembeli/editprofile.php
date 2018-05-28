@@ -86,20 +86,14 @@
                 <td><?php echo $this->session->userdata('username');?></td>
               </tr>
               <tr>
-                <td><label>Nama</label></td>
-                <td><label>:</label></td>
-                <td><input type="text" name="namaorang" placeholder="Nama Anda..." 
-                  value="<?php echo $profil['nama'];?>"> </td>
-              </tr>
-              <tr>
                 <td><label>Email</label></td>
                 <td><label>:</label></td>                
-                <td><input type="email" name="email" placeholder="Email Anda..." value="<?php echo $profil['email'];?>">></td>
+                <td><input type="email" name="email" placeholder="Email Anda..." value="<?php echo $profil['email'];?>"></td>
               </tr>
               <tr>
                 <td><label>No. Handphone</label></td>
                 <td><label>:</label></td>
-                <td><input type="text" name="nohape" placeholder="No. Handphone Anda..." value="<?php echo $profil['nohape'];?>">></td>
+                <td><input type="text" name="nohape" placeholder="No. Handphone Anda..." value="<?php echo $profil['nohape'];?>"></td>
               </tr>
               <?php } ?>
             </table>
