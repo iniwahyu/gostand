@@ -22,6 +22,19 @@ class Welcome extends CI_Controller {
 	public function makanan()
 	{
 		$this->load->view('home/makanan');
+
+		// pagingnation
+		// $this->load->database();
+		// $jumlah_data = $this->Home_model->jumlah_data();
+		// $this->load->library('pagination');
+		// $config['base_url'] = base_url().'makanan';
+		// $config['total_rows'] = $jumlah_data;
+		// $config['per_page'] = 3;
+		// $from = $this->uri->segment(3);
+		// $this->pagination->initialize($config);		
+		// $data['user'] = $this->m_data->data($config['per_page'],$from);
+		// $this->load->view('makanan',$data);
+		// tutup pagination
 	}
 
 	public function minuman()

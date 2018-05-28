@@ -8,7 +8,7 @@
 		function index()
 		{
 			
-			if($this->session->userdata('nama'))
+			if($this->session->userdata('akses'))
 			{
 			$this->load->model('home_model');
 			$nama=$this->session->userdata('username');
@@ -18,7 +18,7 @@
 					$this->load->view('penjual/profil1');
 					
 				}
-				if($cek!=NULL){
+				else{
 					
 					$this->load->view('penjual/index');
 				}

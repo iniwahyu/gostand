@@ -57,21 +57,18 @@ $route['produk'] = 'Welcome/produk';
 $route['makanan'] = 'Welcome/makanan';
 $route['minuman'] = 'Welcome/minuman';
 $route['toko'] = 'Welcome/toko';
-<<<<<<< HEAD
 $route['produktoko'] = 'Welcome/produktoko';
 
-//<<<<<<< Updated upstream
 //$route['coba'] = 'Welcome/coba';
 
 // REGISTERLGOIN CONTROLLER
 //=======
 //$route['produktoko'] = 'Welcome/produktoko';
-//>>>>>>> Stashed changes
-=======
+
 $route['coba'] = 'Welcome/coba';
 
 // REGISTERLGOIN CONTROLLER
->>>>>>> 93844d77a32658f331ada0fed9bbab54319f4895
+
 $route['registrasi'] = 'Registerlogin/registrasi';
 $route['login'] = 'Registerlogin/login';
 $route['logout'] = 'Registerlogin/logout';
