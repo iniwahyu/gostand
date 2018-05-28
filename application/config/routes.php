@@ -57,13 +57,9 @@ $route['produk'] = 'Welcome/produk';
 $route['makanan'] = 'Welcome/makanan';
 $route['minuman'] = 'Welcome/minuman';
 $route['toko'] = 'Welcome/toko';
-<<<<<<< Updated upstream
 $route['coba'] = 'Welcome/coba';
 
 // REGISTERLGOIN CONTROLLER
-=======
-$route['produktoko'] = 'Welcome/produktoko';
->>>>>>> Stashed changes
 $route['registrasi'] = 'Registerlogin/registrasi';
 $route['login'] = 'Registerlogin/login';
 $route['logout'] = 'Registerlogin/logout';

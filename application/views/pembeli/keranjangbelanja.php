@@ -66,6 +66,7 @@
     
 
 <!-- Content -->
+<div id="keranjangbelanja">
 <div class="checkout-right">
                 <h4>Your shopping cart contains:
                     <span>3 Products</span>
@@ -74,9 +75,9 @@
                     <table class="timetable_sub">
                         <thead>
                             <tr>
-                                <th>SL No.</th>
+                                <th>No.</th>
                                 <th>Product</th>
-                                <th>Quality</th>
+                                <th>Quantity</th>
                                 <th>Product Name</th>
 
                                 <th>Price</th>
@@ -93,80 +94,21 @@
                                 </td>
                                 <td class="invert">
                                     <div class="quantity">
-                                        <div class="quantity-select">
-                                            <div class="entry value-minus">&nbsp;</div>
-                                            <div class="entry value">
-                                                <span>1</span>
-                                            </div>
-                                            <div class="entry value-plus active">&nbsp;</div>
-                                        </div>
+                                      <input type="number" name="" readonly>
                                     </div>
                                 </td>
-                                <td class="invert">Spotzero Spin Mop</td>
-                                <td class="invert">$888.00</td>
+                                <td class="invert">Ini Nama Barang</td>
+                                <td class="invert">ini harga barang</td>
                                 <td class="invert">
-                                    <div class="rem">
-                                        <div class="close1"> </div>
-                                    </div>
+                                  <button class="btn btn-danger">Remove</button>
                                 </td>
-                            </tr>
-                            <tr class="rem2">
-                                <td class="invert">2</td>
-                                <td class="invert-image">
-                                    <a href="single2.html">
-                                        <img src="images/s6.jpg" alt=" " class="img-responsive">
-                                    </a>
-                                </td>
-                                <td class="invert">
-                                    <div class="quantity">
-                                        <div class="quantity-select">
-                                            <div class="entry value-minus">&nbsp;</div>
-                                            <div class="entry value">
-                                                <span>1</span>
-                                            </div>
-                                            <div class="entry value-plus active">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="invert">Fair & Lovely, 80 g</td>
-                                <td class="invert">$121.60</td>
-                                <td class="invert">
-                                    <div class="rem">
-                                        <div class="close2"> </div>                                
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="rem3">
-                                <td class="invert">3</td>
-                                <td class="invert-image">
-                                    <a href="single.html">
-                                        <img src="images/s5.jpg" alt=" " class="img-responsive">
-                                    </a>
-                                </td>
-                                <td class="invert">
-                                    <div class="quantity">
-                                        <div class="quantity-select">
-                                            <div class="entry value-minus">&nbsp;</div>
-                                            <div class="entry value">
-                                                <span>1</span>
-                                            </div>
-                                            <div class="entry value-plus active">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="invert">Sprite, 2.25L (Pack of 2)</td>
-                                <td class="invert">$180.00</td>
-                                <td class="invert">
-                                    <div class="rem">
-                                        <div class="close3"> </div>
-                                    </div>
-                                </td>
-                            </tr>
+                            </tr>                          
                         </tbody>
                     </table>
                 </div>
             </div> 
             </div>                  
+          </div>
     <!-- //checkout page -->
 
   <!-- footer -->
