@@ -34,9 +34,9 @@ class Welcome extends CI_Controller {
 		$this->load->view('home/toko');
 	}
 
-	public function coba()
+	public function produktoko()
 	{
-		$this->load->view('home/coba');
+		$this->load->view('home/produktoko');
 	}
 
 	public function error()
