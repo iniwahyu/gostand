@@ -97,9 +97,9 @@ class Home_model extends CI_Model
     // }
     // Tutup
 
-    public function GetWhere($table, $data){
-        $res=$this->db->get_where($table, $data);
-        return $res->result_array();
+    public function GetWhere($table){
+        $res=$this->db->get_where($table,array('kategori'=>'Minuman'));//memilih tabel
+		return $res->result_array();//mengembalikan hasil
     }
 
 
