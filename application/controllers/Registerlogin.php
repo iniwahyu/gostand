@@ -73,7 +73,7 @@ class Registerlogin extends CI_Controller
 
 		if( $data )
 		{
-			redirect('admin/index');
+			redirect('admin');
 		}
 		else
 		{

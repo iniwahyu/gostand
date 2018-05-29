@@ -115,7 +115,7 @@
                   </tr>
                   <tr>
                     <td>Nama Pemilik</td>
-                    <td></td>
+                    <td><?php echo $info['nama']; ?></td>
                   </tr>
                   <tr>
                     <td>Nomor Hp</td>

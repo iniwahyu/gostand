@@ -109,11 +109,14 @@
                   foreach ($data as $produk) {?>
                   <tr>
                     <td><?php echo $no++ ?></td>
-                    <td> <?php echo "<img src=./asset/img/produk/".$produk['nama_file'].">"; ?> </td>
+                    <td><img src="<?php echo base_url('asset/img/produk/').$produk['nama_file']; ?>" width="100" height="100"> </td>
                     <td><?php echo $produk['nama_produk'];?></td>
                     <td><?php echo $produk['deskripsi'];?></td>
-                    <td><?php echo $produk['harga'];?></td>
-                    <td><a href="<?php echo base_url();?>penjual/formupdateproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> <a href="<?php echo base_url();?>penjual/hapusproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="ture"></i></a> </td>
+                    <td>Rp. <?php echo number_format($produk['harga'],2,',','.');?></td>
+                    <td>
+                      <a href="<?php echo base_url();?>penjual/formupdateproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                      <a href="<?php echo base_url();?>penjual/hapusproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="ture"></i></a>
+                    </td>
                   </tr>
                   <?php } ?>
                 </table>

@@ -39,6 +39,7 @@ class penjual_model extends CI_Model
   public function save($upload)
     {
         $data = array(
+        'username' => $this->session->userdata('username'),
         'nama_toko' => $this->input->post('username'),
         'nama_produk' => $this->input->post('namaproduk'),
         'harga' => $this->input->post('harga'),
@@ -55,7 +56,7 @@ class penjual_model extends CI_Model
 
   public function tampilproduk($table,$username)
   {
-		$res=$this->db->get_where($table,array('nama_toko'=>$username));//memilih tabel
+		$res=$this->db->get_where($table,array('username'=>$username));//memilih tabel
 		return $res->result_array();//mengembalikan hasil
   }
    public function takename($table,$username)
@@ -64,10 +65,15 @@ class penjual_model extends CI_Model
     return $res->result_array();//mengembalikan hasil
   }
 
-  public function tampilpenjual($table)
+  public function tampilpenjual($username)
   {
-    $res = $this->db->get('penjual');
-    return $res->result_array();
+    $this->db->select('*');
+    $this->db->from('penjual');
+    $this->db->join('user', 'user.username = penjual.username');
+    $this->db->where('user.username', $username);
+    
+    $query = $this->db->get();
+    return $query->result_array();
   }
 
   public function editproduk($table,$id)
@@ -82,11 +88,13 @@ class penjual_model extends CI_Model
 		$res=$this->db->delete($table);
 		return $res;
   }
+
   public function edit($where,$data,$table)
   {
     $this->db->where($where);
     $this->db->update($table,$data);
   }
+  
   public function prosesupdateproduk()
   {
 

@@ -39,17 +39,17 @@
 		
 		function profil()
 		{
-			//$namadata=$this->session->userdata('username');
-			$this->load->model('penjual_model');
-			$data=$this->penjual_model->tampilpenjual('penjual');
+			$username= $this->session->userdata('username');
+			$data=$this->penjual_model->tampilpenjual($username);
 			$data=array('data'=> $data);
-			//$this->load->view('terserah',$data);
 			$this->load->view('penjual/profil',$data);
 		}
+
 		function profil1()
 		{
 			$this->load->view('penjual/profil1');
 		}
+
 		function editprofil()
 		{
 			$namadata=$this->session->userdata('username');
@@ -58,6 +58,7 @@
 			$data=array('data'=> $data);
 			$this->load->view('penjual/editprofil',$data);
 		}
+
 		function produk()
 		{
 			$namadata=$this->session->userdata('username');
@@ -67,6 +68,7 @@
 			//$this->load->view('terserah',$data);
 			$this->load->view('penjual/produk',$data);
 		}
+
 		function tambahproduk()
 		{
 			$username=$this->session->userdata('username');
@@ -130,7 +132,7 @@
 	        	'username' => $this->session->userdata('username'),
 				'nama_toko' => $this->input->post('namatoko'),
 				'no_hp' => $this->input->post('nomorhp'),
-				'email' => $this->input->post('namatoko'),
+				'email' => $this->input->post('email'),
 				'lokasi' => $this->input->post('lokasi'),
 				'deskripsi_penjual' => $this->input->post('deskripsi'),
 	        	'jam_buka' => $this->input->post('jambuka'),
@@ -149,6 +151,7 @@
 				redirect(base_url('penjual/profil1'));
 			}
 		}
+
 		public function hapusproduk($id)
 		{
 			$this->load->model('penjual_model');
@@ -162,8 +165,8 @@
 				$this->session->set_flashdata('error', 'GAGAL MENGHAPUS');
 				redirect(base_url('penjual/produk'));
 			}
-			
 		}
+
 		public function updateprofil(){
 			$this->load->model('penjual_model');
 			$data = array(
@@ -193,12 +196,14 @@
 				redirect(base_url('penjual/profil'));
 			}
 		}
+
 		function formupdateproduk($id){
 			$this->load->model('penjual_model');
 			$data=$this->penjual_model->editproduk('produk',$id);
 			$data=array('data'=> $data);
 			$this->load->view('penjual/editproduk',$data);
 		}
+
 		function prosesupdateproduk($id){
 			$this->load->model('penjual_model');
 			$data = array(

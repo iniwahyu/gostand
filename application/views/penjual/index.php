@@ -81,8 +81,8 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="callout callout-info">
-            <h5>Selamat Datang <?php echo $this->session->userdata('username'); ?> !</h5>
-            <p>Follow the steps to continue to payment.</p>
+            <h5>Selamat Datang <?php $username = $this->session->userdata('username'); echo $username; ?> !</h5>
+            <p>Bagaimana kabar hari ini? Semangat terus jualannya.</p>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@
               <div class="inner">
                 <h3>
                   <?php
-                  $produk = $this->db->get('produk');
+                  $produk = $this->db->get_where('produk', array('username' => $username));
                   echo $produk->num_rows();
                   ?>
                 </h3>
@@ -127,9 +127,9 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3>Rp. 5.000</h3>
 
-                <p>User Registrations</p>
+                <p>Pendapatan</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -142,9 +142,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3>1 - 5</h3>
 
-                <p>Unique Visitors</p>
+                <p>Rating</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
