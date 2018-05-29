@@ -100,7 +100,7 @@
                                 <td class="invert">Ini Nama Barang</td>
                                 <td class="invert">ini harga barang</td>
                                 <td class="invert">
-                                  <button class="btn btn-danger">Remove</button>
+                                  <button class="btn btn-danger"><i class="fa fa-times"></i></button>
                                 </td>
                             </tr>                          
                         </tbody>
