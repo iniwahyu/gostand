@@ -124,6 +124,10 @@
 		{
 			$this->load->view('penjual/riwayatpemesanan');
 		}
+		function pemesanan()
+		{
+			$this->load->view('penjual/pemesanan');
+		}
 
 		public function inptdatadiri()
 		{
