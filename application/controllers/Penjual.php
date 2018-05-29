@@ -131,7 +131,7 @@
 
 		public function inptdatadiri()
 		{
-			$this->load->model('penjual_model');
+			/*$this->load->model('penjual_model');
 			$data = array(
 	        	'username' => $this->session->userdata('username'),
 				'nama_toko' => $this->input->post('namatoko'),
@@ -153,7 +153,26 @@
 			{
 				$this->session->set_flashdata('error', 'GAGAL MENAMBAHAN');
 				redirect(base_url('penjual/profil1'));
+			}*/
+			$this->load->model('penjual_model');
+			$data = array();
+		
+			if($this->input->post('submit')) // Jika user menekan tombol Submit (Simpan) pada form
+			{ 
+			  // lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
+			  $upload = $this->penjual_model->upload2();
+			  
+			  if($upload['result'] == "success") // Jika proses upload sukses
+			  { 
+				 // Panggil function save yang ada di GambarModel.php untuk menyimpan data ke database
+				$this->penjual_model->save2($upload);
+				
+				redirect('penjual'); // Redirect kembali ke halaman awal / halaman view data
+			  }else{ // Jika proses upload gagal
+				$data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
+			  }
 			}
+			$this->load->view('penjual/index');
 		}
 
 		public function hapusproduk($id)
