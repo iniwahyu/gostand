@@ -14,3 +14,14 @@
 	margin-bottom: 100px;
 }
 
+#formpengiriman
+{
+	margin-top: 100px;
+}
+
+#formpengiriman textarea
+{
+	width: 1000px;
+	height: 100px;
+}
+

@@ -83,10 +83,17 @@
               <?php                  
                   foreach ($data as $info) {?>
                   <tr>
+                    <td><label>Nama</label></td>
+                    <td><label>:</label></td>                
+                    <td><?php echo $info['nama'];?></td>
+                  </tr>
+
+                  <tr>
                     <td><label>Email</label></td>
                     <td><label>:</label></td>                
-                <td><?php echo $info['email'];?></td>
-              </tr>
+                    <td><?php echo $info['email'];?></td>
+                  </tr>
+              
               <tr>
                 <td><label>No. Handphone</label></td>
                 <td><label>:</label></td>

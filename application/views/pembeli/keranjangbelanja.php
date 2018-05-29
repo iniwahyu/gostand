@@ -69,7 +69,12 @@
 <div id="keranjangbelanja">
 <div class="checkout-right">
                 <h4>Your shopping cart contains:
-                    <span>3 Products</span>
+                    <span><?php
+                      $namadata=$this->session->userdata('username');
+                      $query=$this->db->get_where('keranjang',array('nama_pembeli'=>$namadata));//memilih tabel
+                      echo $query->num_rows();
+                      ?></span>
+                    <span>Products</span>
                 </h4>
                 <div class="table-responsive">
                     <table class="timetable_sub">
@@ -85,6 +90,10 @@
                             </tr>
                         </thead>
                         <tbody>
+                          <?php
+                          $no=1;
+                          foreach ($data as $produk) {?>
+                          <tr>
                             <tr class="rem1">
                                 <td class="invert">1</td>
                                 <td class="invert-image">
@@ -97,19 +106,37 @@
                                       <input type="number" name="" readonly>
                                     </div>
                                 </td>
-                                <td class="invert">Ini Nama Barang</td>
-                                <td class="invert">ini harga barang</td>
+                                <td class="invert"><?php echo $produk['nama_produk'];?></td>
+                                <td class="invert"><?php echo $produk['jumlah_produk'];?></td>
                                 <td class="invert">
-                                  <button class="btn btn-danger"><i class="fa fa-times"></i></button>
-                                </td>
-                            </tr>                          
+                                  <a href="<?php echo base_url('pembeli/deletekeranjang/').$produk['id']; ?>" class="btn btn-danger" ><i class="fa fa-times"></i>Remove</a>
+                                </td> 
+                            </tr>
+                            <?php } ?>
                         </tbody>
+
                     </table>
                 </div>
+                    <div id="formpengiriman">
+                      <label>Alamat Pengiriman</label>
+                      <label>:</label>
+                      <br>
+                      <textarea></textarea>
+                      <br><br><br>
+                      <label>Tanggal Pemesanan</label>
+                      <?php
+                      date_default_timezone_set("Asia/Jakarta");
+                      $tgl1 = date("Y-m-d");
+                      ?>
+                      <br>
+                      <input type="date" value="<?php echo $tgl1; ?>" readonly>
+                    </div>
             </div> 
             </div>                  
           </div>
     <!-- //checkout page -->
+
+   
 
   <!-- footer -->
   <footer>

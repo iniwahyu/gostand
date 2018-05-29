@@ -12,9 +12,13 @@ class Pembeli extends CI_Controller {
 			$where=array('username'=>$nama);
 			$cek=$this->Home_model->login('pembeli',$where)->num_rows();
 			
-			if($cek==NULL){
+			if($cek==NULL)
+			{
 				redirect(base_url('pembeli/firstprofile'));
-			}else{
+			}
+
+			else
+			{
 				$this->load->view('home/home');
 			}
 				
@@ -40,7 +44,7 @@ class Pembeli extends CI_Controller {
 				'nohape' => $this->input->post('nohape')
 	        );
 
-			$data = $this->pembeli_model->insertdata('pembeli', $data);
+			$data = $this->pembeli_model->insertprofile('pembeli', $data);
 
 			if( $data )
 			{
@@ -57,12 +61,17 @@ class Pembeli extends CI_Controller {
 	{
 			$namadata=$this->session->userdata('username');
 			$this->load->model('Pembeli_model');
-			$data=$this->Pembeli_model->tampildata('pembeli',$namadata);
-			if( $data == NULL ){
+			$data=$this->Pembeli_model->tampilprofile('pembeli',$namadata);
+			
+			if( $data == NULL )
+			{
 				redirect(base_url('pembeli/firstprofile'));
-			}else {
-			$data=array('data'=> $data);
-			$this->load->view('pembeli/myprofile',$data);
+			}
+			
+			else 
+			{
+				$data=array('data'=> $data);
+				$this->load->view('pembeli/myprofile',$data);
 			}			
 	}
     
@@ -70,7 +79,7 @@ class Pembeli extends CI_Controller {
 	{
 			$namadata=$this->session->userdata('username');
 			$this->load->model('Pembeli_model');
-			$data=$this->Pembeli_model->tampildata('pembeli',$namadata);
+			$data=$this->Pembeli_model->tampilprofile('pembeli',$namadata);
 			$data=array('data'=> $data);
 			$this->load->view('pembeli/editprofile',$data);
 		
@@ -88,7 +97,7 @@ class Pembeli extends CI_Controller {
 			'username'=>$user
 		);
 
-		$data=$this->pembeli_model->edit($where,$data,'pembeli');
+		$data=$this->pembeli_model->editprofile($where,$data,'pembeli');
 
 		if($data){
 			$this->session->set_flashdata('succes', 'BERHASIL UPDATE');
@@ -107,12 +116,35 @@ class Pembeli extends CI_Controller {
 
 	public function keranjang()
 	{
-		$this->load->view('pembeli/keranjangbelanja');
+			$namadata=$this->session->userdata('username');
+			$this->load->model('pembeli_model');
+			$data=$this->pembeli_model->tampilkeranjang('keranjang',$namadata);
+			$data=array('data'=> $data);
+			$this->load->view('pembeli/keranjangbelanja',$data);
 	}
 
 	public function default()
 	{
 		$this->load->view('pembeli/default');
+	}
+
+	public function inputkeranjang()
+	{
+
+		$this->load->model('pembeli_model');
+		$napem=$this->input->post('napem');
+        $nabar=$this->input->post('nabar');
+        $harga=$this->input->post('harga');
+        $data=$this->pembeli_model->inputkeranjang($napem,$nabar,$harga);
+        echo json_encode($data);
+    }
+
+    public function deletekeranjang($id)
+	{
+		$id = array('id' => $id);
+		$this->load->model('pembeli_model');
+		$this->pembeli_model->deletekeranjang('keranjang', $id);
+		redirect(base_url('pembeli/keranjang'));
 	}
 
 	

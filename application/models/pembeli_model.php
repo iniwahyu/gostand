@@ -6,31 +6,55 @@ defined('BASEPATH') OR exit('No Direct Script Access Allowed');
  */
 class Pembeli_model extends CI_Model
 {
-    public function insertdata($table,$data)
+
+    public function __construct()
+    {
+      parent::__construct();
+      $this->load->model('Home_model');
+      $this->load->model('pembeli_model');
+    }
+    public function insertprofile($table,$data)
     {
       $res = $this->db->insert($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
       return $res; // Kode ini digunakan untuk mengembalikan hasil $res
     }
     
-    public function tampildata($table,$username)
+    public function tampilprofile($table,$username)
     {
-      $res=$this->db->get_where($table,array('username'=>$username));//memilih tabel
-      return $res->result_array();//mengembalikan hasil
+          $this->db->select('*');
+          $this->db->from('pembeli');
+          $this->db->join('user', 'user.username = pembeli.username');
+          $this->db->where('user.username', $username);
+    
+          $query = $this->db->get();
+          return $query->result_array();
+          
     }
 
-    public function edit($where,$data,$table) /// Fungsi Untuk Edit data
+    public function editprofile($where,$data,$table) /// Fungsi Untuk Edit data
     {
       $this->db->where($where);
       $this->db->update($table,$data);
     }
       
-    public function hapus($table,$id)
+ 
+
+    public function inputkeranjang($napem,$nabar,$harga)
     {
-      $this->db->where($id);
-      $res=$this->db->delete($table);
-      return $res;
+        $hasil=$this->db->query("INSERT INTO keranjang (nama_pembeli,nama_produk, jumlah_produk)VALUES('$napem','$nabar','$harga')");
+        return $hasil;
     }
-  
+
+    public function tampilkeranjang($table,$username)
+    {
+      $res=$this->db->get_where($table,array('nama_pembeli'=>$username));//memilih tabel
+      return $res->result_array();//mengembalikan hasil
+    }
+
+    public function deletekeranjang($table, $where){
+        $res = $this->db->delete($table, $where); // Kode ini digunakan untuk menghapus record yang sudah ada
+        return $res;
+    }
 	
 }
 	

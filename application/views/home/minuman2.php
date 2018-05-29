@@ -82,7 +82,7 @@
 									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 										<form class="form-keranjang" method="post">
 											<fieldset>
-												<input id="nama_pembeli" type="hidden" name="" value="<?php echo $this->session->userdata('username');?>">
+												<input id="nama_pembeli" type="hidden" value="<?php echo $this->session->userdata('username');?>">
 												<input id="nama_barang" type="hidden" value="<?php echo $row['nama_produk']; ?>">
 												<input id="harga" type="hidden" value="<?php echo $row['harga']; ?>">
 												<button class="btn btn-info" id="btn_simpan">Simpan</button>
@@ -289,18 +289,19 @@
 	<!-- //js-files -->
 
 
-						<script type="text/javascript">
-			$('#btn_simpan').on('click',function(){
-            var kobar=$('#nama_pembeli').val();
+			<script type="text/javascript">
+			$('#btn_simpan').on('click',function()
+			{
+            var napem=$('#nama_pembeli').val();
             var nabar=$('#nama_barang').val();
             var harga=$('#harga').val();
             $.ajax({
                 type : "POST",
-                url  : "<?php echo base_url('welcome/simpan_barang')?>",
+                url  : "<?php echo base_url('pembeli/inputkeranjang')?>",
                 dataType : "JSON",
-                data : {kobar:kobar , nabar:nabar, harga:harga},
+                data : {napem:napem , nabar:nabar, harga:harga},
                 success: function(data){
-                    $('[name="kobar"]').val("");
+                    $('[name="napem"]').val("");
                     $('[name="nabar"]').val("");
                     $('[name="harga"]').val("");                    
                     
