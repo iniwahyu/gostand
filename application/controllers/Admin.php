@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Admin_model');
+	}
+
 	public function index()
 	{
 		$cek = $this->session->userdata('akses');
@@ -16,6 +22,8 @@ class Admin extends CI_Controller {
 		}
 		
 	}
+
+	// SECTION ADMIN
 
 	public function user()
 	{
@@ -85,12 +93,16 @@ class Admin extends CI_Controller {
 		$id = array('id' => $id);
 		$this->load->model('Admin_model');
 		$this->Admin_model->Delete('user', $id);
-		redirect(base_url('admin/user'));
+		redirect(base_url('admin/user'), 'refresh');
 	}
+
+	// SECTION PENJUAL
 
 	public function penjual()
 	{
-		$this->load->view('admin/penjual');
+		$data = $this->Admin_model->tampilpenjual('penjual');
+		$data = array('data' => $data);
+		$this->load->view('admin/penjual', $data);
 	}
 
 	public function profilpenjual()

@@ -196,49 +196,22 @@
 						<div class="col-lg-6">
 							<div class="card">
 								<div class="card-title">
-									<h4>Kritik &amp; Saran </h4>
+									<h4>Produk Terbaru </h4>
 								</div>
 								<div class="recent-comment">
 									<div class="media">
-										<div class="media-left">
-											<a href="#"><img alt="..." src="images/avatar/1.jpg" class="media-object"></a>
-										</div>
 										<div class="media-body">
-											<h4 class="media-heading">john doe</h4>
-											<p>Cras sit amet nibh libero, in gravida nulla. </p>
-											<p class="comment-date">October 21, 2018</p>
-										</div>
-									</div>
-									<div class="media">
-										<div class="media-left">
-											<a href="#"><img alt="..." src="images/avatar/1.jpg" class="media-object"></a>
-										</div>
-										<div class="media-body">
-											<h4 class="media-heading">john doe</h4>
-											<p>Cras sit amet nibh libero, in gravida nulla. </p>
-											<p class="comment-date">October 21, 2018</p>
-										</div>
-									</div>
-
-									<div class="media">
-										<div class="media-left">
-											<a href="#"><img alt="..." src="images/avatar/1.jpg" class="media-object"></a>
-										</div>
-										<div class="media-body">
-											<h4 class="media-heading">john doe</h4>
-											<p>Cras sit amet nibh libero, in gravida nulla. </p>
-											<p class="comment-date">October 21, 2018</p>
-										</div>
-									</div>
-
-									<div class="media no-border">
-										<div class="media-left">
-											<a href="#"><img alt="..." src="images/avatar/1.jpg" class="media-object"></a>
-										</div>
-										<div class="media-body">
-											<h4 class="media-heading">Mr. Michael</h4>
-											<p>Cras sit amet nibh libero, in gravida nulla. </p>
-											<div class="comment-date">October 21, 2018</div>
+                                            <?php
+                                            $produk = $this->db->get('produk');
+                                            $row = $produk->result();
+                                            
+                                            foreach( $row as $produks ){
+                                            ?>
+                                            <h4 class="media-heading"><?php echo $produks->nama_produk; ?></h4>
+                                            <p>
+                                                <?php echo $produks->nama_toko; ?> | <?php echo $produks->harga; ?>
+                                            </p>
+                                            <?php } ?>
 										</div>
 									</div>
 								</div>

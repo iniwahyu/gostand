@@ -32,6 +32,22 @@ class Admin_Model extends CI_Model{
         $res = $this->db->get('user');
         return $res->result_array();
     }
+
+    // SECTION ADMIN
+
+
+    // SECTION PENJUAL
+    public function tampilpenjual($table)
+    {
+        //$query = $this->db->get('user');
+        // $this->db->select('*');
+        // $this->db->from('penjual');
+        // $this->db->join('user', 'user.username = penjual.username');
+        // $this->db->where('user.username', $where);
+
+        $query = $this->db->get($table);
+        return $query->result_array();
+    }
 }
 
 

@@ -60,20 +60,22 @@
 				<div class="wrapper">
 				<!-- first section -->
 					<div class="product-sec1">
-					<?php foreach ($data as $minuman) { var_dump($data); { ?>
+					<?php foreach ($data as $minuman) {  ?>
 						<div class="col-xs-4 product-minuman">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/img/produk').$minuman['nama_file']; ?>" alt="">
+									<img src="<?php echo base_url('asset/img/produk/'). $minuman['nama_file']; ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
+										<a href="single.html"><?php echo $minuman['nama_produk']; ?></a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
+										<span class="item_price">Rp. <?php echo number_format($minuman['harga'], 2,'.','.'); ?></span>
+									</div>
+									<div class="info-product-price">
+									<span><?php echo $minuman['nama_toko']; ?></span>
 									</div>
 									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>

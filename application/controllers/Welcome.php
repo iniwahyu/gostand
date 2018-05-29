@@ -46,14 +46,9 @@ class Welcome extends CI_Controller {
 
 	public function minuman()
 	{
-		$where = array( 'kategori' => 'Minuman' );
-		$minuman = $this->Home_model->GetWhere('produk', $where);
-		$data = array(
-			'nama_file' => $minuman[0]['nama_file'],
-			'nama_produk' => $minuman[0]['nama_produk'],
-			'harga' => $minuman[0]['harga'],
-			'nama_toko' => $minuman[0]['nama_toko'],
-		);
+		//$where = array( 'kategori' => 'Minuman' );
+		$data = $this->Home_model->GetWhere('produk');
+		$data = array('data' => $data );
 		$this->load->view('home/minuman', $data);
 	}
 
