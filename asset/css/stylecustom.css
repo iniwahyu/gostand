@@ -18,3 +18,11 @@ footer{
     /* text-align: right; */
     margin: 0 auto;
 }
+
+.ads-grid .wrapper .product-makanan{ 
+    margin: 50px 0;
+}
+
+.ads-grid .wrapper .product-minuman{ 
+    margin: 50px 0;
+}

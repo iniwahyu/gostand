@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gostand | Penjual</title>
 
-
     <link rel="stylesheet" href="<?php echo base_url('asset/penjual/dist/css/adminlte.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('asset/penjual/plugins/font-awesome/css/font-awesome.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url ('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');?>">
@@ -74,87 +73,65 @@
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </div>
+  
 
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">Tambah Produk</h3>
-            </div>
-            
-            <!-- <form role="form" action="<?php //echo site_url('penjual/prosestambahproduk'); ?>" method="post"> -->
-            <div style="color: red;"><?php echo (isset($message))? $message : ""; ?></div> 
-            <?php echo form_open("penjual/prosestambahproduk", array('enctype'=>'multipart/form-data')); ?>
-            <?php
-            // if($this->session->flashdata('success'))
-            // {
-            //   echo $this->session->flashdata('success');
-            // }
-            // else
-            // {
-            //   echo $this->session->flashdata('error');
-            // }
+   <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Daftar Produk</h3>
+                 <?php
+            if($this->session->flashdata('success'))
+            {
+              echo $this->session->flashdata('success');
+            }
+            else
+            {
+              echo $this->session->flashdata('error');
+            }
             ?>
-
-             
+              </div>
+              <!-- /.card-header -->
               <div class="card-body">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Toko</label>
-                  <?php foreach ($data as $profil) {?>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="username" value="<?php echo $profil['nama_toko'];?>" readonly>
-                  <?php } ?>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Produk</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" value="<?php echo set_value('namaproduk'); ?>">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Kategori Produk</label>
-                  <select class="form-control" name="kategori">
-                  <option value="Makanan">Makanan
-                  <option value="Minuman">Minuman
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Harga (Rp)</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" name="harga" value="<?php echo set_value('harga'); ?>">
-                </div>
-                
-                <div class="form-group">
-                  <div class="box-header">
-                    <h3 class="box-title">Deskripsi Produk</h3>
-                    <!-- tools box -->
-                    <div class="pull-right box-tools">
-                    </div>
-                    <!-- /. tools -->
-                  </div>
-                  <!-- /.box-header -->
-                  <div class="box-body pad">
-                      <textarea name="deskripsi"  class="textarea" placeholder="Silahkan Deskripsikan Produk Anda" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                  </div>
+                <table class="table table-bordered">
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Nama Pemesan</th>
+                    <th>Nama Produk</th>
+                    <th>QTY</th>
+                    <th>Harga Produk</th>
+                    <th>Total Pembayaran</th>
+                    <th style="width: 160px">Action</th>
+                  </tr>
+                  <?php
+                  $no=1;
+                  //foreach ($data as $pemesanan) {?>
+                  <tr>
+                    <td><?php echo $no++ ?></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td>Rp. <?php echo number_format($produk['harga'],2,',','.');?></td>
+                    <td>
+                      <a href="<?php echo base_url();?>penjual/formupdateproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                      <a href="<?php echo base_url();?>penjual/hapusproduk/<?php echo $produk['id'];?>" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="ture"></i></a>
+                    </td>
+                  </tr>
+                  <?//php } ?>
+                </table>
               </div>
-
-                 <div class="form-group">
-                  <label>Foto Produk</label>
-                  <input type="file" class="form-control" name="input_gambar">
-                </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
               </div>
-            
-            <div class="card-footer">
-              <input type="submit" name="submit" class="btn btn-primary" value="Upload"></input>
-            </div>
-            
-            <?php echo form_close(); ?>
-          </div>
-        </div>
-
-      </div>
-        <!-- /.row -->
-    </div><!-- /.container-fluid -->
-  </section>
-</div>
 
 </div><!--divakhir-->
 
@@ -194,28 +171,6 @@
 <script src="<?php echo base_url('asset/penjual/dist/js/pages/dashboard.js');?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('asset/penjual/dist/js/demo.js');?>"></script>
-<script src="<?php echo base_url('asset/penjual/plugins/ckeditor/ckeditor.js');?>"></script>
-<script src="<?php echo base_url('asset/penjual/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js');?>"></script>
-<script>
-  $(function () {
-    // Replace the <textarea id="editor1"> with a CKEditor
-    // instance, using default configuration.
-    ClassicEditor
-      .create(document.querySelector('#CKEditor'))
-      .then(function (ckeditor) {
-        // The editor instance
-      })
-      .catch(function (error) {
-        console.error(error)
-      })
-
-    // bootstrap WYSIHTML5 - text editor
-
-    $('.textarea').wysihtml5({
-      toolbar: { fa: true }
-    })
-  })
-</script>
 
 </body>
 </html>

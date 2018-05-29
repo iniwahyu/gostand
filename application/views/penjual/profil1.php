@@ -119,6 +119,10 @@
                       <label for="exampleInputEmail1">Jam Tutup</label>
                       <input type="time" class="form-control" id="exampleInputPassword1" name="jamtutup" placeholder="">
                     </div>
+                    <div class="form-group">
+                      <label>Foto Toko</label>
+                      <input type="file" class="form-control" name="input_gambar">
+                  </div>
                   </div>
                   </div>
 

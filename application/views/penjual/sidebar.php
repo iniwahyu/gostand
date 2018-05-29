@@ -74,6 +74,14 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a href="<?php echo base_url('penjual/pemesanan'); ?>" class="nav-link">
+              <i class="nav-icon fa fa-calendar"></i>
+              <p>
+                Pemesanan
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="<?php echo base_url('penjual/riwayatpemesanan'); ?>" class="nav-link">
               <i class="nav-icon fa fa-calendar"></i>
               <p>
