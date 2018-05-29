@@ -110,5 +110,25 @@ class Welcome extends CI_Controller {
 		$this->load->view('home/formgambar');
 	}
 
+	// Simulator Bugi
+	public function minuman2()
+	{
+
+		$this->load->model('Home_model');
+		$produk = $this->Home_model->tampilminuman('produk');
+		$produk = array('produk' => $produk);
+		$this->load->view('home/minuman2', $produk);		
+	}
+
+	public function simpan_barang(){
+        $napem=$this->input->post('kobar');
+        $nabar=$this->input->post('nabar');
+        $harga=$this->input->post('harga');
+        $data=$this->Home_model->simpan_barang($kobar,$nabar,$harga);
+        echo json_encode($data);
+    }
+ 
+    //End Simulator
+
 	
 }
