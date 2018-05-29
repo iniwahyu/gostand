@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gostand | Penjual</title>
 
+
     <link rel="stylesheet" href="<?php echo base_url('asset/penjual/dist/css/adminlte.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('asset/penjual/plugins/font-awesome/css/font-awesome.min.css');?>">
     <link rel="stylesheet" href="<?php echo base_url ('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');?>">
@@ -77,7 +78,7 @@
   <section class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="card card-primary">
             <div class="card-header">
               <h3 class="card-title">Tambah Produk</h3>
@@ -113,10 +114,24 @@
                   <label for="exampleInputEmail1">Harga (Rp)</label>
                   <input type="text" class="form-control" id="exampleInputPassword1" name="harga" value="<?php echo set_value('harga'); ?>">
                 </div>
-                <div class="form-group">
-                  <label>Deskripsi Produk</label>
-                  <textarea class="form-control" rows="3" name="deskripsi" ><?php echo set_value('deskripsi'); ?></textarea>
-                </div>
+                
+                <div class="box">
+                  <div class="box-header">
+                    <h3 class="box-title">Deskripsi Produk</h3>
+                    <!-- tools box -->
+                    <div class="pull-right box-tools">
+                    </div>
+                    <!-- /. tools -->
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body pad">
+                    <form>
+                      <textarea name="deskripsi" class="textarea" placeholder="Silahkan Deskripsikan Produk Anda"
+                                style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    </form>
+                  </div>
+              </div>
+
                  <div class="form-group">
                   <label>Foto Produk</label>
                   <input type="file" class="form-control" name="input_gambar">
@@ -175,6 +190,28 @@
 <script src="<?php echo base_url('asset/penjual/dist/js/pages/dashboard.js');?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('asset/penjual/dist/js/demo.js');?>"></script>
+<script src="<?php echo base_url('asset/penjual/plugins/ckeditor/ckeditor.js');?>"></script>
+<script src="<?php echo base_url('asset/penjual/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js');?>"></script>
+<script>
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    ClassicEditor
+      .create(document.querySelector('#editor1'))
+      .then(function (editor) {
+        // The editor instance
+      })
+      .catch(function (error) {
+        console.error(error)
+      })
+
+    // bootstrap WYSIHTML5 - text editor
+
+    $('.textarea').wysihtml5({
+      toolbar: { fa: true }
+    })
+  })
+</script>
 
 </body>
 </html>
