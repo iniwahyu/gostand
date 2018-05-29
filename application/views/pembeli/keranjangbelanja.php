@@ -109,7 +109,7 @@
                                 <td class="invert"><?php echo $produk['nama_produk'];?></td>
                                 <td class="invert"><?php echo $produk['jumlah_produk'];?></td>
                                 <td class="invert">
-                                  <a href="<?php echo base_url('pembeli/deletekeranjang/').$produk['id']; ?>" class="btn btn-danger" ><i class="fa fa-times"></i>Remove</a>
+                                  <a href="<?php echo base_url('pembeli/deletekeranjang/').$produk['id']; ?>" class="btn btn-danger" ><i class="fa fa-times"></i></a>
                                 </td> 
                             </tr>
                             <?php } ?>
