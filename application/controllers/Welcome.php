@@ -37,13 +37,24 @@ class Welcome extends CI_Controller {
 		// tutup pagination
 	}
 
+	// public function minuman()
+	// {
+	// 	$minuman = $this->Home_model->tampilproduk('produk');
+	// 	$produk = array('produk' => $produk);
+	// 	$this->load->view('home/minuman', $produk);		
+	// }
+
 	public function minuman()
 	{
-
-		$this->load->model('Home_model');
-		$produk = $this->Home_model->tampilminuman('produk');
-		$produk = array('produk' => $produk);
-		$this->load->view('home/minuman', $produk);		
+		$where = array( 'kategori' => 'Minuman' );
+		$minuman = $this->Home_model->GetWhere('produk', $where);
+		$data = array(
+			'nama_file' => $minuman[0]['nama_file'],
+			'nama_produk' => $minuman[0]['nama_produk'],
+			'harga' => $minuman[0]['harga'],
+			'nama_toko' => $minuman[0]['nama_toko'],
+		);
+		$this->load->view('home/minuman', $data);
 	}
 
 	public function toko()

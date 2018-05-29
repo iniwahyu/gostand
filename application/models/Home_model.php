@@ -73,7 +73,8 @@ class Home_model extends CI_Model
     }
 
     //Pagination
-    function data($number,$offset){
+    function data($number,$offset)
+    {
         return $query = $this->db->get('user',$number,$offset)->result();       
     }
  
@@ -88,9 +89,23 @@ class Home_model extends CI_Model
     }
     // Tutup Pagination
 
+    // Fungsi Baru
+    // function tampilproduk($table)
+    // {
+    //     $query = $this->db->get($table);
+    //     return $query->result_array();
+    // }
+    // Tutup
+
+    public function GetWhere($table, $data){
+        $res=$this->db->get_where($table, $data);
+        return $res->result_array();
+    }
+
 
     //Bugi
-    function simpan_barang($kobar, $nabar,$harga){
+    function simpan_barang($kobar, $nabar,$harga)
+    {
         $hasil=$this->db->query("INSERT INTO keranjang (nama_pembeli,nama_produk,jumlah_produk) VALUES('$kobar','$nabar','$harga')");
         return $hasil;
     }

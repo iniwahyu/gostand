@@ -60,7 +60,7 @@
 				<div class="wrapper">
 					<!-- first section -->
 					<div class="product-sec1">
-						<div class="col-xs-4 product-men">
+						<div class="col-xs-4 product-makanan">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
 									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
@@ -74,176 +74,11 @@
 										<span class="item_price">$950.00</span>
 										<del>$1020.00</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
-
-						<!-- Tambah Produk -->
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<!-- //Tambah Produk -->
-						<div class="col-xs-4 product-men">
+						<div class="col-xs-4 product-makanan">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
 									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
@@ -258,18 +93,11 @@
 										<span class="item_price">$137.00</span>
 										<del>$420.00</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-4 product-men">
+						<div class="col-xs-4 product-makanan">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
 									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
@@ -284,17 +112,127 @@
 										<span class="item_price">$384.00</span>
 										<del>$480.00</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
+
+						<!-- Tambah Produk -->
+						<div class="col-xs-4 product-makanan">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Zeeba Basmati Rice</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$950.00</span>
+										<del>$1020.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 product-makanan">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Maiyas Gulab Jamun</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$137.00</span>
+										<del>$420.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 product-makanan">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Lipton Green Tea</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$384.00</span>
+										<del>$480.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-4 product-makanan">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Zeeba Basmati Rice</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$950.00</span>
+										<del>$1020.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 product-makanan">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Maiyas Gulab Jamun</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$137.00</span>
+										<del>$420.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-4 product-makanan">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<span class="product-new-top">New</span>
+
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a href="single.html">Lipton Green Tea</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">$384.00</span>
+										<del>$480.00</del>
+									</div>
+									<a href="" class="btn btn-primary">Lihat Produk</a>
+								</div>
+							</div>
+						</div>
+						<!-- //Tambah Produk -->
+
 						<div class="clearfix"></div>
 					</div>
 					<!-- //first section -->

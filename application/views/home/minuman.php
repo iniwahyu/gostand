@@ -58,94 +58,30 @@
 			<!-- product right -->
 			<div class="agileinfo-ads-display col-md-12 w3l-rightpro">
 				<div class="wrapper">
-					<!-- first section -->
+				<!-- first section -->
 					<div class="product-sec1">
-
-						<?php
-                        $no = 1;    
-                        foreach ($produk as $row)
-                        { ?>
-						<div class="col-xs-4 product-men">
+					<?php foreach ($data as $minuman) { var_dump($data); { ?>
+						<div class="col-xs-4 product-minuman">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/img/produk/').$row['nama_file']; ?>" width="100" height="100">
+									<img src="<?php echo base_url('asset/img/produk').$minuman['nama_file']; ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html"><?php echo $row['nama_produk']; ?></a>
+										<a href="single.html">Zeeba Basmati Rice</a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price"><?php echo $row['harga']; ?></span>
+										<span class="item_price">$950.00</span>
 										<del>$1020.00</del>
 									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<?php } ?>
-						
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Maiyas Gulab Jamun</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$137.00</span>
-										<del>$420.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-4 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Lipton Green Tea</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$384.00</span>
-										<del>$480.00</del>
-									</div>
-									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="#" method="post">
-											<fieldset>
-												<input type="submit" name="submit" value="Add to cart" class="button" />
-											</fieldset>
-										</form>
-									</div>
-
+									<a href="" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
 						<div class="clearfix"></div>
 					</div>
+					<?php } ?>
 					<!-- //first section -->
 				</div>
 			</div>
