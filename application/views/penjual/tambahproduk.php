@@ -111,11 +111,18 @@
                   <input type="text" class="form-control" id="exampleInputEmail1" name="namaproduk" value="<?php echo set_value('namaproduk'); ?>">
                 </div>
                 <div class="form-group">
+                  <label for="exampleInputEmail1">Kategori Produk</label>
+                  <select class="form-control" name="kategori">
+                  <option value="Makanan">Makanan
+                  <option value="Minuman">Minuman
+                  </select>
+                </div>
+                <div class="form-group">
                   <label for="exampleInputEmail1">Harga (Rp)</label>
                   <input type="text" class="form-control" id="exampleInputPassword1" name="harga" value="<?php echo set_value('harga'); ?>">
                 </div>
                 
-                <div class="box">
+                <div class="form-group">
                   <div class="box-header">
                     <h3 class="box-title">Deskripsi Produk</h3>
                     <!-- tools box -->
@@ -125,10 +132,7 @@
                   </div>
                   <!-- /.box-header -->
                   <div class="box-body pad">
-                    <form>
-                      <textarea name="deskripsi" class="textarea" placeholder="Silahkan Deskripsikan Produk Anda"
-                                style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                    </form>
+                      <textarea name="deskripsi"  class="textarea" placeholder="Silahkan Deskripsikan Produk Anda" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                   </div>
               </div>
 
@@ -197,8 +201,8 @@
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.
     ClassicEditor
-      .create(document.querySelector('#editor1'))
-      .then(function (editor) {
+      .create(document.querySelector('#CKEditor'))
+      .then(function (ckeditor) {
         // The editor instance
       })
       .catch(function (error) {

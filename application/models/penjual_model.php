@@ -43,6 +43,7 @@ class penjual_model extends CI_Model
         'nama_toko' => $this->input->post('username'),
         'nama_produk' => $this->input->post('namaproduk'),
         'harga' => $this->input->post('harga'),
+        'kategori' => $this->input->post('kategori'),
         'deskripsi' => $this->input->post('deskripsi'),
         'nama_file' => $upload['file']['file_name'],
         'tipe_file' => $upload['file']['file_type'],
