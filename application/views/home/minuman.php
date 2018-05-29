@@ -60,18 +60,23 @@
 				<div class="wrapper">
 					<!-- first section -->
 					<div class="product-sec1">
+
+						<?php
+                        $no = 1;    
+                        foreach ($produk as $row)
+                        { ?>
 						<div class="col-xs-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/img/produk/').$row['nama_file']; ?>" width="100" height="100">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
+										<a href="single.html"><?php echo $row['nama_produk']; ?></a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
+										<span class="item_price"><?php echo $row['harga']; ?></span>
 										<del>$1020.00</del>
 									</div>
 									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
@@ -85,6 +90,8 @@
 								</div>
 							</div>
 						</div>
+						<?php } ?>
+						
 						<div class="col-xs-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">

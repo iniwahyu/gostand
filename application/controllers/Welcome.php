@@ -39,7 +39,11 @@ class Welcome extends CI_Controller {
 
 	public function minuman()
 	{
-		$this->load->view('home/minuman');
+
+		$this->load->model('Home_model');
+		$produk = $this->Home_model->tampilminuman('produk');
+		$produk = array('produk' => $produk);
+		$this->load->view('home/minuman', $produk);		
 	}
 
 	public function toko()

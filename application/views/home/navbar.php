@@ -47,7 +47,7 @@
 					if ( $cek == 'Penjual' ) { ?>
 					<li>
 						<a href="<?php echo base_url('penjual'); ?>">
-							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Profil
+							<span class="fa fa-dashboard" aria-hidden="true"></span> Dashboard
 						</a>
 					</li>
 

@@ -6,6 +6,9 @@ defined('BASEPATH') OR exit('No Direct Script Access Allowed');
  */
 class Home_model extends CI_Model
 {
+
+    
+    
     public function Insert($table,$data)
     {
         $res = $this->db->insert($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
@@ -76,6 +79,12 @@ class Home_model extends CI_Model
  
     function jumlah_data(){
         return $this->db->get('user')->num_rows();
+    }
+
+    public function tampilminuman($table)
+    {
+        $res = $this->db->get('produk');
+        return $res->result_array();
     }
     // Tutup Pagination
 
