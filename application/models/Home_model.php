@@ -103,13 +103,6 @@ class Home_model extends CI_Model
     }
 
 
-    //Bugi
-    function simpan_barang($kobar, $nabar,$harga)
-    {
-        $hasil=$this->db->query("INSERT INTO keranjang (nama_pembeli,nama_produk,jumlah_produk) VALUES('$kobar','$nabar','$harga')");
-        return $hasil;
-    }
-    //Bugi
     
 }
 
