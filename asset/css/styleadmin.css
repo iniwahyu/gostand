@@ -11,3 +11,29 @@
 .table-striped tbody tr:nth-of-type(odd){
     background: #fff;
 }
+
+#main-wrapper .left-sidebar{
+    background: #343a40;
+}
+#main-wrapper .sidebar-nav{
+    background: #343a40;
+    color: #fff;
+}
+#main-wrapper .sidebar-nav ul li .active{
+    background: #007bff;
+}
+#main-wrapper .sidebar-nav ul li a:hover{
+    background: #007bff;
+}
+#main-wrapper .sidebar-nav ul li .fa{
+    color: #fff;
+}
+#main-wrapper .sidebar-nav ul li a{
+    color: #fff;
+}
+#main-wrapper .sidebar-nav ul li.nav-label{
+    color: #21ba45;
+}
+#main-wrapper .container-fluid .card .table tr td{
+    color: #000;
+}

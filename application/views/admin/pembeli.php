@@ -60,11 +60,10 @@
             <div class="container-fluid">
                 <!-- Start Page Content -->
                 <div class="row bg-white m-l-0 m-r-0 box-shadow ">
-
                     <div class="col-lg-12">
                     <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Daftar Pembeli</h4>
+                        <div class="card-body">
+                            <h4 class="card-title">Daftar Pembeli</h4>
                                 <div class="table-responsive m-t-40">
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
@@ -79,7 +78,7 @@
                                         <?php foreach ($data as $pembeli) { ?>
                                             <tr>
                                                 <td><?php echo $pembeli['username']; ?></td>
-                                                <td>System Architect</td>
+                                                <td><?php echo $pembeli['nama']; ?></td>
                                                 <td><?php echo $pembeli['email']; ?></td>
                                                 <td><?php echo $pembeli['nohape']; ?></td>
                                             </tr>

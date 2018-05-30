@@ -63,7 +63,7 @@
 					if ( $cek == 'Admin' ) { ?>
 					<li>
 						<a href="<?php echo base_url('admin'); ?>">
-							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Profil
+							<span class="fa fa-dashboard" aria-hidden="true"></span> Dashboard
 						</a>
 					</li>
 
@@ -151,7 +151,7 @@
 									<a class="nav-stylehead" href="<?php echo base_url('minuman'); ?>">Minuman</a>
 								</li>
 
-								<?php if ( $cek == 'Pembeli' ) { ?>
+								<?php if ( $cek == 'Pembeli' || $cek == 'Admin' ) { ?>
 
 								<li class="<?php if ( $this->uri->uri_string() == 'pembeli/history' ){ echo 'active'; } ?>">
 									<a class="nav-stylehead" href="<?php echo base_url('pembeli/history'); ?>">Riwayat Pembelian</a>

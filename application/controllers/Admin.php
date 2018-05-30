@@ -97,7 +97,7 @@ class Admin extends CI_Controller {
 
 	public function penjual()
 	{
-		$data = $this->Admin_model->tampilpenjual('penjual');
+		$data = $this->Admin_model->tampilpenjual();
 		$data = array('data' => $data);
 		$this->load->view('admin/penjual', $data);
 	}
@@ -116,7 +116,7 @@ class Admin extends CI_Controller {
 
 	public function pembeli()
 	{
-		$data = $this->Admin_model->tampilpembeli('pembeli');
+		$data = $this->Admin_model->tampilpembeli();
 		$data = array('data' => $data);
 		$this->load->view('admin/pembeli', $data);		
 	}

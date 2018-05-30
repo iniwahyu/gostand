@@ -5,7 +5,7 @@ class Pembeli extends CI_Controller {
 
 	public function index()
     {      
-    	if($this->session->userdata('username'))
+    	if($this->session->userdata('username') || $this->session->userdata('akses') == 'Admin' )
 		{
 			$this->load->model('Home_model');
 			$nama=$this->session->userdata('username');

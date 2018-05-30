@@ -147,8 +147,7 @@ class Registerlogin extends CI_Controller
 			}
 
 		}else{
-			echo "Hayo pasti belum daftar";
-			
+			echo 'Hayoo pasti belum daftar';
 		}
 		
 	}

@@ -42,22 +42,23 @@ class Admin_Model extends CI_Model{
 
 
     // SECTION PENJUAL
-    public function tampilpenjual($table)
+    public function tampilpenjual()
     {
-        //$query = $this->db->get('user');
-        // $this->db->select('*');
-        // $this->db->from('penjual');
-        // $this->db->join('user', 'user.username = penjual.username');
-        // $this->db->where('user.username', $where);
-
-        $query = $this->db->get($table);
+        $this->db->select('*');
+        $this->db->from('penjual');
+        $this->db->join('user', 'user.username = penjual.username');
+        $query = $this->db->get();
         return $query->result_array();
     }
 
     // SECTION PEMBELI
-    public function tampilpembeli($table)
+    public function tampilpembeli()
     {
-        $query = $this->db->get($table);
+        $this->db->select('*');
+        $this->db->from('pembeli');
+        $this->db->join('user', 'user.username = pembeli.username');
+        //$this->db->where('user.username', $where);
+        $query = $this->db->get();
         return $query->result_array();
     }
 
