@@ -33,6 +33,11 @@ class Admin_Model extends CI_Model{
         return $res->result_array();
     }
 
+    public function userid($table, $id)
+    {
+        $res = $this->db->get_where($table, $data);
+    }
+
     // SECTION ADMIN
 
 
@@ -48,6 +53,14 @@ class Admin_Model extends CI_Model{
         $query = $this->db->get($table);
         return $query->result_array();
     }
+
+    // SECTION PEMBELI
+    public function tampilpembeli($table)
+    {
+        $query = $this->db->get($table);
+        return $query->result_array();
+    }
+
 }
 
 

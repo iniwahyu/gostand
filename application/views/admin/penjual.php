@@ -89,7 +89,7 @@
                                         <tbody>
                                         <?php foreach($data as $penjual) { ?>
                                             <tr>
-                                                <td> <a href="<?php echo base_url('admin/penjual/produk/').$penjual['nama_toko']; ?>"> <?php echo $penjual['nama_toko']; ?> </a> </td>
+                                                <td> <a href="<?php echo base_url('admin/lihatpenjual/').$penjual['id']; ?>"> <?php echo $penjual['nama_toko']; ?> </a> </td>
                                                 <td><?php echo $penjual['username'];  ?></td>
                                                 <td><?php echo $penjual['lokasi']; ?></td>
                                                 <td><?php echo $penjual['no_hp']; ?></td>

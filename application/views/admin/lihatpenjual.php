@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <title>Ela - Bootstrap Admin Dashboard Template</title>
+    <title>Admin | Daftar Penjual GoStand</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('asset/admin/css/lib/bootstrap/bootstrap.min.css');?>" rel="stylesheet">
     <!-- Custom CSS -->
@@ -23,8 +23,6 @@
     <link href="<?php echo base_url('asset/admin/css/helper.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('asset/admin/css/style.css');?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('asset/css/styleadmin.css');?>">
-    
-
 </head>
 
 <body class="fix-header fix-sidebar">
@@ -47,7 +45,8 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Daftar Pembeli</h3> </div>
+                    <h3 class="text-primary">Daftar Penjual / Toko</h3> 
+                </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
@@ -64,24 +63,24 @@
                     <div class="col-lg-12">
                     <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Daftar Pembeli</h4>
-                                <div class="table-responsive m-t-40">
+                                <h4 class="card-title">Daftar Penjual Toko </h4>
+                                <div class="table-responsive m-t-20">
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Nim</th>
-                                                <th>Nama</th>
-                                                <th>Email</th>
-                                                <th>No Hp</th>
+                                                <th>Nama Produk</th>
+                                                <th>Harga</th>
+                                                <th>Kategori</th>
+                                                <th>Deskripsi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php foreach ($data as $pembeli) { ?>
+                                        <?php foreach($data as $produk) { ?>
                                             <tr>
-                                                <td><?php echo $pembeli['username']; ?></td>
-                                                <td>System Architect</td>
-                                                <td><?php echo $pembeli['email']; ?></td>
-                                                <td><?php echo $pembeli['nohape']; ?></td>
+                                                <td><?php echo $produk['nama_produk']; ?></td>
+                                                <td><?php echo $produk['harga'];  ?></td>
+                                                <td><?php echo $produk['kategori']; ?></td>
+                                                <td><?php echo $produk['deskripsi']; ?></td>
                                             </tr>
                                         <?php } ?>
                                         </tbody>

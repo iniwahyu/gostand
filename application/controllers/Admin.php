@@ -33,15 +33,12 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/user', $user);
 	}
 
-	public function viewuser($id)
+	public function lihatpenjual($id)
 	{
-		$this->load->model('Admin_model');
 		$where = array( 'id' => $id );
-		$user = $this->Admin_model->GetWhere('user', $where);
-		$data = array(
-			'username' => $user[0]['username'],
-		);
-		$this->load->view('admin/viewuser', $data);
+		$data = $this->Admin_model->GetWhere('penjual', $where);
+		$data = array('data' => $data);
+		$this->load->view('admin/lihatpenjual', $data);
 	}
 
 	public function tambahuser()
@@ -115,9 +112,13 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/history');
 	}
 
+	// SECTION PEMBELI
+
 	public function pembeli()
 	{
-		$this->load->view('admin/pembeli');		
+		$data = $this->Admin_model->tampilpembeli('pembeli');
+		$data = array('data' => $data);
+		$this->load->view('admin/pembeli', $data);		
 	}
 
 	

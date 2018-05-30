@@ -47,7 +47,15 @@
 
 		function profil1()
 		{
-			$this->load->view('penjual/profil1');
+			if( $this->session->userdata('akses') == 'Admin' )
+			{
+				redirect(base_url('penjual'),'refresh');
+			}
+			else
+			{
+				$this->load->view('penjual/profil1');
+			}
+			
 		}
 
 		function editprofil()
