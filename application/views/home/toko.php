@@ -56,58 +56,30 @@
       <div class="content-bottom-in">
             <div class="agileinfo-ads-display col-md-12">
         <div class="wrapper">
-          <!-- first section (nuts) -->
+          <!-- first section -->
           <div class="product-sec1">
-            <h3 class="heading-tittle">MAKANAN</h3>
+            <!-- <h3 class="heading-tittle">MAKANAN</h3> -->
+            <?php foreach ($data as $toko) {  ?>
             <div class="col-md-4 product-men">
               <div class="men-pro-item simpleCart_shelfItem">
                 <div class="men-thumb-item">
-                  <img src="<?php echo base_url('asset/home/images/a&w.jpg'); ?>" alt="">
+                  <img src="<?php echo base_url('asset/img/produk/'). $toko['nama_file']; ?>" alt="">
                   <span class="product-new-top">Sale</span>
                 </div>
                 <div class="item-info-product ">
                   <h4>
-                    <a href="single.html">A & W</a>
+                    <a href="single.html"><?php echo $toko['nama_toko']; ?></a>
                   </h4><br>
-                  <a href="" class="btn btn-primary">Lihat Produk</a>
+                  <a href="<?php echo base_url('produktoko'); ?>" class="btn btn-primary">Lihat Produk</a>
                 </div>
               </div>
             </div>
-                        
-                        <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img src="<?php echo base_url('asset/home/images/jco.png'); ?>" alt="">
-                  <span class="product-new-top">Sale</span>
-                </div>
-                <div class="item-info-product ">
-                  <h4>
-                    <a href="single.html">J.co</a>
-                  </h4><br>
-                  <a href="" class="btn btn-primary">Lihat Produk</a>
-                </div>
-              </div>
-                        </div>
-                        
-                        <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img src="<?php echo base_url('asset/home/images/bs.png'); ?>" alt="">
-                  <span class="product-new-top">Sale</span>
-                </div>
-                <div class="item-info-product ">
-                  <h4>
-                    <a href="single.html">Banana Smile</a>
-                  </h4><br>
-                  <a href="" class="btn btn-primary">Lihat Produk</a>
-                </div>
-              </div>
-                        </div>
-                        
+             <?php } ?>          
             <div class="clearfix"></div>
           </div>
           <!-- //first section (nuts) -->
-          <div class="product-sec1">
+
+          <!-- <div class="product-sec1">
             <h3 class="heading-tittle">MINUMAN</h3>
             <div class="col-md-4 product-men">
               <div class="men-pro-item simpleCart_shelfItem">
@@ -122,40 +94,10 @@
                   <a href="" class="btn btn-primary">Lihat Produk</a>
                 </div>
               </div>
-            </div>
-                        
-                        <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img src="<?php echo base_url('asset/home/images/ct.jpg'); ?>" alt="">
-                  <span class="product-new-top">Sale</span>
-                </div>
-                <div class="item-info-product ">
-                  <h4>
-                    <a href="single.html">Chang Tea</a>
-                  </h4><br>
-                  <a href="" class="btn btn-primary">Lihat Produk</a>
-                </div>
-              </div>
-                        </div>
-                        
-                        <div class="col-md-4 product-men">
-              <div class="men-pro-item simpleCart_shelfItem">
-                <div class="men-thumb-item">
-                  <img src="<?php echo base_url('asset/home/images/br.jpg'); ?>" alt="">
-                  <span class="product-new-top">Sale</span>
-                </div>
-                <div class="item-info-product ">
-                  <h4>
-                    <a href="single.html">Baskin Robbins</a>
-                  </h4><br>
-                  <a href="" class="btn btn-primary">Lihat Produk</a>
-                </div>
-              </div>
-                        </div>
-                        
+            </div>     
             <div class="clearfix"></div>
-          </div>
+          </div> -->
+
         </div>
       </div>
       </div>

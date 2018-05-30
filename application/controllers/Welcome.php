@@ -33,17 +33,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('home/minuman', $data);
 	}
 
+	public function toko()
+	{
+		$data = $this->Home_model->GetWhereToko('penjual');
+		$data = array('data' => $data );
+		$this->load->view('home/toko', $data);
+	}
+
 	// public function produkminuman()
 	// {
 	// 	$data = $this->Home_model->GetWhereMinuman('produk');
 	// 	$data = array('data' => $data );
 	// 	$this->load->view('home/produk', $data);
 	// }
-
-	public function toko()
-	{
-		$this->load->view('home/toko');
-	}
 
 	public function produktoko()
 	{
