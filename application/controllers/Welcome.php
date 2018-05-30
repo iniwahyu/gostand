@@ -21,36 +21,24 @@ class Welcome extends CI_Controller {
 
 	public function makanan()
 	{
-		$this->load->view('home/makanan');
-
-		// pagingnation
-		// $this->load->database();
-		// $jumlah_data = $this->Home_model->jumlah_data();
-		// $this->load->library('pagination');
-		// $config['base_url'] = base_url().'makanan';
-		// $config['total_rows'] = $jumlah_data;
-		// $config['per_page'] = 3;
-		// $from = $this->uri->segment(3);
-		// $this->pagination->initialize($config);		
-		// $data['produk'] = $this->m_data->data($config['per_page'],$from);
-		// $this->load->view('makanan',$data);
-		// tutup pagination
+		$data = $this->Home_model->GetWhereMakanan('produk');
+		$data = array('data' => $data );
+		$this->load->view('home/makanan', $data);
 	}
-
-	// public function minuman()
-	// {
-	// 	$minuman = $this->Home_model->tampilproduk('produk');
-	// 	$produk = array('produk' => $produk);
-	// 	$this->load->view('home/minuman', $produk);		
-	// }
 
 	public function minuman()
 	{
-		//$where = array( 'kategori' => 'Minuman' );
-		$data = $this->Home_model->GetWhere('produk');
+		$data = $this->Home_model->GetWhereMinuman('produk');
 		$data = array('data' => $data );
 		$this->load->view('home/minuman', $data);
 	}
+
+	// public function produkminuman()
+	// {
+	// 	$data = $this->Home_model->GetWhereMinuman('produk');
+	// 	$data = array('data' => $data );
+	// 	$this->load->view('home/produk', $data);
+	// }
 
 	public function toko()
 	{
@@ -69,14 +57,6 @@ class Welcome extends CI_Controller {
         // Make sure you actually have some view file named 404.php
         $this->load->view('error');
 	}
-
-
-
-
-	// public function gambar()
-	// {
-	// 	$this->load->view('home/gambar');
-	// }
 
 	public function gambar()
 	{

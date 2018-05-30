@@ -77,13 +77,13 @@
 									<div class="info-product-price">
 									<span><?php echo $minuman['nama_toko']; ?></span>
 									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
+									<a href="<?php echo base_url('produk'); ?>" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
+						<?php } ?>
 						<div class="clearfix"></div>
 					</div>
-					<?php } ?>
 					<!-- //first section -->
 				</div>
 			</div>

@@ -60,184 +60,31 @@
 				<div class="wrapper">
 					<!-- first section -->
 					<div class="product-sec1">
+					<?php foreach ($data as $makanan) {  ?>
 						<div class="col-xs-4 product-makanan">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
+									<img src="<?php echo base_url('asset/img/produk/'). $makanan['nama_file']; ?>" alt="">
 									<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
 									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
+										<a href="single.html"><?php echo $makanan['nama_produk']; ?></a>
 									</h4>
 									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
+										<span class="item_price">Rp. <?php echo number_format($makanan['harga'], 2,'.','.'); ?></span>
 									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
+									<div class="info-product-price">
+									<span><?php echo $makanan['nama_toko']; ?></span>
+									</div>
+									<a href="<?php echo base_url('produk'); ?>" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-4 product-makanan">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Maiyas Gulab Jamun</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$137.00</span>
-										<del>$420.00</del>
-									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-4 product-makanan">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Lipton Green Tea</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$384.00</span>
-										<del>$480.00</del>
-									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
-								</div>
-							</div>
-						</div>
-
-						<!-- Tambah Produk -->
-						<div class="col-xs-4 product-makanan">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-4 product-makanan">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Maiyas Gulab Jamun</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$137.00</span>
-										<del>$420.00</del>
-									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-4 product-makanan">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Lipton Green Tea</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$384.00</span>
-										<del>$480.00</del>
-									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-4 product-makanan">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Zeeba Basmati Rice</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$950.00</span>
-										<del>$1020.00</del>
-									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-4 product-makanan">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Maiyas Gulab Jamun</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$137.00</span>
-										<del>$420.00</del>
-									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-4 product-makanan">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="<?php echo base_url('asset/home/images/m1.jpg'); ?>" alt="">
-									<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4>
-										<a href="single.html">Lipton Green Tea</a>
-									</h4>
-									<div class="info-product-price">
-										<span class="item_price">$384.00</span>
-										<del>$480.00</del>
-									</div>
-									<a href="" class="btn btn-primary">Lihat Produk</a>
-								</div>
-							</div>
-						</div>
-						<!-- //Tambah Produk -->
-
+						<?php } ?>
 						<div class="clearfix"></div>
 					</div>
 					<!-- //first section -->
-
-
 				</div>
 			</div>
 			<!-- //product right -->
