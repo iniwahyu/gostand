@@ -15,7 +15,7 @@
 		function index()
 		{
 			
-			if($this->session->userdata('akses'))
+			if($this->session->userdata('akses') || $this->session->userdata('akses') == 'Admin' )
 			{
 			$this->load->model('home_model');
 			$nama=$this->session->userdata('username');

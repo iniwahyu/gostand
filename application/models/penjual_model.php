@@ -68,8 +68,8 @@ class penjual_model extends CI_Model
         'jam_buka' => $this->input->post('jambuka'),
         'jam_tutup' => $this->input->post('jamtutup'),
         'nama_file' => $upload['file']['file_name'],
-        'tipe_file' => $upload['file']['file_type'],
-        'ukuran' => $upload['file']['file_size']
+        'ukuran_file' => $upload['file']['file_size'],
+        'tipe_file' => $upload['file']['file_type']       
         
         );
         

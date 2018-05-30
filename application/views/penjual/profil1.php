@@ -86,7 +86,7 @@
               <div class="card-header">
                 <h3 class="card-title">Edit Profil</h3>
               </div>
-                <form role="form" method="post" action="<?php echo base_url('penjual/inptdatadiri'); ?>">
+              <?php echo form_open("penjual/inptdatadiri", array('enctype'=>'multipart/form-data')); ?>
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Toko</label>
@@ -130,9 +130,9 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Simpan</button>
+                  <input type="submit" name="submit" class="btn btn-primary" value="Simpan"></input>
                 </div>
-              </form>
+              <?php echo form_close(); ?>
             </div>
           </div>
           <!--/.col (right) -->
