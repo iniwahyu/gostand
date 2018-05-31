@@ -124,6 +124,11 @@ class Home_model extends CI_Model
         return $res->result_array();//mengembalikan hasil
     }
 
+    public function GetWhere($table, $data){
+        $res=$this->db->get_where($table, $data);
+        return $res->result_array();
+    }
+
 
     
 }

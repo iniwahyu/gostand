@@ -87,7 +87,8 @@
                                                 <option value="Admin">Admin</option>
                                             </select>
                                         </div>
-                                        <input type="submit" name="submit" class="btn btn-primary" value="Tambah Penjual" >
+                                        <input type="submit" name="submit" class="btn btn-primary" value="Tambah User" >
+                                        <a href="<?php echo base_url('admin/user'); ?>" class="btn btn-success" >KEMBALI</a>
                                     </form>
                                 </div>
                             </div>

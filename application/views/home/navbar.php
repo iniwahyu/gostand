@@ -153,11 +153,11 @@
 
 								<?php if ( $cek == 'Pembeli' || $cek == 'Admin' ) { ?>
 
-								<li class="<?php if ( $this->uri->uri_string() == 'pembeli/history' ){ echo 'active'; } ?>">
-									<a class="nav-stylehead" href="<?php echo base_url('pembeli/history'); ?>">Riwayat Pembelian</a>
+								<li class="<?php if ( $this->uri->uri_string() == 'history' ){ echo 'active'; } ?>">
+									<a class="nav-stylehead" href="<?php echo base_url('history'); ?>">Riwayat Pembelian</a>
 								</li>
-								<li class="<?php if ( $this->uri->uri_string() == 'pembeli/keranjang' ){ echo 'active'; } ?>">
-									<a class="nav-stylehead" href="<?php echo base_url('pembeli/keranjang'); ?>">Keranjang Belanja</a>
+								<li class="<?php if ( $this->uri->uri_string() == 'keranjang' ){ echo 'active'; } ?>">
+									<a class="nav-stylehead" href="<?php echo base_url('keranjang'); ?>">Keranjang Belanja</a>
 								</li>
 								<?php } ?>
 

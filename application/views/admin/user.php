@@ -87,7 +87,7 @@
                     <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Daftar User <a href="<?php echo base_url('admin/tambahuser');?>" class="btn btn-primary" >Tambah User</a> </h4>
+                            <h4 class="card-title">Daftar User <a href="<?php echo base_url('admin/user/tambah');?>" class="btn btn-primary" >Tambah User</a> </h4>
                                 <div class="table-responsive m-t-20">
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
@@ -112,7 +112,7 @@
                                                 <td><?php echo $row['password']; ?></td>
                                                 <td><?php echo $row['level']; ?></td>
                                                 <td>
-                                                    <a href="<?php echo base_url('admin/edituser/').$row['id']; ?>" class="btn btn-sm btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                    <a href="<?php echo base_url('admin/user/').$row['id']; ?>" class="btn btn-sm btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     <a href="<?php echo base_url('admin/deleteuser/').$row['id']; ?>" class="btn btn-sm btn-danger" id="delete" onClick="return doconfirm();" ><i class="fa fa-times" aria-hidden="true"></i></a>
                                                 </td>
                                             </tr>

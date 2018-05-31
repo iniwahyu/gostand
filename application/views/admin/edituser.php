@@ -80,6 +80,7 @@
                                             <input type="text" class="form-control input-flat" name="password" value="<?php echo $password ?>" >
                                         </div>
                                         <input type="submit" name="submit" class="btn btn-primary" value="Edit Penjual" >
+                                        <a href="<?php echo base_url('admin/user'); ?>" class="btn btn-success" >KEMBALI</a>
                                     </form>
                                 </div>
                             </div>

@@ -92,7 +92,9 @@
             <div class="card">
               <div class="card-body">
                 <h3>Profile foto</h3>
-    
+                <?php foreach($data as $img) { ?>
+                <img src="<?php echo base_url('asset/img/penjual/').$img['nama_file']; ?>" alt=""> 
+                <?php } ?>
               </div><!-- /.card-body -->
             </div><!-- /.card -->
           </div>

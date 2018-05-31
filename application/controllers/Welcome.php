@@ -25,12 +25,27 @@ class Welcome extends CI_Controller {
 		$data = array('data' => $data );
 		$this->load->view('home/makanan', $data);
 	}
+	public function lihatmakanan($id)
+	{
+		$where = array('id' => $id );
+		$data = $this->Home_model->GetWhere('produk', $where);
+		$data = array('data' => $data);
+		$this->load->view('home/lihatmakanan', $data);
+	}
 
 	public function minuman()
 	{
 		$data = $this->Home_model->GetWhereMinuman('produk');
 		$data = array('data' => $data );
 		$this->load->view('home/minuman', $data);
+	}
+
+	public function lihatminuman($id)
+	{
+		$where = array('id' => $id );
+		$data = $this->Home_model->GetWhere('produk', $where);
+		$data = array('data' => $data);
+		$this->load->view('home/lihatminuman', $data);
 	}
 
 	public function toko()

@@ -77,7 +77,7 @@
 									<div class="info-product-price">
 									<span><?php echo $minuman['nama_toko']; ?></span>
 									</div>
-									<a href="<?php echo base_url('produk'); ?>" class="btn btn-primary">Lihat Produk</a>
+									<a href="<?php echo base_url('minuman/').$minuman['id']; ?>" class="btn btn-primary">Lihat Produk</a>
 								</div>
 							</div>
 						</div>
