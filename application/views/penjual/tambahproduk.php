@@ -137,7 +137,8 @@
               </div>
 
                  <div class="form-group">
-                  <label>Foto Produk</label>
+                  <h3>Foto Produk</h3>
+                  <small>200x200 bertipe jpg,png,jpeg</small>
                   <input type="file" class="form-control" name="input_gambar">
                 </div>
               </div>

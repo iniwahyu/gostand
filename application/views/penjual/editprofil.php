@@ -80,7 +80,7 @@
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->
-          <div class="col-md-6">
+          <div class="col-md-8">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
@@ -107,14 +107,23 @@
                     <label for="exampleInputEmail1">Lokasi Stand</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" name="lokasi" value="<?php echo $profil['lokasi'];?>">
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Deskripsi Penjual</label>
-                    <textarea name="deskripsi" class="form-control" cols="30" rows="5" ><?php echo $profil['deskripsi_penjual'];?></textarea>
+                 <div class="form-group">
+                  <div class="box-header">
+                    <h3 class="box-title">Deskripsi Penjual</h3>
+                    <!-- tools box -->
+                    <div class="pull-right box-tools">
+                    </div>
+                    <!-- /. tools -->
                   </div>
+                  <!-- /.box-header -->
+                  <div class="box-body pad">
+                      <textarea name="deskripsi"  class="textarea" placeholder="Silahkan Deskripsikan Produk Anda" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"> <?php echo $profil['deskripsi_penjual'];?></textarea>
+                  </div>
+              </div>
                   <p>Jam Operasional</p>
                   <div class="form-group">
                     <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                       <label for="exampleInputEmail1">Jam Buka</label>
                       <input type="time" class="form-control" id="exampleInputPassword1" name="jambuka" value="<?php echo $profil['jam_buka'];?>">
                     </div>
@@ -137,14 +146,14 @@
           </div>
           <!--/.col (right) -->
 
-            <div class="col-md-6">
+            <div class="col-md-4">
             <!-- Horizontal Form -->
-            <div class="card card-info">
-              <div class="card-header">
-                <h3 class="card-title">Ubah Foto</h3>
-              </div>
-                <p>untuk foto</p>
-               </div>
+            <div class="card-body">
+                <h3>Profile foto</h3>
+                <?php foreach($data as $img) { ?>
+                <img src="<?php echo base_url('asset/img/penjual/').$img['nama_file']; ?>" alt=""> 
+                <?php } ?>
+              </div><!-- /.card-body -->
               <!-- /.card-body -->
           </div>
           <!--/.col (right) -->
@@ -171,8 +180,6 @@
 <script src="<?php echo base_url('asset/penjual/plugins/morris/morris.min.js');?>"></script>
 <!-- Sparkline -->
 <script src="<?php echo base_url('asset/penjual/plugins/sparkline/jquery.sparkline.min.js');?>"></script>
-<!-- bootstrap time picker -->
-<script src="<?php echo base_url ('asset/penjual/plugins/timepicker/bootstrap-timepicker.min.js');?>"></script>
 <!-- jvectormap -->
 <script src="<?php echo base_url('asset/penjual/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js');?>"></script>
 <script src="<?php echo base_url('asset/penjual/plugins/jvectormap/jquery-jvectormap-world-mill-en.js');?>"></script>
@@ -195,6 +202,27 @@
 <script src="<?php echo base_url('asset/penjual/dist/js/pages/dashboard.js');?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('asset/penjual/dist/js/demo.js');?>"></script>
+<script src="<?php echo base_url('asset/penjual/plugins/ckeditor/ckeditor.js');?>"></script>
+<script src="<?php echo base_url('asset/penjual/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js');?>"></script>
+<script>
+  $(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    ClassicEditor
+      .create(document.querySelector('#CKEditor'))
+      .then(function (ckeditor) {
+        // The editor instance
+      })
+      .catch(function (error) {
+        console.error(error)
+      })
 
+    // bootstrap WYSIHTML5 - text editor
+
+    $('.textarea').wysihtml5({
+      toolbar: { fa: true }
+    })
+  })
+</script>
 </body>
 </html>
