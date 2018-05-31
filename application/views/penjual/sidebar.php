@@ -29,7 +29,7 @@
         
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
-              <i class="nav-icon fa fa-dashboard"></i>
+              <i class="nav-icon fa  fa-user-secret"></i>
               <p>
                 Profile Toko
                 <i class="right fa fa-angle-left"></i>
@@ -38,13 +38,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?php echo base_url('penjual/profil'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
+                  <i class="fa fa-check-square nav-icon"></i>
                   <p>Lihat Profile</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url('penjual/editprofil'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
+                  <i class="fa  fa-edit nav-icon"></i>
                   <p>Edit Profile</p>
                 </a>
               </li>
@@ -61,13 +61,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?php echo base_url('penjual/produk'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
+                  <i class="fa  fa-check-square-o nav-icon"></i>
                   <p>Lihat Produk</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url('penjual/tambahproduk'); ?>" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
+                  <i class="fa fa-plus-square-o nav-icon"></i>
                   <p>Input Produk Baru</p>
                 </a>
               </li>
@@ -75,7 +75,7 @@
           </li>
           <li class="nav-item">
             <a href="<?php echo base_url('penjual/pemesanan'); ?>" class="nav-link">
-              <i class="nav-icon fa fa-calendar"></i>
+              <i class="nav-icon fa fa-area-chart"></i>
               <p>
                 Pemesanan
               </p>
