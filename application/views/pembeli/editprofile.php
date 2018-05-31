@@ -85,6 +85,13 @@
                 <td><label>:</label></td>
                 <td><?php echo $this->session->userdata('username');?></td>
               </tr>
+
+              <tr>
+                <td><label>Nama</label></td>              
+                <td><label>:</label></td>
+                <td><?php echo $profil['nama'];?></td>
+              </tr>
+
               <tr>
                 <td><label>Email</label></td>
                 <td><label>:</label></td>                
@@ -94,9 +101,14 @@
                 <td><label>No. Handphone</label></td>
                 <td><label>:</label></td>
                 <td><input type="text" name="nohape" placeholder="No. Handphone Anda..." value="<?php echo $profil['nohape'];?>"></td>
+              </tr>              
+              
+              <tr>
+                <td>*Jika terdapat kesalahan pada Nama, harap menghubungi Admin</td>
               </tr>
               <?php } ?>
             </table>
+
             <button type="submit" class="btn btn-primary">Save</button>  
             </form>
             

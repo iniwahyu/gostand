@@ -54,7 +54,7 @@
   <div class="container">
     <div>
       <!-- tittle heading -->
-      <h3 style="margin-top: 50px;" class="tittle-w3l">List Order
+      <h3 style="margin-top: 50px;" class="tittle-w3l">Daftar Pemesanan
         <span class="heading-style">
           <i></i>
           <i></i>
@@ -68,24 +68,22 @@
 <!-- Content -->
 <div id="keranjangbelanja">
 <div class="checkout-right">
-                <h4>Your shopping cart contains:
+                <h4>Total Produk:
                     <span><?php
                       $namadata=$this->session->userdata('username');
                       $query=$this->db->get_where('keranjang',array('nama_pembeli'=>$namadata));//memilih tabel
                       echo $query->num_rows();
-                      ?></span>
-                    <span>Products</span>
+                      ?></span>                    
                 </h4>
                 <div class="table-responsive">
                     <table class="timetable_sub">
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Product Name</th>
-
-                                <th>Price</th>
+                                <th>Produk</th>
+                                <th>Jumlah Pesanan</th>
+                                <th>Sub Total</th>
+                                <th>Nama Toko</th>                                
                                 <th>Remove</th>
                             </tr>
                         </thead>
@@ -94,22 +92,14 @@
                           $no=1;
                           foreach ($data as $produk) {?>
                           <tr>
-                            <tr class="rem1">
-                                <td class="invert">1</td>
-                                <td class="invert-image">
-                                    <a href="single2.html">
-                                        <img src="images/a7.jpg" alt=" " class="img-responsive">
-                                    </a>
-                                </td>
-                                <td class="invert">
-                                    <div class="quantity">
-                                      <input type="number" name="" readonly>
-                                    </div>
-                                </td>
+                            <tr class="rem1">                               
+                                <td class="invert"><?php echo $no++;?></td>
                                 <td class="invert"><?php echo $produk['nama_produk'];?></td>
                                 <td class="invert"><?php echo $produk['jumlah_produk'];?></td>
+                                <td class="invert">Rp. <?php echo number_format($produk['total_harga'],2,',','.'); ?></td>
+                                <td class="invert"><?php echo $produk['nama_toko'];?></td>
                                 <td class="invert">
-                                  <a href="<?php echo base_url('pembeli/deletekeranjang/').$produk['id']; ?>" class="btn btn-danger" ><i class="fa fa-times"></i></a>
+                                  <a href="<?php echo base_url('pembeli/deletekeranjang/').$produk['id']; ?>" class="btn btn-danger" onClick="return doconfirm();"><i class="fa fa-times"></i></a>
                                 </td> 
                             </tr>
                             <?php } ?>
@@ -318,49 +308,19 @@
   <!-- //for bootstrap working -->
   <!-- //js-files -->
 
-  <!--quantity-->
-    <script>
-        $('.value-plus').on('click', function () {
-            var divUpd = $(this).parent().find('.value'),
-                newVal = parseInt(divUpd.text(), 10) + 1;
-            divUpd.text(newVal);
-        });
 
-        $('.value-minus').on('click', function () {
-            var divUpd = $(this).parent().find('.value'),
-                newVal = parseInt(divUpd.text(), 10) - 1;
-            if (newVal >= 1) divUpd.text(newVal);
-        });
+    <!-- Alert Hapus -->
+    <script type="text/javascript">
+    function doconfirm()
+    {
+        job=confirm("Apakah anda ingin menghapus produk ini ?");
+        if(job!=true)
+        {
+            return false;
+        }
+    }
     </script>
-    <!--quantity-->
-    <script>
-        $(document).ready(function (c) {
-            $('.close1').on('click', function (c) {
-                $('.rem1').fadeOut('slow', function (c) {
-                    $('.rem1').remove();
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function (c) {
-            $('.close2').on('click', function (c) {
-                $('.rem2').fadeOut('slow', function (c) {
-                    $('.rem2').remove();
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function (c) {
-            $('.close3').on('click', function (c) {
-                $('.rem3').fadeOut('slow', function (c) {
-                    $('.rem3').remove();
-                });
-            });
-        });
-    </script>
-    <!--//quantity-->
+  </script>
 
 
 

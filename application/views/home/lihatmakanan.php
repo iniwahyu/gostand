@@ -77,7 +77,7 @@
         <h3><?php echo $makanan['nama_produk']; ?></h3>
         
         <p>
-          <span class="item_price">Rp. <?php echo number_format($makanan['harga'],2,'.','.'); ?></span>
+          <span class="item_price">Rp. <?php echo number_format($makanan['harga'],2,',','.'); ?></span>
           <label>Free delivery</label>
         </p>
         
@@ -96,10 +96,10 @@
         
         <div class="occasion-cart">
           <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-            <form action="<?php echo base_url('welcome/prosestambahkeranjang'); ?>" method="post">
+            <form  method="post">
               <fieldset>
               <label>Jumlah Pesanan</label>
-              <select name="jumlah" class="form-control">
+              <select id="jumlah_produk" class="form-control">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -107,14 +107,18 @@
                 <option value="5">5</option>
               </select>
               <?php foreach ( $data as $makanan ) { ?>
-                <input type="hidden" name="nama_produk" value="<?php echo $makanan['nama_produk']; ?>" >
-                <input type="hidden" name="harga" value="<?php echo $makanan['harga']; ?>" >
+                <input type="hidden" id="nama_produk" value="<?php echo $makanan['nama_produk']; ?>" >
+                <input type="hidden" id="harga" value="<?php echo $makanan['harga']; ?>" >
+                <input type="hidden" id="nama_toko" value="<?php echo $makanan['nama_toko']; ?>" >
               <?php } ?>
-                <input type="submit" name="submit" value="Tambah Ke Keranjang" class="button" style="margin-top:25px;" />
+                <input id="nama_pembeli" type="hidden" value="<?php echo $this->session->userdata('username');?>">
+                <input type="submit" id="tambah-ke-keranjang" value="Tambah Ke Keranjang" class="button" style="margin-top:25px;" />
               </fieldset>
             </form>
           </div>
         </div>
+
+        
       
       </div>
       <div class="clearfix"> </div>
@@ -297,7 +301,45 @@
   <!-- for bootstrap working -->
   <script src="<?php echo base_url('asset/home/js/bootstrap.js');?>"></script>
   <!-- //for bootstrap working -->
+  
+  <!-- Ajax Buat nambah Data  -->
+  <script type="text/javascript">
+    function doconfirm()
+    {
+        job=confirm("Pesan Makanan ?");
+        if(job!=true)
+        {
+            return false;
+        }
+    }
+    </script>
+  </script>
+
+  <script type="text/javascript">
+      $('#tambah-ke-keranjang').on('click',function()
+      {
+            var napem=$('#nama_pembeli').val();
+            var napro=$('#nama_produk').val();
+            var jumlah=$('#jumlah_produk').val();
+            var tohar=$('#harga').val() * $('#jumlah_produk').val();
+            var natok=$('#nama_toko').val();
+
+            $.ajax({
+                type : "POST",
+                url  : "<?php echo base_url('pembeli/inputkeranjang')?>",                
+                data : {napem:napem , napro:napro, jumlah:jumlah, tohar:tohar, natok:natok},
+                success: function(data)
+                {
+                    return doconfirm();                    
+
+                }
+            });
+            return false;
+        });
+      </script>
   <!-- //js-files -->
+
+
 </body>
 
 </html>

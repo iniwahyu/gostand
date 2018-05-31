@@ -1,7 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pembeli extends CI_Controller {
+class Pembeli extends CI_Controller 
+{
+
+
+	public function __construct()
+    {
+      parent::__construct();
+      $this->load->model('Home_model');
+      $this->load->model('pembeli_model');
+    }
 
 	public function index()
     {      
@@ -133,10 +142,21 @@ class Pembeli extends CI_Controller {
 
 		$this->load->model('pembeli_model');
 		$napem=$this->input->post('napem');
-        $nabar=$this->input->post('nabar');
-        $harga=$this->input->post('harga');
-        $data=$this->pembeli_model->inputkeranjang($napem,$nabar,$harga);
-        echo json_encode($data);
+        $napro=$this->input->post('napro');
+        $jumlah=$this->input->post('jumlah');
+        $tohar=$this->input->post('tohar');
+        $natok=$this->input->post('natok');
+
+        $data = array
+        (
+        	'nama_pembeli' => $napem,
+        	'nama_produk' => $napro,
+        	'jumlah_produk' => $jumlah,
+        	'total_harga' => $tohar,
+        	'nama_toko' => $natok,
+        );
+ 
+        $data=$this->pembeli_model->insertdata('keranjang', $data);        
     }
 
     public function deletekeranjang($id)

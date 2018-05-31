@@ -7,13 +7,14 @@ defined('BASEPATH') OR exit('No Direct Script Access Allowed');
 class Pembeli_model extends CI_Model
 {
 
-    public function __construct()
-    {
-      parent::__construct();
-      $this->load->model('Home_model');
-      $this->load->model('pembeli_model');
-    }
+    
     public function insertprofile($table,$data)
+    {
+      $res = $this->db->insert($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
+      return $res; // Kode ini digunakan untuk mengembalikan hasil $res
+    }
+
+    public function insertdata($table,$data)
     {
       $res = $this->db->insert($table, $data); // Kode ini digunakan untuk memasukan record baru kedalam sebuah tabel
       return $res; // Kode ini digunakan untuk mengembalikan hasil $res
